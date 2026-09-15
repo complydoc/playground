@@ -1,0 +1,19 @@
+[project]
+name = "complydoc-playground"
+version = "0.0.0"
+description = "Examples of complydoc from the command line and from Python."
+requires-python = ">=3.11"
+dependencies = [
+    "complydoc[notebook]>=0.4.4",
+    "langchain-community>=0.3",
+    "langchain-text-splitters>=0.3",
+    "pdfplumber>=0.11",
+    "pypdf>=5",
+    "pytest>=8",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

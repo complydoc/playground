@@ -1,0 +1,13 @@
+# Read by cli/2-compare-loaders.sh. Paths are relative to this file.
+loaders:
+  pypdf: langchain_community.document_loaders:PyPDFLoader
+  pdfplumber:
+    loader: langchain_community.document_loaders:PDFPlumberLoader
+    options: {extract_images: false}
+paths:
+  - ../documents/employee-record.pdf
+  - ../documents/terms-and-conditions.pdf
+  - ../documents/vendor-assessment.pdf
+facts:
+  - Two administrator accounts have no multi-factor authentication
+components: [readiness, sensitive]

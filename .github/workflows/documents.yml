@@ -1,0 +1,28 @@
+# Audit the documents on every push and fail when something got worse than the
+# committed baseline. The reports are uploaded as an artifact.
+name: documents
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync
+      - name: Audit
+        run: |
+          uv run complydoc audit documents --no-ocr --no-page-images --no-extracted-text \
+            --out build --name current -q
+      - name: Compare with the baseline
+        run: uv run complydoc diff baseline/report.json build/current.json --out build
+      - name: Tests
+        run: uv run pytest -q
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: complydoc-reports
+          path: build/
