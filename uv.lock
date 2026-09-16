@@ -461,10 +461,11 @@ wheels = [
 
 [[package]]
 name = "complydoc"
-version = "0.4.4"
+version = "0.4.6"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "jinja2" },
+    { name = "lxml" },
     { name = "numpy", version = "2.4.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
     { name = "numpy", version = "2.5.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
     { name = "openpyxl" },
@@ -480,9 +481,9 @@ dependencies = [
     { name = "tiktoken" },
     { name = "typer" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/7b/c4/d6d707f2c399e4f0f3f8623ef7053a0ac290ebc9cd4925cf5fb28c7470ab/complydoc-0.4.4.tar.gz", hash = "sha256:bb048fa75251f1b87e5438dd1116036592de2fa4760c7b81e174594c9573eae7", size = 3789004, upload-time = "2026-09-15T10:34:09.064Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/51/78/6dafd5fb37376dd9dcc9fd37adb28c9a95f152f6e92d68968ae10a3bdef6/complydoc-0.4.6.tar.gz", hash = "sha256:51cd92f5a3f7231a93e5a8f5b051a6bf7f6b23ddc276c67e253e3577c2f9aca0", size = 3827467, upload-time = "2026-09-16T11:04:48.974Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/a4/a3/900ece5068f24d989c5fd7d31efc09e5e21a5919b4f25f044ec1673a0d80/complydoc-0.4.4-py3-none-any.whl", hash = "sha256:fbcace4cd4c984b12e68354cc2cce7a174213dc130bdfdbfce4e45b6d90b26fd", size = 2959489, upload-time = "2026-09-15T10:34:07.46Z" },
+    { url = "https://files.pythonhosted.org/packages/1f/f3/63595e726d836d204e9549329b47924e065b854d6424f65efe37aea15be1/complydoc-0.4.6-py3-none-any.whl", hash = "sha256:07cb2c9b9b6d37ab88062eff2871d94fbc3b34c36a5803751750b5d9cd0c1efa", size = 2997903, upload-time = "2026-09-16T11:04:47.301Z" },
 ]
 
 [package.optional-dependencies]
@@ -505,7 +506,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "complydoc", extras = ["notebook"], specifier = ">=0.4.4" },
+    { name = "complydoc", extras = ["notebook"], specifier = ">=0.4.6" },
     { name = "langchain-community", specifier = ">=0.3" },
     { name = "langchain-text-splitters", specifier = ">=0.3" },
     { name = "pdfplumber", specifier = ">=0.11" },

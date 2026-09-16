@@ -26,8 +26,9 @@ run with `--no-ocr` and report that names were not scanned.
 | `cli/2-compare-loaders.sh` | `complydoc compare-loaders cli/loaders.yaml`: PyPDF and pdfplumber on the same files, with an expected fact |
 | `cli/3-chunks.sh` | `complydoc chunks` with two chunk sizes of `RecursiveCharacterTextSplitter` |
 | `cli/4-diff.sh` | `complydoc diff` against `baseline/report.json`, and its exit code on a regression |
+| `cli/5-routing.sh` | `complydoc routing`: the path each page needs, priced as a mix, written as a manifest |
 
-`make cli` runs all four. Reports are written to `out/`.
+`make cli` runs all five. Reports are written to `out/`.
 
 ## Python
 
