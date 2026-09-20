@@ -1,11 +1,11 @@
 {
   "aggregate": {
-    "analyse_seconds": 0.578,
+    "analyse_seconds": 0.646,
     "annual_text_usd": null,
     "annual_vision_usd": null,
     "categories_not_scanned": {
-      "organisation_name": "named entity recognition needs the optional NER extra (install with: uv sync --extra ner)",
-      "person_name": "named entity recognition needs the optional NER extra (install with: uv sync --extra ner)"
+      "organisation_name": "names need the ner extra and the spaCy model 'en_core_web_sm'. With pip: pip install \"complydoc[ner]\" && python -m spacy download en_core_web_sm. With uv: uv tool install --force \"complydoc[ner]\" --with https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl. Keep any extras you already use in the brackets",
+      "person_name": "names need the ner extra and the spaCy model 'en_core_web_sm'. With pip: pip install \"complydoc[ner]\" && python -m spacy download en_core_web_sm. With uv: uv tool install --force \"complydoc[ner]\" --with https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl. Keep any extras you already use in the brackets"
     },
     "content_findings_high": 1,
     "content_findings_total": 1,
@@ -24,8 +24,8 @@
       "docx": 1,
       "pdf": 6
     },
-    "hours_per_1000_documents": 0.03,
-    "mean_readiness_score": 76.9,
+    "hours_per_1000_documents": 0.04,
+    "mean_readiness_score": 77.2,
     "monthly_text_usd": null,
     "monthly_vision_usd": null,
     "ocr_pages": 0,
@@ -34,20 +34,20 @@
     "pages_total": 7,
     "pages_unreadable": 1,
     "projected_seconds": {
-      "100": 10.2,
-      "1000": 102.4,
-      "10000": 1024.3,
-      "100000": 10242.9
+      "100": 15.6,
+      "1000": 155.6,
+      "10000": 1555.7,
+      "100000": 15557.1
     },
-    "read_seconds": 0.08,
+    "read_seconds": 0.087,
     "readiness_bands": {
       "needs work": 1,
       "ready": 5,
       "workable": 1
     },
-    "scan_seconds": 0.058,
-    "seconds_per_document": 0.102,
-    "seconds_per_page": 0.102,
+    "scan_seconds": 0.355,
+    "seconds_per_document": 0.156,
+    "seconds_per_page": 0.156,
     "sensitive_by_category": {
       "bank_account_number": 1,
       "card_number": 1,
@@ -188,6 +188,13 @@
         "not_applicable": 0,
         "poor": 0
       },
+      "table_fidelity": {
+        "error": 0,
+        "fair": 0,
+        "good": 1,
+        "not_applicable": 6,
+        "poor": 0
+      },
       "table_max_header_depth": {
         "error": 0,
         "fair": 1,
@@ -224,7 +231,7 @@
         "poor": 0
       }
     },
-    "total_seconds": 0.717,
+    "total_seconds": 1.089,
     "total_text_path_usd": 8.204000000000001e-05,
     "total_vision_path_usd": 0.00110925
   },
@@ -247,7 +254,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Opus 5",
             "imported_on": null,
             "input_per_mtok_usd": 5.0,
@@ -279,7 +286,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Sonnet 5",
             "imported_on": null,
             "input_per_mtok_usd": 2.0,
@@ -311,7 +318,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Haiku 4.5",
             "imported_on": null,
             "input_per_mtok_usd": 1.0,
@@ -343,7 +350,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "DeepSeek V4 Flash Vision Exp",
             "imported_on": null,
             "input_per_mtok_usd": 0.44,
@@ -375,7 +382,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "Gemini 3.1 Pro Preview",
             "imported_on": null,
             "input_per_mtok_usd": 2.0,
@@ -407,7 +414,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "Kimi K3",
             "imported_on": null,
             "input_per_mtok_usd": 3.0,
@@ -439,7 +446,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "GLM-5.3-Flash",
             "imported_on": null,
             "input_per_mtok_usd": 0.15,
@@ -1056,7 +1063,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Opus 5",
             "imported_on": null,
             "input_per_mtok_usd": 5.0,
@@ -1088,7 +1095,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Sonnet 5",
             "imported_on": null,
             "input_per_mtok_usd": 2.0,
@@ -1120,7 +1127,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Haiku 4.5",
             "imported_on": null,
             "input_per_mtok_usd": 1.0,
@@ -1152,7 +1159,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "DeepSeek V4 Flash Vision Exp",
             "imported_on": null,
             "input_per_mtok_usd": 0.44,
@@ -1184,7 +1191,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "Gemini 3.1 Pro Preview",
             "imported_on": null,
             "input_per_mtok_usd": 2.0,
@@ -1216,7 +1223,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "Kimi K3",
             "imported_on": null,
             "input_per_mtok_usd": 3.0,
@@ -1248,7 +1255,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "GLM-5.3-Flash",
             "imported_on": null,
             "input_per_mtok_usd": 0.15,
@@ -1865,7 +1872,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Opus 5",
             "imported_on": null,
             "input_per_mtok_usd": 5.0,
@@ -1897,7 +1904,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Sonnet 5",
             "imported_on": null,
             "input_per_mtok_usd": 2.0,
@@ -1929,7 +1936,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Haiku 4.5",
             "imported_on": null,
             "input_per_mtok_usd": 1.0,
@@ -1961,7 +1968,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "DeepSeek V4 Flash Vision Exp",
             "imported_on": null,
             "input_per_mtok_usd": 0.44,
@@ -1993,7 +2000,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "Gemini 3.1 Pro Preview",
             "imported_on": null,
             "input_per_mtok_usd": 2.0,
@@ -2025,7 +2032,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "Kimi K3",
             "imported_on": null,
             "input_per_mtok_usd": 3.0,
@@ -2057,7 +2064,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "GLM-5.3-Flash",
             "imported_on": null,
             "input_per_mtok_usd": 0.15,
@@ -2674,7 +2681,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Opus 5",
             "imported_on": null,
             "input_per_mtok_usd": 5.0,
@@ -2706,7 +2713,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Sonnet 5",
             "imported_on": null,
             "input_per_mtok_usd": 2.0,
@@ -2738,7 +2745,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Haiku 4.5",
             "imported_on": null,
             "input_per_mtok_usd": 1.0,
@@ -2770,7 +2777,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "DeepSeek V4 Flash Vision Exp",
             "imported_on": null,
             "input_per_mtok_usd": 0.44,
@@ -2802,7 +2809,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "Gemini 3.1 Pro Preview",
             "imported_on": null,
             "input_per_mtok_usd": 2.0,
@@ -2834,7 +2841,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "Kimi K3",
             "imported_on": null,
             "input_per_mtok_usd": 3.0,
@@ -2866,7 +2873,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "GLM-5.3-Flash",
             "imported_on": null,
             "input_per_mtok_usd": 0.15,
@@ -3483,7 +3490,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Opus 5",
             "imported_on": null,
             "input_per_mtok_usd": 5.0,
@@ -3515,7 +3522,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Sonnet 5",
             "imported_on": null,
             "input_per_mtok_usd": 2.0,
@@ -3547,7 +3554,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Haiku 4.5",
             "imported_on": null,
             "input_per_mtok_usd": 1.0,
@@ -3579,7 +3586,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "DeepSeek V4 Flash Vision Exp",
             "imported_on": null,
             "input_per_mtok_usd": 0.44,
@@ -3611,7 +3618,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "Gemini 3.1 Pro Preview",
             "imported_on": null,
             "input_per_mtok_usd": 2.0,
@@ -3643,7 +3650,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "Kimi K3",
             "imported_on": null,
             "input_per_mtok_usd": 3.0,
@@ -3675,7 +3682,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "GLM-5.3-Flash",
             "imported_on": null,
             "input_per_mtok_usd": 0.15,
@@ -4292,7 +4299,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Opus 5",
             "imported_on": null,
             "input_per_mtok_usd": 5.0,
@@ -4324,7 +4331,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Sonnet 5",
             "imported_on": null,
             "input_per_mtok_usd": 2.0,
@@ -4356,7 +4363,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Haiku 4.5",
             "imported_on": null,
             "input_per_mtok_usd": 1.0,
@@ -4388,7 +4395,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "DeepSeek V4 Flash Vision Exp",
             "imported_on": null,
             "input_per_mtok_usd": 0.44,
@@ -4420,7 +4427,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "Gemini 3.1 Pro Preview",
             "imported_on": null,
             "input_per_mtok_usd": 2.0,
@@ -4452,7 +4459,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "Kimi K3",
             "imported_on": null,
             "input_per_mtok_usd": 3.0,
@@ -4484,7 +4491,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "GLM-5.3-Flash",
             "imported_on": null,
             "input_per_mtok_usd": 0.15,
@@ -5101,7 +5108,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Opus 5",
             "imported_on": null,
             "input_per_mtok_usd": 5.0,
@@ -5133,7 +5140,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Sonnet 5",
             "imported_on": null,
             "input_per_mtok_usd": 2.0,
@@ -5165,7 +5172,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Haiku 4.5",
             "imported_on": null,
             "input_per_mtok_usd": 1.0,
@@ -5197,7 +5204,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "DeepSeek V4 Flash Vision Exp",
             "imported_on": null,
             "input_per_mtok_usd": 0.44,
@@ -5229,7 +5236,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "Gemini 3.1 Pro Preview",
             "imported_on": null,
             "input_per_mtok_usd": 2.0,
@@ -5261,7 +5268,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "Kimi K3",
             "imported_on": null,
             "input_per_mtok_usd": 3.0,
@@ -5293,7 +5300,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "GLM-5.3-Flash",
             "imported_on": null,
             "input_per_mtok_usd": 0.15,
@@ -5923,7 +5930,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Opus 5",
             "imported_on": null,
             "input_per_mtok_usd": 5.0,
@@ -5955,7 +5962,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Sonnet 5",
             "imported_on": null,
             "input_per_mtok_usd": 2.0,
@@ -5987,7 +5994,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Haiku 4.5",
             "imported_on": null,
             "input_per_mtok_usd": 1.0,
@@ -6019,7 +6026,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "DeepSeek V4 Flash Vision Exp",
             "imported_on": null,
             "input_per_mtok_usd": 0.44,
@@ -6051,7 +6058,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "Gemini 3.1 Pro Preview",
             "imported_on": null,
             "input_per_mtok_usd": 2.0,
@@ -6083,7 +6090,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "Kimi K3",
             "imported_on": null,
             "input_per_mtok_usd": 3.0,
@@ -6115,7 +6122,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "GLM-5.3-Flash",
             "imported_on": null,
             "input_per_mtok_usd": 0.15,
@@ -6733,7 +6740,7 @@
           "mean_coverage_pct": 4.55,
           "reads_tables": true,
           "reordered": false,
-          "seconds": 0.0092,
+          "seconds": 0.0081,
           "similarity": 1.0
         }
       ],
@@ -6759,7 +6766,7 @@
             {
               "h": 0.0119,
               "label": "high",
-              "title": "Date of birth — high severity, confirmed\nReported because it passed plausible_dob.\nSpecial-risk identifier in combination with a name. Only dates near an explicit birth-date label are reported, so an unlabelled DOB is missed.",
+              "title": "Date of birth — high severity, corroborated\nReported because it passed plausible_dob.\nSpecial-risk identifier in combination with a name. Only dates near an explicit birth-date label are reported, so an unlabelled DOB is missed.",
               "value": "••/••/1985",
               "w": 0.0968,
               "x": 0.2127,
@@ -6786,7 +6793,7 @@
             {
               "h": 0.0119,
               "label": "medium",
-              "title": "Phone number — medium severity, confirmed\nReported because it passed uk_phone.\nPersonal data when tied to an individual. UK formats; numbers with another country code are reported as international phone numbers.",
+              "title": "Phone number — medium severity, corroborated\nReported because it passed uk_phone.\nPersonal data when tied to an individual. UK formats; numbers with another country code are reported as international phone numbers.",
               "value": "••• •••• 0958",
               "w": 0.1282,
               "x": 0.1944,
@@ -6795,7 +6802,7 @@
             {
               "h": 0.0119,
               "label": "medium",
-              "title": "Street address — medium severity, pattern\nReported on the pattern alone, with nothing else to confirm it.\nDetected by house-number-and-street-word heuristics for English, Portuguese, Spanish, Italian, French, German and Dutch. It will miss flats, named houses and addresses split across lines.",
+              "title": "Street address — medium severity, corroborated\nReported on the pattern alone, with nothing else to confirm it.\nDetected by house-number-and-street-word heuristics for English, Portuguese, Spanish, Italian, French, German and Dutch. It will miss flats, named houses and addresses split across lines.",
               "value": "•• ••••••• Road",
               "w": 0.1478,
               "x": 0.1738,
@@ -6804,7 +6811,7 @@
             {
               "h": 0.0119,
               "label": "medium",
-              "title": "UK postcode — medium severity, confirmed\nReported because it passed uk_postcode.\nA full postcode narrows location to a handful of properties and is treated as personal data when combined with any other identifier.",
+              "title": "UK postcode — medium severity, corroborated\nReported because it passed uk_postcode.\nA full postcode narrows location to a handful of properties and is treated as personal data when combined with any other identifier.",
               "value": "•••A 1BB",
               "w": 0.0836,
               "x": 0.1825,
@@ -6813,7 +6820,7 @@
             {
               "h": 0.0119,
               "label": "high",
-              "title": "UK sort code — high severity, confirmed\nReported because it passed sort_code.\nFinancial identifier. On its own it identifies a bank branch; combined with an account number it enables direct debit fraud.",
+              "title": "UK sort code — high severity, corroborated\nReported because it passed sort_code.\nFinancial identifier. On its own it identifies a bank branch; combined with an account number it enables direct debit fraud.",
               "value": "••-34-56",
               "w": 0.0763,
               "x": 0.1865,
@@ -7605,7 +7612,7 @@
           "low_confidence": false,
           "method": "weighted_sum: each signal's rating scores good=1.0, fair=0.5, poor=0.0; weights renormalised across the 14 signals that produced a rating for this document, then expressed out of 100.",
           "signals_counted": 14,
-          "signals_excluded": 8,
+          "signals_excluded": 9,
           "value": 85.9
         },
         "signals": [
@@ -7887,6 +7894,19 @@
           {
             "detail": {},
             "display": "not applicable",
+            "id": "table_fidelity",
+            "name": "Table rows that survived",
+            "rating": null,
+            "reason": "no ruled table on this document could be checked against the extracted text",
+            "status": "not_applicable",
+            "unit": "% of rows",
+            "value": null,
+            "weight": 0.06,
+            "why": "A row split across lines no longer says which value belongs to which column."
+          },
+          {
+            "detail": {},
+            "display": "not applicable",
             "id": "table_max_header_depth",
             "name": "Deepest table header",
             "rating": null,
@@ -7985,7 +8005,7 @@
             "column": 15,
             "confidence": 0.8,
             "context_term": "date of birth",
-            "evidence": "confirmed",
+            "evidence": "corroborated",
             "label": "Date of birth",
             "length": 10,
             "line": 4,
@@ -8034,7 +8054,7 @@
             "column": 11,
             "confidence": 1.0,
             "context_term": null,
-            "evidence": "confirmed",
+            "evidence": "corroborated",
             "label": "Phone number",
             "length": 13,
             "line": 7,
@@ -8051,7 +8071,7 @@
             "column": 9,
             "confidence": 1.0,
             "context_term": null,
-            "evidence": "pattern",
+            "evidence": "corroborated",
             "label": "Street address",
             "length": 15,
             "line": 8,
@@ -8066,7 +8086,7 @@
             "column": 10,
             "confidence": 1.0,
             "context_term": null,
-            "evidence": "confirmed",
+            "evidence": "corroborated",
             "label": "UK postcode",
             "length": 8,
             "line": 9,
@@ -8083,7 +8103,7 @@
             "column": 11,
             "confidence": 1.0,
             "context_term": null,
-            "evidence": "confirmed",
+            "evidence": "corroborated",
             "label": "UK sort code",
             "length": 8,
             "line": 11,
@@ -8178,6 +8198,7 @@
             "validators_passed": []
           }
         ],
+        "models_used": {},
         "pages_scanned": 1,
         "path": "/Users/duarte/Documents/Development/complydoc-playground/documents/employee-record.pdf",
         "reveal_blocked_categories": [],
@@ -8187,22 +8208,22 @@
           {
             "category": "person_name",
             "label": "Person name",
-            "reason": "named entity recognition needs the optional NER extra (install with: uv sync --extra ner)"
+            "reason": "names need the ner extra and the spaCy model 'en_core_web_sm'. With pip: pip install \"complydoc[ner]\" && python -m spacy download en_core_web_sm. With uv: uv tool install --force \"complydoc[ner]\" --with https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl. Keep any extras you already use in the brackets"
           },
           {
             "category": "organisation_name",
             "label": "Organisation name",
-            "reason": "named entity recognition needs the optional NER extra (install with: uv sync --extra ner)"
+            "reason": "names need the ner extra and the spaCy model 'en_core_web_sm'. With pip: pip install \"complydoc[ner]\" && python -m spacy download en_core_web_sm. With uv: uv tool install --force \"complydoc[ner]\" --with https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl. Keep any extras you already use in the brackets"
           }
         ]
       },
       "sha256": "8c4c77b4341e3d5c184e484a96a8e9bad8c858f82934311ec000ad23dc50be00",
       "timing": {
-        "analyse_seconds": 0.571,
-        "read_seconds": 0.014,
-        "scan_seconds": 0.036,
-        "seconds_per_page": 0.62,
-        "total_seconds": 0.62
+        "analyse_seconds": 0.639,
+        "read_seconds": 0.017,
+        "scan_seconds": 0.33,
+        "seconds_per_page": 0.986,
+        "total_seconds": 0.986
       },
       "visibility_checked": true,
       "visibility_note": null
@@ -8217,7 +8238,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Opus 5",
             "imported_on": null,
             "input_per_mtok_usd": 5.0,
@@ -8249,7 +8270,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Sonnet 5",
             "imported_on": null,
             "input_per_mtok_usd": 2.0,
@@ -8281,7 +8302,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Haiku 4.5",
             "imported_on": null,
             "input_per_mtok_usd": 1.0,
@@ -8313,7 +8334,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "DeepSeek V4 Flash Vision Exp",
             "imported_on": null,
             "input_per_mtok_usd": 0.44,
@@ -8345,7 +8366,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "Gemini 3.1 Pro Preview",
             "imported_on": null,
             "input_per_mtok_usd": 2.0,
@@ -8377,7 +8398,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "Kimi K3",
             "imported_on": null,
             "input_per_mtok_usd": 3.0,
@@ -8409,7 +8430,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "GLM-5.3-Flash",
             "imported_on": null,
             "input_per_mtok_usd": 0.15,
@@ -9027,7 +9048,7 @@
           "mean_coverage_pct": 1.03,
           "reads_tables": true,
           "reordered": false,
-          "seconds": 0.0055,
+          "seconds": 0.0057,
           "similarity": 1.0
         }
       ],
@@ -9309,9 +9330,9 @@
         "score": {
           "components": [
             {
-              "contribution": 1.32,
+              "contribution": 1.22,
               "name": "PDF form fields",
-              "normalised_weight": 0.0263,
+              "normalised_weight": 0.0244,
               "points": 0.5,
               "rating": "fair",
               "raw_weight": 0.02,
@@ -9320,88 +9341,97 @@
             {
               "contribution": 0.0,
               "name": "Column layout",
-              "normalised_weight": 0.0658,
+              "normalised_weight": 0.061,
               "points": 0.0,
               "rating": "poor",
               "raw_weight": 0.05,
               "signal_id": "column_count"
             },
             {
-              "contribution": 13.16,
+              "contribution": 12.2,
               "name": "Encryption or password protection",
-              "normalised_weight": 0.1316,
+              "normalised_weight": 0.122,
               "points": 1.0,
               "rating": "good",
               "raw_weight": 0.1,
               "signal_id": "encrypted"
             },
             {
-              "contribution": 3.95,
+              "contribution": 3.66,
               "name": "Distinct fonts",
-              "normalised_weight": 0.0395,
+              "normalised_weight": 0.0366,
               "points": 1.0,
               "rating": "good",
               "raw_weight": 0.03,
               "signal_id": "font_count"
             },
             {
-              "contribution": 3.95,
+              "contribution": 3.66,
               "name": "Fonts embedded",
-              "normalised_weight": 0.0395,
+              "normalised_weight": 0.0366,
               "points": 1.0,
               "rating": "good",
               "raw_weight": 0.03,
               "signal_id": "fonts_embedded"
             },
             {
-              "contribution": 11.84,
+              "contribution": 10.98,
               "name": "Page area that is image",
-              "normalised_weight": 0.1184,
+              "normalised_weight": 0.1098,
               "points": 1.0,
               "rating": "good",
               "raw_weight": 0.09,
               "signal_id": "image_area_ratio_pct"
             },
             {
-              "contribution": 3.95,
+              "contribution": 3.66,
               "name": "Page rotation flag",
-              "normalised_weight": 0.0395,
+              "normalised_weight": 0.0366,
               "points": 1.0,
               "rating": "good",
               "raw_weight": 0.03,
               "signal_id": "page_rotation"
             },
             {
-              "contribution": 3.95,
+              "contribution": 3.66,
               "name": "Distinct page sizes",
-              "normalised_weight": 0.0395,
+              "normalised_weight": 0.0366,
               "points": 1.0,
               "rating": "good",
               "raw_weight": 0.03,
               "signal_id": "page_size_variance"
             },
             {
-              "contribution": 5.26,
+              "contribution": 4.88,
               "name": "Tables detected",
-              "normalised_weight": 0.0526,
+              "normalised_weight": 0.0488,
               "points": 1.0,
               "rating": "good",
               "raw_weight": 0.04,
               "signal_id": "table_count"
             },
             {
+              "contribution": 7.32,
+              "name": "Table rows that survived",
+              "normalised_weight": 0.0732,
+              "points": 1.0,
+              "rating": "good",
+              "raw_weight": 0.06,
+              "signal_id": "table_fidelity"
+            },
+            {
               "contribution": 0.0,
               "name": "Deepest table header",
-              "normalised_weight": 0.0789,
+              "normalised_weight": 0.0732,
               "points": 0.0,
               "rating": "poor",
               "raw_weight": 0.06,
               "signal_id": "table_max_header_depth"
             },
             {
-              "contribution": 3.95,
+              "contribution": 3.66,
               "name": "Merged table cells",
-              "normalised_weight": 0.0789,
+              "normalised_weight": 0.0732,
               "points": 0.5,
               "rating": "fair",
               "raw_weight": 0.06,
@@ -9410,16 +9440,16 @@
             {
               "contribution": 0.0,
               "name": "Text layer coverage",
-              "normalised_weight": 0.1316,
+              "normalised_weight": 0.122,
               "points": 0.0,
               "rating": "poor",
               "raw_weight": 0.1,
               "signal_id": "text_layer_coverage_pct"
             },
             {
-              "contribution": 15.79,
+              "contribution": 14.63,
               "name": "Text layer present",
-              "normalised_weight": 0.1579,
+              "normalised_weight": 0.1463,
               "points": 1.0,
               "rating": "good",
               "raw_weight": 0.12,
@@ -9429,10 +9459,10 @@
           "confidence_note": null,
           "label": "workable",
           "low_confidence": false,
-          "method": "weighted_sum: each signal's rating scores good=1.0, fair=0.5, poor=0.0; weights renormalised across the 13 signals that produced a rating for this document, then expressed out of 100.",
-          "signals_counted": 13,
+          "method": "weighted_sum: each signal's rating scores good=1.0, fair=0.5, poor=0.0; weights renormalised across the 14 signals that produced a rating for this document, then expressed out of 100.",
+          "signals_counted": 14,
           "signals_excluded": 9,
-          "value": 67.1
+          "value": 69.5
         },
         "signals": [
           {
@@ -9695,6 +9725,28 @@
           },
           {
             "detail": {
+              "aligned_tables_not_scored": 0,
+              "per_table_pct": [
+                100.0
+              ],
+              "rows_compared": 5,
+              "rows_intact": 5,
+              "tables_measured": 1,
+              "worst_table_pct": 100.0
+            },
+            "display": "100% of rows",
+            "id": "table_fidelity",
+            "name": "Table rows that survived",
+            "rating": "good",
+            "reason": null,
+            "status": "measured",
+            "unit": "% of rows",
+            "value": 100.0,
+            "weight": 0.06,
+            "why": "A row split across lines no longer says which value belongs to which column."
+          },
+          {
+            "detail": {
               "per_table": [
                 3
               ]
@@ -9793,6 +9845,7 @@
       },
       "sensitive": {
         "matches": [],
+        "models_used": {},
         "pages_scanned": 1,
         "path": "/Users/duarte/Documents/Development/complydoc-playground/documents/financial-summary.pdf",
         "reveal_blocked_categories": [],
@@ -9802,12 +9855,12 @@
           {
             "category": "person_name",
             "label": "Person name",
-            "reason": "named entity recognition needs the optional NER extra (install with: uv sync --extra ner)"
+            "reason": "names need the ner extra and the spaCy model 'en_core_web_sm'. With pip: pip install \"complydoc[ner]\" && python -m spacy download en_core_web_sm. With uv: uv tool install --force \"complydoc[ner]\" --with https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl. Keep any extras you already use in the brackets"
           },
           {
             "category": "organisation_name",
             "label": "Organisation name",
-            "reason": "named entity recognition needs the optional NER extra (install with: uv sync --extra ner)"
+            "reason": "names need the ner extra and the spaCy model 'en_core_web_sm'. With pip: pip install \"complydoc[ner]\" && python -m spacy download en_core_web_sm. With uv: uv tool install --force \"complydoc[ner]\" --with https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl. Keep any extras you already use in the brackets"
           }
         ]
       },
@@ -9816,8 +9869,8 @@
         "analyse_seconds": 0.0,
         "read_seconds": 0.008,
         "scan_seconds": 0.003,
-        "seconds_per_page": 0.011,
-        "total_seconds": 0.011
+        "seconds_per_page": 0.012,
+        "total_seconds": 0.012
       },
       "visibility_checked": true,
       "visibility_note": null
@@ -9832,7 +9885,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Opus 5",
             "imported_on": null,
             "input_per_mtok_usd": 5.0,
@@ -9864,7 +9917,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Sonnet 5",
             "imported_on": null,
             "input_per_mtok_usd": 2.0,
@@ -9896,7 +9949,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Haiku 4.5",
             "imported_on": null,
             "input_per_mtok_usd": 1.0,
@@ -9928,7 +9981,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "DeepSeek V4 Flash Vision Exp",
             "imported_on": null,
             "input_per_mtok_usd": 0.44,
@@ -9960,7 +10013,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "Gemini 3.1 Pro Preview",
             "imported_on": null,
             "input_per_mtok_usd": 2.0,
@@ -9992,7 +10045,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "Kimi K3",
             "imported_on": null,
             "input_per_mtok_usd": 3.0,
@@ -10024,7 +10077,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "GLM-5.3-Flash",
             "imported_on": null,
             "input_per_mtok_usd": 0.15,
@@ -10790,12 +10843,12 @@
               "signal_id": "text_layer_present"
             }
           ],
-          "confidence_note": null,
+          "confidence_note": "Only 11 of 23 signals could be measured for this document, so this score rests on few signals. See the breakdown.",
           "label": "needs work",
-          "low_confidence": false,
+          "low_confidence": true,
           "method": "weighted_sum: each signal's rating scores good=1.0, fair=0.5, poor=0.0; weights renormalised across the 11 signals that produced a rating for this document, then expressed out of 100.",
           "signals_counted": 11,
-          "signals_excluded": 11,
+          "signals_excluded": 12,
           "value": 46.9
         },
         "signals": [
@@ -11065,6 +11118,19 @@
           {
             "detail": {},
             "display": "not applicable",
+            "id": "table_fidelity",
+            "name": "Table rows that survived",
+            "rating": null,
+            "reason": "no ruled table on this document could be checked against the extracted text",
+            "status": "not_applicable",
+            "unit": "% of rows",
+            "value": null,
+            "weight": 0.06,
+            "why": "A row split across lines no longer says which value belongs to which column."
+          },
+          {
+            "detail": {},
+            "display": "not applicable",
             "id": "table_max_header_depth",
             "name": "Deepest table header",
             "rating": null,
@@ -11153,6 +11219,7 @@
       },
       "sensitive": {
         "matches": [],
+        "models_used": {},
         "pages_scanned": 0,
         "path": "/Users/duarte/Documents/Development/complydoc-playground/documents/invoice-scan.pdf",
         "reveal_blocked_categories": [],
@@ -11165,7 +11232,7 @@
       "sha256": "6607111c39da2f584c566c047bf08e320a336995d48a1a9f8b73ae4c4caa91ed",
       "timing": {
         "analyse_seconds": 0.005,
-        "read_seconds": 0.022,
+        "read_seconds": 0.023,
         "scan_seconds": 0.001,
         "seconds_per_page": 0.028,
         "total_seconds": 0.028
@@ -11183,7 +11250,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Opus 5",
             "imported_on": null,
             "input_per_mtok_usd": 5.0,
@@ -11215,7 +11282,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Sonnet 5",
             "imported_on": null,
             "input_per_mtok_usd": 2.0,
@@ -11247,7 +11314,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Haiku 4.5",
             "imported_on": null,
             "input_per_mtok_usd": 1.0,
@@ -11279,7 +11346,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "DeepSeek V4 Flash Vision Exp",
             "imported_on": null,
             "input_per_mtok_usd": 0.44,
@@ -11311,7 +11378,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "Gemini 3.1 Pro Preview",
             "imported_on": null,
             "input_per_mtok_usd": 2.0,
@@ -11343,7 +11410,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "Kimi K3",
             "imported_on": null,
             "input_per_mtok_usd": 3.0,
@@ -11375,7 +11442,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "GLM-5.3-Flash",
             "imported_on": null,
             "input_per_mtok_usd": 0.15,
@@ -12084,12 +12151,12 @@
               "signal_id": "unmapped_glyphs"
             }
           ],
-          "confidence_note": "Only 7 of 22 signals could be measured for this document, so this score rests on few signals. See the breakdown.",
+          "confidence_note": "Only 7 of 23 signals could be measured for this document, so this score rests on few signals. See the breakdown.",
           "label": "ready",
           "low_confidence": true,
           "method": "weighted_sum: each signal's rating scores good=1.0, fair=0.5, poor=0.0; weights renormalised across the 7 signals that produced a rating for this document, then expressed out of 100.",
           "signals_counted": 7,
-          "signals_excluded": 15,
+          "signals_excluded": 16,
           "value": 85.7
         },
         "signals": [
@@ -12339,6 +12406,19 @@
             "why": "Every table is another structure to teach a pipeline about."
           },
           {
+            "detail": {},
+            "display": "not applicable",
+            "id": "table_fidelity",
+            "name": "Table rows that survived",
+            "rating": null,
+            "reason": "no ruled table on this document could be checked against the extracted text",
+            "status": "not_applicable",
+            "unit": "% of rows",
+            "value": null,
+            "weight": 0.06,
+            "why": "A row split across lines no longer says which value belongs to which column."
+          },
+          {
             "detail": {
               "per_table": [
                 2
@@ -12453,6 +12533,7 @@
             "validators_passed": []
           }
         ],
+        "models_used": {},
         "pages_scanned": 1,
         "path": "/Users/duarte/Documents/Development/complydoc-playground/documents/supplier-list.docx",
         "reveal_blocked_categories": [],
@@ -12462,12 +12543,12 @@
           {
             "category": "person_name",
             "label": "Person name",
-            "reason": "named entity recognition needs the optional NER extra (install with: uv sync --extra ner)"
+            "reason": "names need the ner extra and the spaCy model 'en_core_web_sm'. With pip: pip install \"complydoc[ner]\" && python -m spacy download en_core_web_sm. With uv: uv tool install --force \"complydoc[ner]\" --with https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl. Keep any extras you already use in the brackets"
           },
           {
             "category": "organisation_name",
             "label": "Organisation name",
-            "reason": "named entity recognition needs the optional NER extra (install with: uv sync --extra ner)"
+            "reason": "names need the ner extra and the spaCy model 'en_core_web_sm'. With pip: pip install \"complydoc[ner]\" && python -m spacy download en_core_web_sm. With uv: uv tool install --force \"complydoc[ner]\" --with https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl. Keep any extras you already use in the brackets"
           }
         ]
       },
@@ -12475,9 +12556,9 @@
       "timing": {
         "analyse_seconds": 0.0,
         "read_seconds": 0.005,
-        "scan_seconds": 0.005,
-        "seconds_per_page": 0.01,
-        "total_seconds": 0.01
+        "scan_seconds": 0.006,
+        "seconds_per_page": 0.011,
+        "total_seconds": 0.011
       },
       "visibility_checked": true,
       "visibility_note": null
@@ -12492,7 +12573,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Opus 5",
             "imported_on": null,
             "input_per_mtok_usd": 5.0,
@@ -12524,7 +12605,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Sonnet 5",
             "imported_on": null,
             "input_per_mtok_usd": 2.0,
@@ -12556,7 +12637,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Haiku 4.5",
             "imported_on": null,
             "input_per_mtok_usd": 1.0,
@@ -12588,7 +12669,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "DeepSeek V4 Flash Vision Exp",
             "imported_on": null,
             "input_per_mtok_usd": 0.44,
@@ -12620,7 +12701,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "Gemini 3.1 Pro Preview",
             "imported_on": null,
             "input_per_mtok_usd": 2.0,
@@ -12652,7 +12733,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "Kimi K3",
             "imported_on": null,
             "input_per_mtok_usd": 3.0,
@@ -12684,7 +12765,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "GLM-5.3-Flash",
             "imported_on": null,
             "input_per_mtok_usd": 0.15,
@@ -13302,7 +13383,7 @@
           "mean_coverage_pct": 0.87,
           "reads_tables": true,
           "reordered": false,
-          "seconds": 0.0033,
+          "seconds": 0.0034,
           "similarity": 1.0
         }
       ],
@@ -13556,12 +13637,12 @@
               "signal_id": "text_layer_present"
             }
           ],
-          "confidence_note": null,
+          "confidence_note": "Only 11 of 23 signals could be measured for this document, so this score rests on few signals. See the breakdown.",
           "label": "ready",
-          "low_confidence": false,
+          "low_confidence": true,
           "method": "weighted_sum: each signal's rating scores good=1.0, fair=0.5, poor=0.0; weights renormalised across the 11 signals that produced a rating for this document, then expressed out of 100.",
           "signals_counted": 11,
-          "signals_excluded": 11,
+          "signals_excluded": 12,
           "value": 83.6
         },
         "signals": [
@@ -13830,6 +13911,19 @@
           {
             "detail": {},
             "display": "not applicable",
+            "id": "table_fidelity",
+            "name": "Table rows that survived",
+            "rating": null,
+            "reason": "no ruled table on this document could be checked against the extracted text",
+            "status": "not_applicable",
+            "unit": "% of rows",
+            "value": null,
+            "weight": 0.06,
+            "why": "A row split across lines no longer says which value belongs to which column."
+          },
+          {
+            "detail": {},
+            "display": "not applicable",
             "id": "table_max_header_depth",
             "name": "Deepest table header",
             "rating": null,
@@ -13918,6 +14012,7 @@
       },
       "sensitive": {
         "matches": [],
+        "models_used": {},
         "pages_scanned": 1,
         "path": "/Users/duarte/Documents/Development/complydoc-playground/documents/supplier-onboarding.pdf",
         "reveal_blocked_categories": [],
@@ -13927,22 +14022,22 @@
           {
             "category": "person_name",
             "label": "Person name",
-            "reason": "named entity recognition needs the optional NER extra (install with: uv sync --extra ner)"
+            "reason": "names need the ner extra and the spaCy model 'en_core_web_sm'. With pip: pip install \"complydoc[ner]\" && python -m spacy download en_core_web_sm. With uv: uv tool install --force \"complydoc[ner]\" --with https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl. Keep any extras you already use in the brackets"
           },
           {
             "category": "organisation_name",
             "label": "Organisation name",
-            "reason": "named entity recognition needs the optional NER extra (install with: uv sync --extra ner)"
+            "reason": "names need the ner extra and the spaCy model 'en_core_web_sm'. With pip: pip install \"complydoc[ner]\" && python -m spacy download en_core_web_sm. With uv: uv tool install --force \"complydoc[ner]\" --with https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl. Keep any extras you already use in the brackets"
           }
         ]
       },
       "sha256": "f23cf91c0935e6326988fb1995ceccba1da1d3b5818ee72a6f03022ec9e39ee2",
       "timing": {
         "analyse_seconds": 0.0,
-        "read_seconds": 0.007,
+        "read_seconds": 0.006,
         "scan_seconds": 0.002,
-        "seconds_per_page": 0.01,
-        "total_seconds": 0.01
+        "seconds_per_page": 0.009,
+        "total_seconds": 0.009
       },
       "visibility_checked": true,
       "visibility_note": null
@@ -13957,7 +14052,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Opus 5",
             "imported_on": null,
             "input_per_mtok_usd": 5.0,
@@ -13989,7 +14084,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Sonnet 5",
             "imported_on": null,
             "input_per_mtok_usd": 2.0,
@@ -14021,7 +14116,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Haiku 4.5",
             "imported_on": null,
             "input_per_mtok_usd": 1.0,
@@ -14053,7 +14148,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "DeepSeek V4 Flash Vision Exp",
             "imported_on": null,
             "input_per_mtok_usd": 0.44,
@@ -14085,7 +14180,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "Gemini 3.1 Pro Preview",
             "imported_on": null,
             "input_per_mtok_usd": 2.0,
@@ -14117,7 +14212,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "Kimi K3",
             "imported_on": null,
             "input_per_mtok_usd": 3.0,
@@ -14149,7 +14244,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "GLM-5.3-Flash",
             "imported_on": null,
             "input_per_mtok_usd": 0.15,
@@ -14767,7 +14862,7 @@
           "mean_coverage_pct": 4.48,
           "reads_tables": true,
           "reordered": false,
-          "seconds": 0.009,
+          "seconds": 0.0117,
           "similarity": 1.0
         }
       ],
@@ -15900,7 +15995,7 @@
           "low_confidence": false,
           "method": "weighted_sum: each signal's rating scores good=1.0, fair=0.5, poor=0.0; weights renormalised across the 15 signals that produced a rating for this document, then expressed out of 100.",
           "signals_counted": 15,
-          "signals_excluded": 7,
+          "signals_excluded": 8,
           "value": 83.1
         },
         "signals": [
@@ -16185,6 +16280,19 @@
           {
             "detail": {},
             "display": "not applicable",
+            "id": "table_fidelity",
+            "name": "Table rows that survived",
+            "rating": null,
+            "reason": "no ruled table on this document could be checked against the extracted text",
+            "status": "not_applicable",
+            "unit": "% of rows",
+            "value": null,
+            "weight": 0.06,
+            "why": "A row split across lines no longer says which value belongs to which column."
+          },
+          {
+            "detail": {},
+            "display": "not applicable",
             "id": "table_max_header_depth",
             "name": "Deepest table header",
             "rating": null,
@@ -16278,6 +16386,7 @@
       },
       "sensitive": {
         "matches": [],
+        "models_used": {},
         "pages_scanned": 1,
         "path": "/Users/duarte/Documents/Development/complydoc-playground/documents/terms-and-conditions.pdf",
         "reveal_blocked_categories": [],
@@ -16287,22 +16396,22 @@
           {
             "category": "person_name",
             "label": "Person name",
-            "reason": "named entity recognition needs the optional NER extra (install with: uv sync --extra ner)"
+            "reason": "names need the ner extra and the spaCy model 'en_core_web_sm'. With pip: pip install \"complydoc[ner]\" && python -m spacy download en_core_web_sm. With uv: uv tool install --force \"complydoc[ner]\" --with https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl. Keep any extras you already use in the brackets"
           },
           {
             "category": "organisation_name",
             "label": "Organisation name",
-            "reason": "named entity recognition needs the optional NER extra (install with: uv sync --extra ner)"
+            "reason": "names need the ner extra and the spaCy model 'en_core_web_sm'. With pip: pip install \"complydoc[ner]\" && python -m spacy download en_core_web_sm. With uv: uv tool install --force \"complydoc[ner]\" --with https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl. Keep any extras you already use in the brackets"
           }
         ]
       },
       "sha256": "e0f8ec10112b84f6221fbc5f9ac20e937d59ab2ab6929547ed9f1d36fac41bc8",
       "timing": {
         "analyse_seconds": 0.001,
-        "read_seconds": 0.014,
+        "read_seconds": 0.017,
         "scan_seconds": 0.006,
-        "seconds_per_page": 0.021,
-        "total_seconds": 0.021
+        "seconds_per_page": 0.025,
+        "total_seconds": 0.025
       },
       "visibility_checked": true,
       "visibility_note": null
@@ -16335,7 +16444,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Opus 5",
             "imported_on": null,
             "input_per_mtok_usd": 5.0,
@@ -16367,7 +16476,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Sonnet 5",
             "imported_on": null,
             "input_per_mtok_usd": 2.0,
@@ -16399,7 +16508,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 84,
+            "days_since_verified": 88,
             "display_name": "Claude Haiku 4.5",
             "imported_on": null,
             "input_per_mtok_usd": 1.0,
@@ -16431,7 +16540,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "DeepSeek V4 Flash Vision Exp",
             "imported_on": null,
             "input_per_mtok_usd": 0.44,
@@ -16463,7 +16572,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "Gemini 3.1 Pro Preview",
             "imported_on": null,
             "input_per_mtok_usd": 2.0,
@@ -16495,7 +16604,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "Kimi K3",
             "imported_on": null,
             "input_per_mtok_usd": 3.0,
@@ -16527,7 +16636,7 @@
             "batch_input_per_mtok_usd": null,
             "batch_text_path_input_usd": null,
             "batch_vision_input_usd_by_resolution": {},
-            "days_since_verified": 7,
+            "days_since_verified": 11,
             "display_name": "GLM-5.3-Flash",
             "imported_on": null,
             "input_per_mtok_usd": 0.15,
@@ -17145,7 +17254,7 @@
           "mean_coverage_pct": 6.45,
           "reads_tables": true,
           "reordered": false,
-          "seconds": 0.0074,
+          "seconds": 0.0076,
           "similarity": 1.0
         }
       ],
@@ -18007,7 +18116,7 @@
           "low_confidence": false,
           "method": "weighted_sum: each signal's rating scores good=1.0, fair=0.5, poor=0.0; weights renormalised across the 14 signals that produced a rating for this document, then expressed out of 100.",
           "signals_counted": 14,
-          "signals_excluded": 8,
+          "signals_excluded": 9,
           "value": 85.9
         },
         "signals": [
@@ -18289,6 +18398,19 @@
           {
             "detail": {},
             "display": "not applicable",
+            "id": "table_fidelity",
+            "name": "Table rows that survived",
+            "rating": null,
+            "reason": "no ruled table on this document could be checked against the extracted text",
+            "status": "not_applicable",
+            "unit": "% of rows",
+            "value": null,
+            "weight": 0.06,
+            "why": "A row split across lines no longer says which value belongs to which column."
+          },
+          {
+            "detail": {},
+            "display": "not applicable",
             "id": "table_max_header_depth",
             "name": "Deepest table header",
             "rating": null,
@@ -18382,6 +18504,7 @@
       },
       "sensitive": {
         "matches": [],
+        "models_used": {},
         "pages_scanned": 1,
         "path": "/Users/duarte/Documents/Development/complydoc-playground/documents/vendor-assessment.pdf",
         "reveal_blocked_categories": [],
@@ -18391,22 +18514,22 @@
           {
             "category": "person_name",
             "label": "Person name",
-            "reason": "named entity recognition needs the optional NER extra (install with: uv sync --extra ner)"
+            "reason": "names need the ner extra and the spaCy model 'en_core_web_sm'. With pip: pip install \"complydoc[ner]\" && python -m spacy download en_core_web_sm. With uv: uv tool install --force \"complydoc[ner]\" --with https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl. Keep any extras you already use in the brackets"
           },
           {
             "category": "organisation_name",
             "label": "Organisation name",
-            "reason": "named entity recognition needs the optional NER extra (install with: uv sync --extra ner)"
+            "reason": "names need the ner extra and the spaCy model 'en_core_web_sm'. With pip: pip install \"complydoc[ner]\" && python -m spacy download en_core_web_sm. With uv: uv tool install --force \"complydoc[ner]\" --with https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl. Keep any extras you already use in the brackets"
           }
         ]
       },
       "sha256": "4b5ddf80fce77f0d2fcca8e1527d2bb29a882ab58b040fa5f3a97359e718be15",
       "timing": {
         "analyse_seconds": 0.001,
-        "read_seconds": 0.01,
-        "scan_seconds": 0.005,
-        "seconds_per_page": 0.017,
-        "total_seconds": 0.017
+        "read_seconds": 0.011,
+        "scan_seconds": 0.007,
+        "seconds_per_page": 0.018,
+        "total_seconds": 0.018
       },
       "visibility_checked": true,
       "visibility_note": null
@@ -18425,7 +18548,7 @@
       "affected": [],
       "area": "Hidden content",
       "severity": "info",
-      "statement": "Hidden-text checks cover the text layer of PDFs and the markup of Word, Excel, PowerPoint, HTML, Markdown and email files. In HTML and Markdown, hidden passages are reported only when they read as instructions. Text inside images, which a vision model reads, is not checked. Instruction patterns are mostly English."
+      "statement": "Hidden-text checks cover the text layer of PDFs and the markup of Word, Excel, PowerPoint, HTML, Markdown and email files. In HTML and Markdown, hidden passages are reported only when they read as instructions. Text inside images, which a vision model reads, is not checked. Instruction patterns cover English and six other European languages; wording outside those is found only by a classifier."
     },
     {
       "affected": [
@@ -18449,7 +18572,7 @@
         "Mistral Small 4"
       ],
       "area": "Price provenance",
-      "severity": "important",
+      "severity": "info",
       "statement": "18 models are priced from a maintained third-party table taken on 2026-09-09. Those prices have not been checked against the provider's own page."
     },
     {
@@ -18471,20 +18594,7 @@
       ],
       "area": "Categories not scanned",
       "severity": "important",
-      "statement": "Organisation name was not scanned for at all, because named entity recognition needs the optional NER extra (install with: uv sync --extra ner). No conclusion about this category can be drawn from this report."
-    },
-    {
-      "affected": [
-        "employee-record.pdf",
-        "financial-summary.pdf",
-        "supplier-list.docx",
-        "supplier-onboarding.pdf",
-        "terms-and-conditions.pdf",
-        "vendor-assessment.pdf"
-      ],
-      "area": "Categories not scanned",
-      "severity": "important",
-      "statement": "Person name was not scanned for at all, because named entity recognition needs the optional NER extra (install with: uv sync --extra ner). No conclusion about this category can be drawn from this report."
+      "statement": "Organisation name and Person name were not scanned for at all, because names need the ner extra and the spaCy model 'en_core_web_sm'. With pip: pip install \"complydoc[ner]\" && python -m spacy download en_core_web_sm. With uv: uv tool install --force \"complydoc[ner]\" --with https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl. Keep any extras you already use in the brackets. No conclusion about these categories can be drawn from this report."
     },
     {
       "affected": [
@@ -18739,7 +18849,7 @@
     },
     "by_document": {
       "employee-record.pdf": 68.0,
-      "financial-summary.pdf": 83.5,
+      "financial-summary.pdf": 84.8,
       "invoice-scan.pdf": 48.5,
       "supplier-list.docx": 91.8,
       "supplier-onboarding.pdf": 91.8,
@@ -18750,7 +18860,7 @@
       {
         "key": "content",
         "name": "Content",
-        "score": 76.9,
+        "score": 77.2,
         "weight": 0.5,
         "why": "Whether the text can be got off the page at all."
       },
@@ -18770,7 +18880,7 @@
       }
     ],
     "label": "ready",
-    "score": 81.2,
+    "score": 81.3,
     "scored_documents": 7,
     "total_documents": 7
   },
@@ -18832,6 +18942,9 @@
     "vision_usd": 0.022400000000000003
   },
   "run": {
+    "classifier_calls": 0,
+    "classifier_failures": 0,
+    "classifier_missed_workers": 0,
     "compare_engines": [],
     "compare_extractors": [],
     "components_run": [
@@ -18839,13 +18952,14 @@
       "readiness",
       "sensitive"
     ],
-    "config_digest": "5aa6264e3f5b194a",
+    "config_digest": "62304ccdd0ffadc9",
     "config_dir": "/Users/duarte/Documents/Development/complydoc-playground/.venv/lib/python3.13/site-packages/complydoc/config",
+    "content_sent_to": [],
     "documents_read_after_worker_failure": 0,
-    "duration_seconds": 0.928,
+    "duration_seconds": 1.638,
     "extracted_text_used": false,
     "extractor": "pdfplumber",
-    "finished_at": "2026-09-16T12:15:29+01:00",
+    "finished_at": "2026-09-20T21:17:25+01:00",
     "jobs": 1,
     "monthly_volume": null,
     "ner_available": false,
@@ -18859,11 +18973,11 @@
     "reveal_used": false,
     "sample_size": null,
     "sampled_from": null,
-    "schema_version": 10,
-    "started_at": "2026-09-16T12:15:29+01:00",
+    "schema_version": 13,
+    "started_at": "2026-09-20T21:17:23+01:00",
     "target": "/Users/duarte/Documents/Development/complydoc-playground/documents",
     "timeout_seconds": null,
-    "tool_version": "0.4.6"
+    "tool_version": "0.4.11"
   },
   "signal_weights": {
     "acroform_fields": 0.02,
@@ -18883,6 +18997,7 @@
     "scan_dpi": 0.05,
     "skew_angle": 0.04,
     "table_count": 0.04,
+    "table_fidelity": 0.06,
     "table_max_header_depth": 0.06,
     "table_merged_cells": 0.06,
     "text_layer_coverage_pct": 0.1,

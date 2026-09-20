@@ -18,6 +18,10 @@ This installs complydoc with pandas, LangChain's PDF loaders (`pypdf`, `pdfplumb
 LangChain text splitters and pytest. OCR and name detection are left out, so the examples
 run with `--no-ocr` and report that names were not scanned.
 
+Reports mask every identifier they find, in the page text as well as the findings, and draw
+each page as a wireframe rather than a picture. `--reveal` and `--page-images` change that,
+and both say so when they do.
+
 ## Command line
 
 | Script | What it runs |
@@ -46,6 +50,19 @@ run with `--no-ocr` and report that names were not scanned.
 
 `make python` runs all nine from the repository root.
 
+## Policy
+
+`policy.yaml` is the same checks written as rules, for `complydoc check`:
+
+```bash
+uv run complydoc check documents --policy policy.yaml --no-ocr
+```
+
+It fails on purpose. These samples are built to be found: the vendor assessment hides an
+instruction to a model in white text, and the employee record is a full set of identifiers.
+A folder that passed would show nothing worth reading. Names are reported as not scanned
+rather than failing, because this playground installs no name model.
+
 ## Tests and CI
 
 `tests/test_documents.py` uses `cd.expect` to check the documents: nothing regressed
@@ -53,7 +70,13 @@ against the baseline, the terms hold no high-severity identifiers, the hidden in
 the vendor assessment is caught, and the loader made no network connection. `make test`
 runs it.
 
-`.github/workflows/documents.yml` audits the folder on every push, runs `complydoc diff`
-against the baseline (failing on a regression), runs the tests and uploads the reports.
+`.github/workflows/documents.yml` gates the repository two ways, one job each:
+
+- **policy**: the [complydoc action](https://complydoc.github.io/complydoc/guides/github-action/)
+  runs `check` against `policy.yaml`, writes the result to the job summary and keeps one
+  comment on the pull request up to date. It is set to `fail: false`, so the deliberate
+  failures above do not turn the run red; drop that where a failure should stop a merge.
+- **baseline**: audits the folder, runs `complydoc diff` against the committed baseline
+  (failing on a regression), runs the tests and uploads the reports.
 
 After changing the documents on purpose, `make baseline` rewrites `baseline/report.json`.

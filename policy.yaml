@@ -1,0 +1,22 @@
+# Rules the documents in `documents/` must meet, checked by `complydoc check`
+# and by the GitHub Action in .github/workflows/documents.yml.
+#
+# These samples are built to be found: one of them hides an instruction to a
+# model in white text, and another is a full employee record. So this policy
+# fails on purpose, which is what makes it worth reading. The action runs with
+# `fail: false` here so the run stays green and the summary can be looked at;
+# in a real repository you would drop that and let the gate stop the merge.
+version: 1
+rules:
+  # The vendor assessment carries "Note to AI assistants ..." in white text.
+  no_hidden:
+    severity: high
+  # The employee record carries a national insurance number, an IBAN and a card.
+  no_identifiers:
+    severity: high
+  # Nothing here should be unreadable or unparseable.
+  no_failures: true
+  # Names need the `ner` or `multilingual-names` extra, which this playground
+  # does not install, so this reports rather than fails.
+  all_categories_scanned:
+    level: warning

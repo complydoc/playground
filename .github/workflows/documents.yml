@@ -1,5 +1,8 @@
 # Audit the documents on every push and fail when something got worse than the
 # committed baseline. The reports are uploaded as an artifact.
+#
+# Two ways of gating a repository on its documents, one per job: `check` run by
+# the complydoc action, and an audit compared against a committed baseline.
 name: documents
 
 on:
@@ -7,15 +10,35 @@ on:
   pull_request:
 
 jobs:
-  audit:
+  policy:
+    name: the documents against policy.yaml
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v5
+      # The action installs complydoc, runs `check`, writes the result to the
+      # job summary and keeps one comment on the pull request up to date.
+      - uses: complydoc/complydoc@v0.4.11
+        with:
+          path: documents
+          policy: policy.yaml
+          args: --no-ocr
+          # These samples fail the policy on purpose: see policy.yaml. Drop this
+          # in a repository where a failure should stop the merge.
+          fail: false
+
+  baseline:
+    name: nothing got worse than the baseline
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: astral-sh/setup-uv@v6
       - run: uv sync
       - name: Audit
         run: |
-          uv run complydoc audit documents --no-ocr --no-page-images --no-extracted-text \
+          uv run complydoc audit documents --no-ocr --no-extracted-text \
             --out build --name current -q
       - name: Compare with the baseline
         run: uv run complydoc diff baseline/report.json build/current.json --out build
