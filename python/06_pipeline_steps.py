@@ -5,8 +5,8 @@ from langchain_community.document_loaders import PyPDFLoader
 
 import complydoc as cd
 
-documents = PyPDFLoader("documents/vendor-assessment.pdf").load()
-documents += PyPDFLoader("documents/employee-record.pdf").load()
+documents = PyPDFLoader("documents/company/vendor-due-diligence.pdf").load()
+documents += PyPDFLoader("documents/company/employee-handbook.pdf").load()
 
 steps = [cd.StripPathMetadata(), cd.DropHiddenPassages(), cd.MaskIdentifiers()]
 for step in steps:

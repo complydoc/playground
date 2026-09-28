@@ -20,18 +20,18 @@ def test_no_regressions_against_the_baseline(report):
     cd.expect(report).no_regressions("baseline/report.json")
 
 
-def test_the_terms_hold_no_high_severity_identifiers():
-    terms = cd.security_audit("documents/terms-and-conditions.pdf", ocr=False)
-    cd.expect(terms).no_identifiers(severity="high").no_hidden(severity="high")
+def test_the_annual_report_holds_no_high_severity_identifiers():
+    annual = cd.security_audit("documents/company/annual-report-2025.pdf", ocr=False)
+    cd.expect(annual).no_identifiers(severity="high").no_hidden(severity="high")
 
 
-def test_the_hidden_instruction_in_the_vendor_assessment_is_caught():
-    vendor = cd.security_audit("documents/vendor-assessment.pdf", ocr=False)
+def test_the_hidden_instruction_in_the_questionnaire_is_caught():
+    vendor = cd.security_audit("documents/company/vendor-due-diligence.pdf", ocr=False)
     with pytest.raises(cd.ExpectationError):
         cd.expect(vendor).no_hidden(severity="high")
 
 
 def test_the_loader_keeps_the_key_fact_and_stays_offline():
-    report = cd.inspect_documents(PyPDFLoader("documents/vendor-assessment.pdf"))
-    cd.check_facts(report, ["Two administrator accounts have no multi-factor authentication"])
+    report = cd.inspect_documents(PyPDFLoader("documents/company/vendor-due-diligence.pdf"))
+    cd.check_facts(report, ["Evidence may be requested for any answer during the on-site review."])
     cd.expect(report).no_network()

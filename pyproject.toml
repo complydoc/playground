@@ -1,11 +1,12 @@
 [project]
 name = "complydoc-playground"
 version = "0.0.0"
-description = "Examples of complydoc from the command line and from Python."
+description = "Examples of complydoc from the command line and from Python, on LangChain pipelines."
 requires-python = ">=3.11"
 dependencies = [
-    "complydoc[notebook]>=0.4.11",
+    "complydoc[notebook]>=0.6.1",
     "langchain-community>=0.3",
+    "langchain-pymupdf4llm>=0.4",
     "langchain-text-splitters>=0.3",
     "pdfplumber>=0.11",
     "pypdf>=5",

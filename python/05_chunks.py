@@ -1,4 +1,7 @@
-"""Compare chunk sizes on the folder's text with a LangChain splitter."""
+"""Compare chunk sizes on the folder's text with a LangChain splitter.
+
+For the chunks drawn over each document in `complydoc ui`, run cli/3-chunks.sh.
+"""
 
 from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -17,7 +20,7 @@ comparison = cd.compare_chunkers(
         "1200": RecursiveCharacterTextSplitter(chunk_size=1200, chunk_overlap=100),
     },
     documents,
-    facts=["Two administrator accounts have no multi-factor authentication"],
+    facts=["Evidence may be requested for any answer during the on-site review."],
     max_tokens=400,
 )
 
@@ -28,5 +31,3 @@ for chunk in small.chunks:
     if "split_sentence" in chunk.flags:
         print(chunk.document, chunk.page, chunk.preview[:70])
         break
-
-cd.write_chunks_html(comparison, "out/python-chunks.html", source="documents")

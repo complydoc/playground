@@ -4,7 +4,7 @@ from langchain_community.document_loaders import PyPDFLoader
 
 import complydoc as cd
 
-report = cd.inspect_documents(PyPDFLoader("documents/employee-record.pdf"))
+report = cd.inspect_documents(PyPDFLoader("documents/company/employee-handbook.pdf"))
 
 loader = report.loader
 print(f"{loader.name}: {loader.documents_returned} documents")

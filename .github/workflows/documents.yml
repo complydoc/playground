@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v5
       # The action installs complydoc, runs `check`, writes the result to the
       # job summary and keeps one comment on the pull request up to date.
-      - uses: complydoc/complydoc@v0.4.11
+      - uses: complydoc/complydoc@v0.6.1
         with:
           path: documents
           policy: policy.yaml

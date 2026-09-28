@@ -47,6 +47,6 @@ config = cd.load_config().override(
 
 print([m.label for m in cd.scan_text("Badge EMP-004211 issued.", config=config).matches])
 
-report = cd.readiness_audit("documents/employee-record.pdf", config=config)
+report = cd.readiness_audit("documents/company/employee-handbook.pdf", config=config)
 signal = next(s for s in report.documents[0].readiness.signals if s.id == "uppercase_share")
 print(signal.name, signal.display, signal.rating)
