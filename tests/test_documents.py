@@ -8,7 +8,9 @@ import complydoc as cd
 
 @pytest.fixture(scope="module")
 def report():
-    return cd.full_audit("documents", ocr=False, extracted_text=False, page_images=False)
+    return cd.full_audit(
+        "documents", ocr=False, extracted_text=False, page_images=False
+    )
 
 
 def test_every_file_was_read(report):
@@ -32,6 +34,10 @@ def test_the_hidden_instruction_in_the_questionnaire_is_caught():
 
 
 def test_the_loader_keeps_the_key_fact_and_stays_offline():
-    report = cd.inspect_documents(PyPDFLoader("documents/company/vendor-due-diligence.pdf"))
-    cd.check_facts(report, ["Evidence may be requested for any answer during the on-site review."])
+    report = cd.inspect_documents(
+        PyPDFLoader("documents/company/vendor-due-diligence.pdf")
+    )
+    cd.check_facts(
+        report, ["Evidence may be requested for any answer during the on-site review."]
+    )
     cd.expect(report).no_network()

@@ -32,22 +32,26 @@ make start
 make ui
 ```
 
-`pipeline.py` is a LangChain ingestion pipeline inside `cd.observe`: the company
-documents loaded with `PyMuPDF4LLMLoader`, the invoices with `PyPDFLoader`, then cleaned,
-split and embedded. `make start` runs it twice, as written and with `--mask`, and compares two
-LangChain PDF loaders on the same files. `make ui` opens the runs in your browser:
+`make start` runs two LangChain PDF loaders, `PyPDFLoader` and `PyMuPDF4LLMLoader`, over
+the same files (`python/04_compare_loaders.py`), and five LangChain text splitters over
+the text (`complydoc chunks --preset common`). `make ui` opens them in your browser:
 
-- **Trace**: each LangChain call as a step, with its time, tokens, cost, and the
-  identifiers it passed on. Runs, with both ticked, shows what masking changed.
-- **Documents**: which loader to use for PDFs, and a document's Diff, `PyPDFLoader`
-  against `PyMuPDF4LLMLoader`, line by line.
+- **Documents**: the loaders side by side, and the files they read differently. Open one
+  for its Diff, the two readings line by line, or pick a splitter to see its chunks drawn
+  over the text.
+- **Chunks**: the splitters side by side, and where their cuts fall.
 
+`make trace` runs `pipeline.py`, a LangChain ingestion pipeline inside `cd.observe`: the
+company documents loaded with `PyMuPDF4LLMLoader`, the invoices with `PyPDFLoader`, then
+cleaned, split and embedded. It runs twice, as written and with `--mask`, and the Trace
+shows every LangChain call with its time, tokens, cost and the identifiers it passed on.
 The embedding model in `embeddings.py` is a local stand-in named as OpenAI's, so nothing
 leaves the machine and nothing is charged. With `OPENAI_API_KEY` set and `langchain-openai`
 installed, the pipeline calls OpenAI's.
 
 Reports mask every identifier they find, in the page text as well as the findings.
-`--reveal` changes that, and says so when it does.
+`--reveal` (`reveal=True` in Python) keeps the values too, and says so when it does; the
+loader comparison uses it, so the viewer can unmask these synthetic documents.
 
 ## Command line
 

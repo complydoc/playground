@@ -7,7 +7,11 @@ report = cd.full_audit("documents", ocr=False)
 print(f"global readiness: {report.overall.score:.0f} ({report.overall.label})")
 for document in report.documents:
     identifiers = document.sensitive.total if document.sensitive else 0
-    score = document.readiness.score.value if document.readiness and document.readiness.score else None
+    score = (
+        document.readiness.score.value
+        if document.readiness and document.readiness.score
+        else None
+    )
     print(
         f"{document.relative_path:<32} readiness {score if score is not None else '-':>5}  "
         f"identifiers {identifiers:>3}  hidden passages {len(document.content_findings)}"

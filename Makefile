@@ -1,13 +1,16 @@
-.PHONY: setup start ui cli python test baseline all
+.PHONY: setup start trace ui cli python test baseline all
 
 setup: ## Install complydoc and the LangChain packages the examples use
 	uv sync
 
-start: ## The pipeline, observed twice, and two LangChain loaders compared: then `make ui`
+start: ## Two LangChain loaders compared and five LangChain splitters on their text: then `make ui`
 	rm -rf .complydoc
+	uv run python python/04_compare_loaders.py > /dev/null
+	uv run complydoc chunks documents --extractor pypdf --no-ocr --preset common --name chunks -q
+
+trace: ## The pipeline, observed twice: as written and with masking
 	uv run python pipeline.py
 	uv run python pipeline.py --mask
-	uv run python python/04_compare_loaders.py > /dev/null
 
 ui: ## Open every run in .complydoc in the browser
 	uv run complydoc ui

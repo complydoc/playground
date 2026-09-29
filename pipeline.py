@@ -13,15 +13,16 @@ import sys
 import warnings
 from pathlib import Path
 
-# langchain-community prints a notice that it is being sunset; PyPDFLoader still lives there.
-warnings.filterwarnings("ignore", category=DeprecationWarning)
-
-from embeddings import OpenAIEmbeddings
+import complydoc as cd
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_pymupdf4llm import PyMuPDF4LLMLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-import complydoc as cd
+from embeddings import OpenAIEmbeddings
+
+# langchain-community prints a notice that it is being sunset; PyPDFLoader still lives there.
+warnings.filterwarnings("ignore", category=DeprecationWarning)
+
 
 with cd.observe("documents-ingest") as run:
     documents = []

@@ -9,7 +9,9 @@ class EmployeeIdDetector:
     id = "employee_id"
 
     def find(self, text, context):
-        return [cd.Finding(m.start(), m.end()) for m in re.finditer(r"\bEMP-\d{6}\b", text)]
+        return [
+            cd.Finding(m.start(), m.end()) for m in re.finditer(r"\bEMP-\d{6}\b", text)
+        ]
 
 
 class UppercaseSignal:
@@ -45,8 +47,12 @@ config = cd.load_config().override(
     }
 )
 
-print([m.label for m in cd.scan_text("Badge EMP-004211 issued.", config=config).matches])
+print(
+    [m.label for m in cd.scan_text("Badge EMP-004211 issued.", config=config).matches]
+)
 
 report = cd.readiness_audit("documents/company/employee-handbook.pdf", config=config)
-signal = next(s for s in report.documents[0].readiness.signals if s.id == "uppercase_share")
+signal = next(
+    s for s in report.documents[0].readiness.signals if s.id == "uppercase_share"
+)
 print(signal.name, signal.display, signal.rating)

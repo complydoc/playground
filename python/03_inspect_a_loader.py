@@ -12,7 +12,9 @@ print(f"network attempts: {loader.network_attempts or 'none'}")
 print(f"metadata keys: {', '.join(loader.metadata_keys)}")
 
 for document in report.documents:
-    print(document.relative_path, len(document.sensitive.matches), "identifiers in text")
+    print(
+        document.relative_path, len(document.sensitive.matches), "identifiers in text"
+    )
     for finding in document.metadata_findings:
         print(f"  metadata {finding.key}: {finding.label} {finding.masked}")
     if document.path_exposures:
