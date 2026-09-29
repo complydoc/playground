@@ -14,7 +14,7 @@ def report():
 
 
 def test_every_file_was_read(report):
-    # all_categories_scanned() would fail here: names need the optional `ner` extra.
+    # all_categories_scanned() fails where the name model has not been downloaded.
     cd.expect(report).no_failures()
 
 

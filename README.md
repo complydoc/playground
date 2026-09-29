@@ -21,9 +21,10 @@ make setup
 ```
 
 This installs complydoc with pandas, LangChain's PDF loaders (`PyPDFLoader`,
-`PyMuPDF4LLMLoader`, `PDFPlumberLoader`), LangChain text splitters and pytest. OCR and name
-detection are left out, so the examples run with `--no-ocr` and report that names were not
-scanned.
+`PyMuPDF4LLMLoader`, `OpenDataLoaderPDFLoader`, which needs Java, and `DoclingLoader`,
+which brings PyTorch and downloads its models on first use), LangChain text splitters and
+pytest. PyTorch also lets complydoc find names. complydoc's own OCR is left out, so the
+examples run with `--no-ocr`.
 
 ## Start here
 
@@ -32,13 +33,14 @@ make start
 make ui
 ```
 
-`make start` runs two LangChain PDF loaders, `PyPDFLoader` and `PyMuPDF4LLMLoader`, over
-the same files (`python/04_compare_loaders.py`), and five LangChain text splitters over
-the text (`complydoc chunks --preset common`). `make ui` opens them in your browser:
+`make start` runs `experiment.py`: four LangChain PDF loaders (`PyPDFLoader`,
+`PyMuPDF4LLMLoader`, `OpenDataLoaderPDFLoader` and `DoclingLoader`, set up in
+`loaders.py`) over the same files. Then five LangChain text splitters cut the text
+(`complydoc chunks --preset common`). `make ui` opens them in your browser:
 
 - **Documents**: the loaders side by side, and the files they read differently. Open one
-  for its Diff, the two readings line by line, or pick a splitter to see its chunks drawn
-  over the text.
+  for its Diff against any other loader, line by line, or pick a splitter to see its
+  chunks drawn over the text.
 - **Chunks**: the splitters side by side, and where their cuts fall.
 
 `make trace` runs `pipeline.py`, a LangChain ingestion pipeline inside `cd.observe`: the
@@ -46,8 +48,8 @@ company documents loaded with `PyMuPDF4LLMLoader`, the invoices with `PyPDFLoade
 cleaned, split and embedded. It runs twice, as written and with `--mask`, and the Trace
 shows every LangChain call with its time, tokens, cost and the identifiers it passed on.
 The embedding model in `embeddings.py` is a local stand-in named as OpenAI's, so nothing
-leaves the machine and nothing is charged. With `OPENAI_API_KEY` set and `langchain-openai`
-installed, the pipeline calls OpenAI's.
+leaves the machine and nothing is charged; import `OpenAIEmbeddings` from
+`langchain_openai` instead to call OpenAI's.
 
 Reports mask every identifier they find, in the page text as well as the findings.
 `--reveal` (`reveal=True` in Python) keeps the values too, and says so when it does; the
@@ -74,14 +76,14 @@ diff and routing outputs, which are for other tools, go to `out/`.
 | `python/01_audit_a_folder.py` | `full_audit`, `write_json` |
 | `python/02_strings.py` | `scan_text`, `mask_text`, `find_hidden`, `count_tokens` |
 | `python/03_inspect_a_loader.py` | `inspect_documents` on a LangChain loader |
-| `python/04_compare_loaders.py` | `compare_loaders` over files, with a fact and a loader cache |
+| `experiment.py` | `compare_loaders`: four LangChain PDF loaders over the same files |
 | `python/05_chunks.py` | `extract_text`, `compare_chunkers` |
 | `python/06_pipeline_steps.py` | `StripPathMetadata`, `DropHiddenPassages`, `MaskIdentifiers` on LangChain documents |
 | `python/07_baseline_and_diff.py` | `load_report`, `diff_reports` |
 | `python/08_extend.py` | `register_detector`, `register_signal`, `Config.override` |
 | `python/09_report_tables.py` | `report.to_pandas`, `iter_audit` |
 
-`make python` runs the nine in `python/` from the repository root.
+`make python` runs the eight in `python/` from the repository root.
 
 ## Policy
 
@@ -94,8 +96,7 @@ uv run complydoc check documents --policy policy.yaml --no-ocr
 It fails on purpose. These samples are built to be found: the questionnaire and the CV
 hide instructions to a model in white text, and the invoices, the questionnaire and the
 email carry bank details and a card. A folder that passed would show nothing worth reading.
-Names are reported as not scanned rather than failing, because this playground installs no
-name model.
+Names are found with the multilingual model complydoc runs on PyTorch.
 
 ## Tests and CI
 

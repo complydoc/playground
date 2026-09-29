@@ -3,9 +3,9 @@
 setup: ## Install complydoc and the LangChain packages the examples use
 	uv sync
 
-start: ## Two LangChain loaders compared and five LangChain splitters on their text: then `make ui`
+start: ## Four LangChain loaders compared and five LangChain splitters: then `make ui`
 	rm -rf .complydoc
-	uv run python python/04_compare_loaders.py > /dev/null
+	uv run python experiment.py
 	uv run complydoc chunks documents --extractor pypdf --no-ocr --preset common --name chunks -q
 
 trace: ## The pipeline, observed twice: as written and with masking

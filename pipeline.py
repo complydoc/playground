@@ -1,16 +1,15 @@
 """A LangChain ingestion pipeline, observed by complydoc.
 
-    uv run python pipeline.py            # as written: identifiers reach the embedding model
-    uv run python pipeline.py --mask     # with masking added before the split
-    uv run complydoc ui                  # the traces, side by side
+    uv run python pipeline.py          # as written: identifiers reach the model
+    uv run python pipeline.py --mask   # with masking added before the split
+    uv run complydoc ui                # the traces, side by side
 
-Two sources, each with the LangChain loader that suits it, one splitter and one embedding
-model. Every LangChain call inside the block becomes a step of the trace, with its time,
-tokens, cost and the identifiers it passed on.
+Two sources, each with the LangChain loader that suits it, one splitter and one
+embedding model. Every LangChain call inside the block becomes a step of the trace,
+with its time, tokens, cost and the identifiers it passed on.
 """
 
 import sys
-import warnings
 from pathlib import Path
 
 import complydoc as cd
@@ -19,10 +18,6 @@ from langchain_pymupdf4llm import PyMuPDF4LLMLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 from embeddings import OpenAIEmbeddings
-
-# langchain-community prints a notice that it is being sunset; PyPDFLoader still lives there.
-warnings.filterwarnings("ignore", category=DeprecationWarning)
-
 
 with cd.observe("documents-ingest") as run:
     documents = []

@@ -16,7 +16,7 @@ rules:
     severity: high
   # Nothing here should be unreadable or unparseable.
   no_failures: true
-  # Names need the `ner` or `multilingual-names` extra, which this playground
-  # does not install, so this reports rather than fails.
+  # Names need a name model: the multilingual one runs on the PyTorch that
+  # Docling brings, once it is downloaded. Without it this reports, not fails.
   all_categories_scanned:
     level: warning

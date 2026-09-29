@@ -4,7 +4,8 @@ import complydoc as cd
 
 report = cd.full_audit("documents", ocr=False)
 
-print(f"global readiness: {report.overall.score:.0f} ({report.overall.label})")
+if report.overall is not None:
+    print(f"global readiness: {report.overall.score:.0f} ({report.overall.label})")
 for document in report.documents:
     identifiers = document.sensitive.total if document.sensitive else 0
     score = (

@@ -17,9 +17,9 @@ class EmployeeIdDetector:
 class UppercaseSignal:
     id = "uppercase_share"
     name = "Uppercase words"
-    unit = "% of words"
+    unit: str | None = "% of words"
     why = "Text in capitals is often a heading or a label."
-    applies_to = frozenset(cd.DocumentFormat)
+    applies_to: frozenset[cd.DocumentFormat] = frozenset(cd.DocumentFormat)
 
     def measure(self, document):
         words = document.full_text.split()
@@ -52,7 +52,7 @@ print(
 )
 
 report = cd.readiness_audit("documents/company/employee-handbook.pdf", config=config)
-signal = next(
-    s for s in report.documents[0].readiness.signals if s.id == "uppercase_share"
-)
+readiness = report.documents[0].readiness
+assert readiness is not None, "readiness_audit measures readiness"
+signal = next(s for s in readiness.signals if s.id == "uppercase_share")
 print(signal.name, signal.display, signal.rating)

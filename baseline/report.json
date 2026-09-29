@@ -1,12 +1,9 @@
 {
   "aggregate": {
-    "analyse_seconds": 0.122,
+    "analyse_seconds": 0.121,
     "annual_text_usd": null,
     "annual_vision_usd": null,
-    "categories_not_scanned": {
-      "organisation_name": "names need the ner extra and the spaCy model 'en_core_web_sm'. With pip: pip install \"complydoc[ner]\" && python -m spacy download en_core_web_sm. With uv: uv tool install --force \"complydoc[ner]\" --with https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl. Keep any extras you already use in the brackets",
-      "person_name": "names need the ner extra and the spaCy model 'en_core_web_sm'. With pip: pip install \"complydoc[ner]\" && python -m spacy download en_core_web_sm. With uv: uv tool install --force \"complydoc[ner]\" --with https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl. Keep any extras you already use in the brackets"
-    },
+    "categories_not_scanned": {},
     "content_findings_high": 1,
     "content_findings_total": 2,
     "content_matrix": {
@@ -22,13 +19,13 @@
     "documents_skipped": 0,
     "documents_visibility_unchecked": 0,
     "documents_with_content_findings": 2,
-    "documents_with_sensitive_data": 6,
+    "documents_with_sensitive_data": 7,
     "formats": {
       "docx": 1,
       "email": 1,
       "pdf": 6
     },
-    "hours_per_1000_documents": 0.1,
+    "hours_per_1000_documents": 0.33,
     "ignored_total": 0,
     "mean_readiness_score": 86.7,
     "monthly_text_usd": null,
@@ -39,19 +36,19 @@
     "pages_total": 35,
     "pages_unreadable": 3,
     "projected_seconds": {
-      "100": 35.1,
-      "1000": 350.9,
-      "10000": 3508.8,
-      "100000": 35087.5
+      "100": 117.6,
+      "1000": 1176.0,
+      "10000": 11760.0,
+      "100000": 117600.0
     },
-    "read_seconds": 1.859,
+    "read_seconds": 1.844,
     "readiness_bands": {
       "needs work": 1,
       "ready": 7
     },
-    "scan_seconds": 0.825,
-    "seconds_per_document": 0.351,
-    "seconds_per_page": 0.08,
+    "scan_seconds": 7.444,
+    "seconds_per_document": 1.176,
+    "seconds_per_page": 0.269,
     "sensitive_by_category": {
       "bank_account_number": 2,
       "card_number": 2,
@@ -59,6 +56,8 @@
       "email_address": 15,
       "iban": 3,
       "ni_number": 5,
+      "organisation_name": 18,
+      "person_name": 20,
       "phone_number": 14,
       "sort_code": 2,
       "street_address": 1,
@@ -66,9 +65,10 @@
     },
     "sensitive_by_severity": {
       "high": 17,
-      "medium": 32
+      "low": 18,
+      "medium": 52
     },
-    "sensitive_total": 49,
+    "sensitive_total": 87,
     "signal_distribution": {
       "acroform_fields": {
         "error": 0,
@@ -232,7 +232,7 @@
         "poor": 0
       }
     },
-    "total_seconds": 2.807,
+    "total_seconds": 9.408,
     "total_text_path_usd": 0.0018243,
     "total_vision_path_usd": 0.003723
   },
@@ -1609,7 +1609,7 @@
           "mean_coverage_pct": 30.14,
           "reads_tables": true,
           "reordered": false,
-          "seconds": 0.321,
+          "seconds": 0.323,
           "similarity": 1.0
         }
       ],
@@ -2300,34 +2300,59 @@
         ]
       },
       "sensitive": {
-        "matches": [],
-        "models_used": {},
+        "matches": [
+          {
+            "category": "organisation_name",
+            "column": 0,
+            "confidence": 0.985625147819519,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-e5927d3c6db8cf08",
+            "label": "Organisation name",
+            "length": 21,
+            "line": 1,
+            "masked": "••••••• ••••••••s Ltd",
+            "page": 1,
+            "revealed": null,
+            "severity": "low",
+            "validators_passed": []
+          },
+          {
+            "category": "person_name",
+            "column": 10,
+            "confidence": 0.9997694492340088,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-51841514ac06a9aa",
+            "label": "Person name",
+            "length": 16,
+            "line": 45,
+            "masked": "•••••••• •••ison",
+            "page": 1,
+            "revealed": null,
+            "severity": "medium",
+            "validators_passed": []
+          }
+        ],
+        "models_used": {
+          "organisation_name": "token_classifier: Babelscape/wikineural-multilingual-ner",
+          "person_name": "token_classifier: Babelscape/wikineural-multilingual-ner"
+        },
         "pages_scanned": 8,
         "path": "/Users/duarte/Documents/Development/playground/documents/company/annual-report-2025.pdf",
         "reveal_blocked_categories": [],
         "reveal_used": false,
         "unreadable_pages": [],
-        "unscanned_categories": [
-          {
-            "category": "person_name",
-            "label": "Person name",
-            "reason": "names need the ner extra and the spaCy model 'en_core_web_sm'. With pip: pip install \"complydoc[ner]\" && python -m spacy download en_core_web_sm. With uv: uv tool install --force \"complydoc[ner]\" --with https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl. Keep any extras you already use in the brackets"
-          },
-          {
-            "category": "organisation_name",
-            "label": "Organisation name",
-            "reason": "names need the ner extra and the spaCy model 'en_core_web_sm'. With pip: pip install \"complydoc[ner]\" && python -m spacy download en_core_web_sm. With uv: uv tool install --force \"complydoc[ner]\" --with https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl. Keep any extras you already use in the brackets"
-          }
-        ]
+        "unscanned_categories": []
       },
       "sha256": "6911df5d52683c1388947080657a022016a1f02c8fdd9f51cb690d2e8fc8efa2",
       "timing": {
         "analyse_seconds": 0.033,
-        "read_seconds": 0.635,
-        "scan_seconds": 0.257,
-        "seconds_per_page": 0.116,
-        "started_at": 1790635099.695,
-        "total_seconds": 0.926
+        "read_seconds": 0.636,
+        "scan_seconds": 1.922,
+        "seconds_per_page": 0.324,
+        "started_at": 1790679909.562,
+        "total_seconds": 2.59
       },
       "verification": null,
       "visibility_checked": true,
@@ -2805,6 +2830,22 @@
       "sensitive": {
         "matches": [
           {
+            "category": "person_name",
+            "column": 0,
+            "confidence": 0.9697926044464111,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-35af01c177e550e7",
+            "label": "Person name",
+            "length": 11,
+            "line": 1,
+            "masked": "•••••• Hart",
+            "page": 1,
+            "revealed": null,
+            "severity": "medium",
+            "validators_passed": []
+          },
+          {
             "category": "email_address",
             "column": 31,
             "confidence": 1.0,
@@ -2837,35 +2878,43 @@
             "validators_passed": [
               "uk_phone"
             ]
+          },
+          {
+            "category": "organisation_name",
+            "column": 0,
+            "confidence": 0.9928187727928162,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-19e6f368f907da5c",
+            "label": "Organisation name",
+            "length": 19,
+            "line": 5,
+            "masked": "••••••••• •••••ance",
+            "page": 1,
+            "revealed": null,
+            "severity": "low",
+            "validators_passed": []
           }
         ],
-        "models_used": {},
+        "models_used": {
+          "organisation_name": "token_classifier: Babelscape/wikineural-multilingual-ner",
+          "person_name": "token_classifier: Babelscape/wikineural-multilingual-ner"
+        },
         "pages_scanned": 1,
         "path": "/Users/duarte/Documents/Development/playground/documents/company/candidate-cv.docx",
         "reveal_blocked_categories": [],
         "reveal_used": false,
         "unreadable_pages": [],
-        "unscanned_categories": [
-          {
-            "category": "person_name",
-            "label": "Person name",
-            "reason": "names need the ner extra and the spaCy model 'en_core_web_sm'. With pip: pip install \"complydoc[ner]\" && python -m spacy download en_core_web_sm. With uv: uv tool install --force \"complydoc[ner]\" --with https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl. Keep any extras you already use in the brackets"
-          },
-          {
-            "category": "organisation_name",
-            "label": "Organisation name",
-            "reason": "names need the ner extra and the spaCy model 'en_core_web_sm'. With pip: pip install \"complydoc[ner]\" && python -m spacy download en_core_web_sm. With uv: uv tool install --force \"complydoc[ner]\" --with https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl. Keep any extras you already use in the brackets"
-          }
-        ]
+        "unscanned_categories": []
       },
       "sha256": "88f8a22d9dcf6b801ab5642aa3c290eb771244826a5223330995b9545bca9c65",
       "timing": {
         "analyse_seconds": 0.007,
-        "read_seconds": 0.106,
-        "scan_seconds": 0.016,
-        "seconds_per_page": 0.129,
-        "started_at": 1790635099.698,
-        "total_seconds": 0.129
+        "read_seconds": 0.109,
+        "scan_seconds": 2.254,
+        "seconds_per_page": 2.37,
+        "started_at": 1790679909.563,
+        "total_seconds": 2.37
       },
       "verification": null,
       "visibility_checked": true,
@@ -3025,7 +3074,7 @@
           "mean_coverage_pct": 27.14,
           "reads_tables": true,
           "reordered": false,
-          "seconds": 0.2712,
+          "seconds": 0.2726,
           "similarity": 1.0
         }
       ],
@@ -3694,6 +3743,22 @@
       "sensitive": {
         "matches": [
           {
+            "category": "person_name",
+            "column": 0,
+            "confidence": 0.9760686159133911,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-e38be19c28959d2e",
+            "label": "Person name",
+            "length": 8,
+            "line": 3,
+            "masked": "•••e Doe",
+            "page": 6,
+            "revealed": null,
+            "severity": "medium",
+            "validators_passed": []
+          },
+          {
             "category": "email_address",
             "column": 21,
             "confidence": 1.0,
@@ -3746,6 +3811,22 @@
             ]
           },
           {
+            "category": "person_name",
+            "column": 0,
+            "confidence": 0.939118504524231,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-f362acd72093a315",
+            "label": "Person name",
+            "length": 13,
+            "line": 4,
+            "masked": "•••••• ••afor",
+            "page": 6,
+            "revealed": null,
+            "severity": "medium",
+            "validators_passed": []
+          },
+          {
             "category": "email_address",
             "column": 22,
             "confidence": 1.0,
@@ -3796,6 +3877,22 @@
             "validators_passed": [
               "ni_prefix"
             ]
+          },
+          {
+            "category": "person_name",
+            "column": 0,
+            "confidence": 0.9796391725540161,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-c4102bfe99204f7e",
+            "label": "Person name",
+            "length": 12,
+            "line": 5,
+            "masked": "•••••• •ewis",
+            "page": 6,
+            "revealed": null,
+            "severity": "medium",
+            "validators_passed": []
           },
           {
             "category": "email_address",
@@ -3902,6 +3999,22 @@
             ]
           },
           {
+            "category": "person_name",
+            "column": 0,
+            "confidence": 0.9902021884918213,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-92ebcf69b69878c9",
+            "label": "Person name",
+            "length": 10,
+            "line": 7,
+            "masked": "••••• Khan",
+            "page": 6,
+            "revealed": null,
+            "severity": "medium",
+            "validators_passed": []
+          },
+          {
             "category": "email_address",
             "column": 24,
             "confidence": 1.0,
@@ -3970,33 +4083,25 @@
             "validators_passed": []
           }
         ],
-        "models_used": {},
+        "models_used": {
+          "organisation_name": "token_classifier: Babelscape/wikineural-multilingual-ner",
+          "person_name": "token_classifier: Babelscape/wikineural-multilingual-ner"
+        },
         "pages_scanned": 6,
         "path": "/Users/duarte/Documents/Development/playground/documents/company/employee-handbook.pdf",
         "reveal_blocked_categories": [],
         "reveal_used": false,
         "unreadable_pages": [],
-        "unscanned_categories": [
-          {
-            "category": "person_name",
-            "label": "Person name",
-            "reason": "names need the ner extra and the spaCy model 'en_core_web_sm'. With pip: pip install \"complydoc[ner]\" && python -m spacy download en_core_web_sm. With uv: uv tool install --force \"complydoc[ner]\" --with https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl. Keep any extras you already use in the brackets"
-          },
-          {
-            "category": "organisation_name",
-            "label": "Organisation name",
-            "reason": "names need the ner extra and the spaCy model 'en_core_web_sm'. With pip: pip install \"complydoc[ner]\" && python -m spacy download en_core_web_sm. With uv: uv tool install --force \"complydoc[ner]\" --with https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl. Keep any extras you already use in the brackets"
-          }
-        ]
+        "unscanned_categories": []
       },
       "sha256": "3153e66cd7a6fd813457f450d3eec04784ffa93e76b664f9a8defdee9e5ebf50",
       "timing": {
         "analyse_seconds": 0.03,
         "read_seconds": 0.483,
-        "scan_seconds": 0.267,
-        "seconds_per_page": 0.13,
-        "started_at": 1790635099.7,
-        "total_seconds": 0.781
+        "scan_seconds": 1.557,
+        "seconds_per_page": 0.345,
+        "started_at": 1790679909.569,
+        "total_seconds": 2.07
       },
       "verification": null,
       "visibility_checked": true,
@@ -4200,7 +4305,7 @@
           "mean_coverage_pct": 25.24,
           "reads_tables": true,
           "reordered": false,
-          "seconds": 0.2806,
+          "seconds": 0.2685,
           "similarity": 1.0
         }
       ],
@@ -4912,6 +5017,54 @@
       "sensitive": {
         "matches": [
           {
+            "category": "organisation_name",
+            "column": 8,
+            "confidence": 0.99452143907547,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-feb7d805e54fb6d1",
+            "label": "Organisation name",
+            "length": 24,
+            "line": 2,
+            "masked": "••••••••• •••••••••s Ltd",
+            "page": 1,
+            "revealed": null,
+            "severity": "low",
+            "validators_passed": []
+          },
+          {
+            "category": "organisation_name",
+            "column": 37,
+            "confidence": 0.9941643476486206,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-e5927d3c6db8cf08",
+            "label": "Organisation name",
+            "length": 21,
+            "line": 2,
+            "masked": "••••••• ••••••••s Ltd",
+            "page": 1,
+            "revealed": null,
+            "severity": "low",
+            "validators_passed": []
+          },
+          {
+            "category": "organisation_name",
+            "column": 47,
+            "confidence": 0.9946494698524475,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-feb7d805e54fb6d1",
+            "label": "Organisation name",
+            "length": 24,
+            "line": 3,
+            "masked": "••••••••• •••••••••s Ltd",
+            "page": 1,
+            "revealed": null,
+            "severity": "low",
+            "validators_passed": []
+          },
+          {
             "category": "street_address",
             "column": 74,
             "confidence": 1.0,
@@ -4946,6 +5099,22 @@
             ]
           },
           {
+            "category": "organisation_name",
+            "column": 36,
+            "confidence": 0.9897300004959106,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-e5927d3c6db8cf08",
+            "label": "Organisation name",
+            "length": 21,
+            "line": 5,
+            "masked": "••••••• ••••••••s Ltd",
+            "page": 1,
+            "revealed": null,
+            "severity": "low",
+            "validators_passed": []
+          },
+          {
             "category": "uk_postcode",
             "column": 20,
             "confidence": 1.0,
@@ -4962,6 +5131,22 @@
             "validators_passed": [
               "uk_postcode"
             ]
+          },
+          {
+            "category": "person_name",
+            "column": 14,
+            "confidence": 0.9645969867706299,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-9e66ed4e9c19fc9a",
+            "label": "Person name",
+            "length": 11,
+            "line": 9,
+            "masked": "••••• •aman",
+            "page": 1,
+            "revealed": null,
+            "severity": "medium",
+            "validators_passed": []
           },
           {
             "category": "email_address",
@@ -4996,6 +5181,22 @@
             "validators_passed": [
               "uk_phone"
             ]
+          },
+          {
+            "category": "person_name",
+            "column": 14,
+            "confidence": 0.984039306640625,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-b3c059116618c949",
+            "label": "Person name",
+            "length": 12,
+            "line": 10,
+            "masked": "•••••• •rant",
+            "page": 1,
+            "revealed": null,
+            "severity": "medium",
+            "validators_passed": []
           },
           {
             "category": "email_address",
@@ -5066,6 +5267,22 @@
             ]
           },
           {
+            "category": "organisation_name",
+            "column": 10,
+            "confidence": 0.9703365564346313,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-d6505c4734743696",
+            "label": "Organisation name",
+            "length": 17,
+            "line": 44,
+            "masked": "•••••••• •••k plc",
+            "page": 3,
+            "revealed": null,
+            "severity": "low",
+            "validators_passed": []
+          },
+          {
             "category": "sort_code",
             "column": 0,
             "confidence": 1.0,
@@ -5116,35 +5333,59 @@
             "validators_passed": [
               "iban_mod97"
             ]
+          },
+          {
+            "category": "person_name",
+            "column": 27,
+            "confidence": 0.996070384979248,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-9e66ed4e9c19fc9a",
+            "label": "Person name",
+            "length": 11,
+            "line": 8,
+            "masked": "••••• •aman",
+            "page": 8,
+            "revealed": null,
+            "severity": "medium",
+            "validators_passed": []
+          },
+          {
+            "category": "person_name",
+            "column": 27,
+            "confidence": 0.9996490478515625,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-b3c059116618c949",
+            "label": "Person name",
+            "length": 12,
+            "line": 9,
+            "masked": "•••••• •rant",
+            "page": 8,
+            "revealed": null,
+            "severity": "medium",
+            "validators_passed": []
           }
         ],
-        "models_used": {},
+        "models_used": {
+          "organisation_name": "token_classifier: Babelscape/wikineural-multilingual-ner",
+          "person_name": "token_classifier: Babelscape/wikineural-multilingual-ner"
+        },
         "pages_scanned": 8,
         "path": "/Users/duarte/Documents/Development/playground/documents/company/master-services-agreement.pdf",
         "reveal_blocked_categories": [],
         "reveal_used": false,
         "unreadable_pages": [],
-        "unscanned_categories": [
-          {
-            "category": "person_name",
-            "label": "Person name",
-            "reason": "names need the ner extra and the spaCy model 'en_core_web_sm'. With pip: pip install \"complydoc[ner]\" && python -m spacy download en_core_web_sm. With uv: uv tool install --force \"complydoc[ner]\" --with https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl. Keep any extras you already use in the brackets"
-          },
-          {
-            "category": "organisation_name",
-            "label": "Organisation name",
-            "reason": "names need the ner extra and the spaCy model 'en_core_web_sm'. With pip: pip install \"complydoc[ner]\" && python -m spacy download en_core_web_sm. With uv: uv tool install --force \"complydoc[ner]\" --with https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl. Keep any extras you already use in the brackets"
-          }
-        ]
+        "unscanned_categories": []
       },
       "sha256": "8186812a462e216e9789ac8f2a99bdc60dea2ab1e123e4f80d971b2627d917cf",
       "timing": {
-        "analyse_seconds": 0.027,
-        "read_seconds": 0.472,
-        "scan_seconds": 0.21,
-        "seconds_per_page": 0.088,
-        "started_at": 1790635099.832,
-        "total_seconds": 0.708
+        "analyse_seconds": 0.026,
+        "read_seconds": 0.454,
+        "scan_seconds": 0.622,
+        "seconds_per_page": 0.138,
+        "started_at": 1790679911.674,
+        "total_seconds": 1.102
       },
       "verification": null,
       "visibility_checked": true,
@@ -5301,7 +5542,7 @@
           "mean_coverage_pct": 9.46,
           "reads_tables": true,
           "reordered": false,
-          "seconds": 0.0696,
+          "seconds": 0.0695,
           "similarity": 1.0
         }
       ],
@@ -5967,6 +6208,54 @@
       "sensitive": {
         "matches": [
           {
+            "category": "organisation_name",
+            "column": 12,
+            "confidence": 0.9941613078117371,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-e5927d3c6db8cf08",
+            "label": "Organisation name",
+            "length": 21,
+            "line": 2,
+            "masked": "••••••• ••••••••s Ltd",
+            "page": 1,
+            "revealed": null,
+            "severity": "low",
+            "validators_passed": []
+          },
+          {
+            "category": "person_name",
+            "column": 48,
+            "confidence": 0.9992572069168091,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-b3c059116618c949",
+            "label": "Person name",
+            "length": 12,
+            "line": 2,
+            "masked": "•••••• •rant",
+            "page": 1,
+            "revealed": null,
+            "severity": "medium",
+            "validators_passed": []
+          },
+          {
+            "category": "organisation_name",
+            "column": 14,
+            "confidence": 0.9965662956237793,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-e5927d3c6db8cf08",
+            "label": "Organisation name",
+            "length": 21,
+            "line": 2,
+            "masked": "••••••• ••••••••s Ltd",
+            "page": 5,
+            "revealed": null,
+            "severity": "low",
+            "validators_passed": []
+          },
+          {
             "category": "sort_code",
             "column": 48,
             "confidence": 1.0,
@@ -6038,6 +6327,22 @@
             ]
           },
           {
+            "category": "person_name",
+            "column": 26,
+            "confidence": 0.995052695274353,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-0429f534b57543ce",
+            "label": "Person name",
+            "length": 13,
+            "line": 4,
+            "masked": "••••• •••yemi",
+            "page": 5,
+            "revealed": null,
+            "severity": "medium",
+            "validators_passed": []
+          },
+          {
             "category": "phone_number",
             "column": 51,
             "confidence": 1.0,
@@ -6056,33 +6361,25 @@
             ]
           }
         ],
-        "models_used": {},
+        "models_used": {
+          "organisation_name": "token_classifier: Babelscape/wikineural-multilingual-ner",
+          "person_name": "token_classifier: Babelscape/wikineural-multilingual-ner"
+        },
         "pages_scanned": 5,
         "path": "/Users/duarte/Documents/Development/playground/documents/company/vendor-due-diligence.pdf",
         "reveal_blocked_categories": [],
         "reveal_used": false,
         "unreadable_pages": [],
-        "unscanned_categories": [
-          {
-            "category": "person_name",
-            "label": "Person name",
-            "reason": "names need the ner extra and the spaCy model 'en_core_web_sm'. With pip: pip install \"complydoc[ner]\" && python -m spacy download en_core_web_sm. With uv: uv tool install --force \"complydoc[ner]\" --with https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl. Keep any extras you already use in the brackets"
-          },
-          {
-            "category": "organisation_name",
-            "label": "Organisation name",
-            "reason": "names need the ner extra and the spaCy model 'en_core_web_sm'. With pip: pip install \"complydoc[ner]\" && python -m spacy download en_core_web_sm. With uv: uv tool install --force \"complydoc[ner]\" --with https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl. Keep any extras you already use in the brackets"
-          }
-        ]
+        "unscanned_categories": []
       },
       "sha256": "e15a2151125e6ebf56b86b9d0193ce55dc832c0d614f96218248982be70174ae",
       "timing": {
         "analyse_seconds": 0.007,
         "read_seconds": 0.09,
-        "scan_seconds": 0.055,
-        "seconds_per_page": 0.03,
-        "started_at": 1790635100.514,
-        "total_seconds": 0.152
+        "scan_seconds": 0.629,
+        "seconds_per_page": 0.145,
+        "started_at": 1790679911.935,
+        "total_seconds": 0.726
       },
       "verification": null,
       "visibility_checked": true,
@@ -6176,7 +6473,7 @@
           "mean_coverage_pct": 6.36,
           "reads_tables": true,
           "reordered": false,
-          "seconds": 0.0257,
+          "seconds": 0.0255,
           "similarity": 1.0
         }
       ],
@@ -6830,6 +7127,38 @@
       "sensitive": {
         "matches": [
           {
+            "category": "organisation_name",
+            "column": 7,
+            "confidence": 0.9986040592193604,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-8695cf921a661ab1",
+            "label": "Organisation name",
+            "length": 20,
+            "line": 3,
+            "masked": "•••••••• ••••••ik AG",
+            "page": 1,
+            "revealed": null,
+            "severity": "low",
+            "validators_passed": []
+          },
+          {
+            "category": "person_name",
+            "column": 55,
+            "confidence": 0.998214840888977,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-4d768a73aa753020",
+            "label": "Person name",
+            "length": 14,
+            "line": 3,
+            "masked": "•••••• •••midt",
+            "page": 1,
+            "revealed": null,
+            "severity": "medium",
+            "validators_passed": []
+          },
+          {
             "category": "email_address",
             "column": 0,
             "confidence": 1.0,
@@ -6880,6 +7209,86 @@
             "validators_passed": [
               "uk_phone"
             ]
+          },
+          {
+            "category": "organisation_name",
+            "column": 33,
+            "confidence": 0.9990462064743042,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-9dab42ef84747d4b",
+            "label": "Organisation name",
+            "length": 24,
+            "line": 11,
+            "masked": "•••••• •••••••••••• GmbH",
+            "page": 1,
+            "revealed": null,
+            "severity": "low",
+            "validators_passed": []
+          },
+          {
+            "category": "organisation_name",
+            "column": 66,
+            "confidence": 0.9989541172981262,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-8695cf921a661ab1",
+            "label": "Organisation name",
+            "length": 20,
+            "line": 11,
+            "masked": "•••••••• ••••••ik AG",
+            "page": 1,
+            "revealed": null,
+            "severity": "low",
+            "validators_passed": []
+          },
+          {
+            "category": "person_name",
+            "column": 58,
+            "confidence": 0.9981197714805603,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-c169c200dacd503f",
+            "label": "Person name",
+            "length": 11,
+            "line": 12,
+            "masked": "•••• ••cker",
+            "page": 1,
+            "revealed": null,
+            "severity": "medium",
+            "validators_passed": []
+          },
+          {
+            "category": "organisation_name",
+            "column": 7,
+            "confidence": 0.9985840916633606,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-8695cf921a661ab1",
+            "label": "Organisation name",
+            "length": 20,
+            "line": 3,
+            "masked": "•••••••• ••••••ik AG",
+            "page": 2,
+            "revealed": null,
+            "severity": "low",
+            "validators_passed": []
+          },
+          {
+            "category": "person_name",
+            "column": 55,
+            "confidence": 0.9983264207839966,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-4d768a73aa753020",
+            "label": "Person name",
+            "length": 14,
+            "line": 3,
+            "masked": "•••••• •••midt",
+            "page": 2,
+            "revealed": null,
+            "severity": "medium",
+            "validators_passed": []
           },
           {
             "category": "email_address",
@@ -6934,6 +7343,86 @@
             ]
           },
           {
+            "category": "organisation_name",
+            "column": 33,
+            "confidence": 0.9990407228469849,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-9dab42ef84747d4b",
+            "label": "Organisation name",
+            "length": 24,
+            "line": 11,
+            "masked": "•••••• •••••••••••• GmbH",
+            "page": 2,
+            "revealed": null,
+            "severity": "low",
+            "validators_passed": []
+          },
+          {
+            "category": "organisation_name",
+            "column": 66,
+            "confidence": 0.9989479184150696,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-8695cf921a661ab1",
+            "label": "Organisation name",
+            "length": 20,
+            "line": 11,
+            "masked": "•••••••• ••••••ik AG",
+            "page": 2,
+            "revealed": null,
+            "severity": "low",
+            "validators_passed": []
+          },
+          {
+            "category": "person_name",
+            "column": 58,
+            "confidence": 0.9982311725616455,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-c169c200dacd503f",
+            "label": "Person name",
+            "length": 11,
+            "line": 12,
+            "masked": "•••• ••cker",
+            "page": 2,
+            "revealed": null,
+            "severity": "medium",
+            "validators_passed": []
+          },
+          {
+            "category": "organisation_name",
+            "column": 7,
+            "confidence": 0.9985762238502502,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-8695cf921a661ab1",
+            "label": "Organisation name",
+            "length": 20,
+            "line": 3,
+            "masked": "•••••••• ••••••ik AG",
+            "page": 3,
+            "revealed": null,
+            "severity": "low",
+            "validators_passed": []
+          },
+          {
+            "category": "person_name",
+            "column": 55,
+            "confidence": 0.9982607364654541,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-4d768a73aa753020",
+            "label": "Person name",
+            "length": 14,
+            "line": 3,
+            "masked": "•••••• •••midt",
+            "page": 3,
+            "revealed": null,
+            "severity": "medium",
+            "validators_passed": []
+          },
+          {
             "category": "email_address",
             "column": 0,
             "confidence": 1.0,
@@ -6984,35 +7473,75 @@
             "validators_passed": [
               "uk_phone"
             ]
+          },
+          {
+            "category": "organisation_name",
+            "column": 33,
+            "confidence": 0.9990403056144714,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-9dab42ef84747d4b",
+            "label": "Organisation name",
+            "length": 24,
+            "line": 11,
+            "masked": "•••••• •••••••••••• GmbH",
+            "page": 3,
+            "revealed": null,
+            "severity": "low",
+            "validators_passed": []
+          },
+          {
+            "category": "organisation_name",
+            "column": 66,
+            "confidence": 0.9989479184150696,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-8695cf921a661ab1",
+            "label": "Organisation name",
+            "length": 20,
+            "line": 11,
+            "masked": "•••••••• ••••••ik AG",
+            "page": 3,
+            "revealed": null,
+            "severity": "low",
+            "validators_passed": []
+          },
+          {
+            "category": "person_name",
+            "column": 58,
+            "confidence": 0.9981750249862671,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-c169c200dacd503f",
+            "label": "Person name",
+            "length": 11,
+            "line": 12,
+            "masked": "•••• ••cker",
+            "page": 3,
+            "revealed": null,
+            "severity": "medium",
+            "validators_passed": []
           }
         ],
-        "models_used": {},
+        "models_used": {
+          "organisation_name": "token_classifier: Babelscape/wikineural-multilingual-ner",
+          "person_name": "token_classifier: Babelscape/wikineural-multilingual-ner"
+        },
         "pages_scanned": 3,
         "path": "/Users/duarte/Documents/Development/playground/documents/invoices/rechnungen-2026-de.pdf",
         "reveal_blocked_categories": [],
         "reveal_used": false,
         "unreadable_pages": [],
-        "unscanned_categories": [
-          {
-            "category": "person_name",
-            "label": "Person name",
-            "reason": "names need the ner extra and the spaCy model 'en_core_web_sm'. With pip: pip install \"complydoc[ner]\" && python -m spacy download en_core_web_sm. With uv: uv tool install --force \"complydoc[ner]\" --with https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl. Keep any extras you already use in the brackets"
-          },
-          {
-            "category": "organisation_name",
-            "label": "Organisation name",
-            "reason": "names need the ner extra and the spaCy model 'en_core_web_sm'. With pip: pip install \"complydoc[ner]\" && python -m spacy download en_core_web_sm. With uv: uv tool install --force \"complydoc[ner]\" --with https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl. Keep any extras you already use in the brackets"
-          }
-        ]
+        "unscanned_categories": []
       },
       "sha256": "87ae793dc92653908f5206d0ab5f947a7bb675702c480a7a58b7f1269343d04d",
       "timing": {
         "analyse_seconds": 0.002,
         "read_seconds": 0.032,
-        "scan_seconds": 0.017,
-        "seconds_per_page": 0.017,
-        "started_at": 1790635100.574,
-        "total_seconds": 0.051
+        "scan_seconds": 0.439,
+        "seconds_per_page": 0.158,
+        "started_at": 1790679912.192,
+        "total_seconds": 0.473
       },
       "verification": null,
       "visibility_checked": true,
@@ -7472,6 +8001,22 @@
       "sensitive": {
         "matches": [
           {
+            "category": "person_name",
+            "column": 6,
+            "confidence": 0.9990197420120239,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-4306da7466fe550b",
+            "label": "Person name",
+            "length": 13,
+            "line": 1,
+            "masked": "•••••• ••reau",
+            "page": 1,
+            "revealed": null,
+            "severity": "medium",
+            "validators_passed": []
+          },
+          {
             "category": "email_address",
             "column": 21,
             "confidence": 1.0,
@@ -7557,35 +8102,43 @@
             "validators_passed": [
               "uk_phone"
             ]
+          },
+          {
+            "category": "person_name",
+            "column": 0,
+            "confidence": 0.9978724718093872,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-4306da7466fe550b",
+            "label": "Person name",
+            "length": 13,
+            "line": 15,
+            "masked": "•••••• ••reau",
+            "page": 1,
+            "revealed": null,
+            "severity": "medium",
+            "validators_passed": []
           }
         ],
-        "models_used": {},
+        "models_used": {
+          "organisation_name": "token_classifier: Babelscape/wikineural-multilingual-ner",
+          "person_name": "token_classifier: Babelscape/wikineural-multilingual-ner"
+        },
         "pages_scanned": 1,
         "path": "/Users/duarte/Documents/Development/playground/documents/invoices/refund-request.eml",
         "reveal_blocked_categories": [],
         "reveal_used": false,
         "unreadable_pages": [],
-        "unscanned_categories": [
-          {
-            "category": "person_name",
-            "label": "Person name",
-            "reason": "names need the ner extra and the spaCy model 'en_core_web_sm'. With pip: pip install \"complydoc[ner]\" && python -m spacy download en_core_web_sm. With uv: uv tool install --force \"complydoc[ner]\" --with https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl. Keep any extras you already use in the brackets"
-          },
-          {
-            "category": "organisation_name",
-            "label": "Organisation name",
-            "reason": "names need the ner extra and the spaCy model 'en_core_web_sm'. With pip: pip install \"complydoc[ner]\" && python -m spacy download en_core_web_sm. With uv: uv tool install --force \"complydoc[ner]\" --with https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl. Keep any extras you already use in the brackets"
-          }
-        ]
+        "unscanned_categories": []
       },
       "sha256": "db5e9cf9d7d5e1fac37cae4bc116771319af163665410dc660b458efe5069c63",
       "timing": {
-        "analyse_seconds": 0.0,
+        "analyse_seconds": 0.001,
         "read_seconds": 0.001,
-        "scan_seconds": 0.002,
-        "seconds_per_page": 0.003,
-        "started_at": 1790635100.629,
-        "total_seconds": 0.003
+        "scan_seconds": 0.02,
+        "seconds_per_page": 0.022,
+        "started_at": 1790679912.67,
+        "total_seconds": 0.022
       },
       "verification": null,
       "visibility_checked": true,
@@ -7679,7 +8232,7 @@
           "mean_coverage_pct": 0.0,
           "reads_tables": true,
           "reordered": false,
-          "seconds": 0.0009,
+          "seconds": 0.001,
           "similarity": 1.0
         }
       ],
@@ -8214,12 +8767,12 @@
       },
       "sha256": "b9293ef1ccaacdd8e49c4282661652bbc81c564fe68b290c8c382d658c74e93f",
       "timing": {
-        "analyse_seconds": 0.016,
-        "read_seconds": 0.04,
+        "analyse_seconds": 0.015,
+        "read_seconds": 0.039,
         "scan_seconds": 0.001,
-        "seconds_per_page": 0.019,
-        "started_at": 1790635100.633,
-        "total_seconds": 0.057
+        "seconds_per_page": 0.018,
+        "started_at": 1790679912.673,
+        "total_seconds": 0.055
       },
       "verification": null,
       "visibility_checked": true,
@@ -8263,20 +8816,6 @@
       "area": "Pages that could not be read",
       "severity": "important",
       "statement": "3 pages carried no readable text because OCR was not requested (pass --ocr to read scanned pages). Those pages were not searched for sensitive information."
-    },
-    {
-      "affected": [
-        "company/annual-report-2025.pdf",
-        "company/candidate-cv.docx",
-        "company/employee-handbook.pdf",
-        "company/master-services-agreement.pdf",
-        "company/vendor-due-diligence.pdf",
-        "invoices/rechnungen-2026-de.pdf",
-        "invoices/refund-request.eml"
-      ],
-      "area": "Categories not scanned",
-      "severity": "important",
-      "statement": "Organisation name and Person name were not scanned for at all, because names need the ner extra and the spaCy model 'en_core_web_sm'. With pip: pip install \"complydoc[ner]\" && python -m spacy download en_core_web_sm. With uv: uv tool install --force \"complydoc[ner]\" --with https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl. Keep any extras you already use in the brackets. No conclusion about these categories can be drawn from this report."
     },
     {
       "affected": [
@@ -8534,17 +9073,17 @@
   "overall": {
     "bands": {
       "needs work": 1,
-      "ready": 6,
-      "workable": 1
+      "ready": 4,
+      "workable": 3
     },
     "by_document": {
-      "company/annual-report-2025.pdf": 96.5,
-      "company/candidate-cv.docx": 98.0,
+      "company/annual-report-2025.pdf": 95.3,
+      "company/candidate-cv.docx": 96.8,
       "company/employee-handbook.pdf": 73.0,
-      "company/master-services-agreement.pdf": 80.0,
-      "company/vendor-due-diligence.pdf": 79.8,
-      "invoices/rechnungen-2026-de.pdf": 77.8,
-      "invoices/refund-request.eml": 91.0,
+      "company/master-services-agreement.pdf": 74.8,
+      "company/vendor-due-diligence.pdf": 77.5,
+      "invoices/rechnungen-2026-de.pdf": 69.4,
+      "invoices/refund-request.eml": 89.4,
       "invoices/supplier-invoices-scanned.pdf": 45.0
     },
     "factors": [
@@ -8565,13 +9104,13 @@
       {
         "key": "exposure",
         "name": "Exposure",
-        "score": 59.6,
+        "score": 49.6,
         "weight": 0.25,
         "why": "What these documents carry that should not leave, weighted by severity and by how good the evidence for each finding is."
       }
     ],
     "label": "ready",
-    "score": 80.1,
+    "score": 77.7,
     "scored_documents": 8,
     "total_documents": 8
   },
@@ -8662,13 +9201,13 @@
     "config_dir": "/Users/duarte/Documents/Development/playground/.venv/lib/python3.13/site-packages/complydoc/config",
     "content_sent_to": [],
     "documents_read_after_worker_failure": 0,
-    "duration_seconds": 2.017,
+    "duration_seconds": 4.235,
     "extracted_text_used": false,
     "extractor": "pdfplumber",
-    "finished_at": "2026-09-28T23:38:20+01:00",
+    "finished_at": "2026-09-29T12:05:12+01:00",
     "jobs": 3,
     "monthly_volume": null,
-    "ner_available": false,
+    "ner_available": true,
     "ocr_available": false,
     "ocr_compare_used": false,
     "ocr_requested": false,
@@ -8681,10 +9220,10 @@
     "sample_size": null,
     "sampled_from": null,
     "schema_version": 17,
-    "started_at": "2026-09-28T23:38:18+01:00",
+    "started_at": "2026-09-29T12:05:08+01:00",
     "target": "/Users/duarte/Documents/Development/playground/documents",
     "timeout_seconds": null,
-    "tool_version": "0.6.1",
+    "tool_version": "0.6.2",
     "verify_model": null,
     "verify_scope": null
   },
