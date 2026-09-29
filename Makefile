@@ -2,7 +2,7 @@
 
 setup: ## Install complydoc and the LangChain loaders, and download the model names are found with
 	uv sync
-	uv run python -c "from huggingface_hub import snapshot_download; snapshot_download('Babelscape/wikineural-multilingual-ner')"
+	uv run python -c "from huggingface_hub import snapshot_download; snapshot_download('Babelscape/wikineural-multilingual-ner', allow_patterns=['*.json', 'vocab.txt', 'model.safetensors'])"
 
 start: ## Four LangChain loaders compared and five LangChain splitters: then `make ui`
 	rm -rf .complydoc
