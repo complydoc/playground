@@ -23,8 +23,9 @@ make setup
 This installs complydoc with pandas, LangChain's PDF loaders (`PyPDFLoader`,
 `PyMuPDF4LLMLoader`, `OpenDataLoaderPDFLoader`, which needs Java, and `DoclingLoader`,
 which brings PyTorch and downloads its models on first use), LangChain text splitters and
-pytest. PyTorch also lets complydoc find names. complydoc's own OCR is left out, so the
-examples run with `--no-ocr`.
+pytest, and downloads the model complydoc finds names with (680 MB, once), which runs on
+the PyTorch Docling brings. complydoc's own OCR is left out, so the examples run with
+`--no-ocr`.
 
 ## Start here
 

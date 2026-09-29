@@ -1,7 +1,8 @@
 .PHONY: setup start trace ui cli python test baseline all
 
-setup: ## Install complydoc and the LangChain packages the examples use
+setup: ## Install complydoc and the LangChain loaders, and download the model names are found with
 	uv sync
+	uv run python -c "from huggingface_hub import snapshot_download; snapshot_download('Babelscape/wikineural-multilingual-ner')"
 
 start: ## Four LangChain loaders compared and five LangChain splitters: then `make ui`
 	rm -rf .complydoc

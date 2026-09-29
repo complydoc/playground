@@ -25,7 +25,7 @@
       "email": 1,
       "pdf": 6
     },
-    "hours_per_1000_documents": 0.33,
+    "hours_per_1000_documents": 0.35,
     "ignored_total": 0,
     "mean_readiness_score": 86.7,
     "monthly_text_usd": null,
@@ -36,19 +36,19 @@
     "pages_total": 35,
     "pages_unreadable": 3,
     "projected_seconds": {
-      "100": 117.6,
-      "1000": 1176.0,
-      "10000": 11760.0,
-      "100000": 117600.0
+      "100": 124.9,
+      "1000": 1248.6,
+      "10000": 12486.2,
+      "100000": 124862.5
     },
-    "read_seconds": 1.844,
+    "read_seconds": 1.902,
     "readiness_bands": {
       "needs work": 1,
       "ready": 7
     },
-    "scan_seconds": 7.444,
-    "seconds_per_document": 1.176,
-    "seconds_per_page": 0.269,
+    "scan_seconds": 7.966,
+    "seconds_per_document": 1.249,
+    "seconds_per_page": 0.285,
     "sensitive_by_category": {
       "bank_account_number": 2,
       "card_number": 2,
@@ -232,7 +232,7 @@
         "poor": 0
       }
     },
-    "total_seconds": 9.408,
+    "total_seconds": 9.989,
     "total_text_path_usd": 0.0018243,
     "total_vision_path_usd": 0.003723
   },
@@ -1609,7 +1609,7 @@
           "mean_coverage_pct": 30.14,
           "reads_tables": true,
           "reordered": false,
-          "seconds": 0.323,
+          "seconds": 0.3322,
           "similarity": 1.0
         }
       ],
@@ -2347,12 +2347,12 @@
       },
       "sha256": "6911df5d52683c1388947080657a022016a1f02c8fdd9f51cb690d2e8fc8efa2",
       "timing": {
-        "analyse_seconds": 0.033,
-        "read_seconds": 0.636,
-        "scan_seconds": 1.922,
-        "seconds_per_page": 0.324,
-        "started_at": 1790679909.562,
-        "total_seconds": 2.59
+        "analyse_seconds": 0.034,
+        "read_seconds": 0.644,
+        "scan_seconds": 2.082,
+        "seconds_per_page": 0.345,
+        "started_at": 1790680081.77,
+        "total_seconds": 2.759
       },
       "verification": null,
       "visibility_checked": true,
@@ -2909,12 +2909,12 @@
       },
       "sha256": "88f8a22d9dcf6b801ab5642aa3c290eb771244826a5223330995b9545bca9c65",
       "timing": {
-        "analyse_seconds": 0.007,
-        "read_seconds": 0.109,
-        "scan_seconds": 2.254,
-        "seconds_per_page": 2.37,
-        "started_at": 1790679909.563,
-        "total_seconds": 2.37
+        "analyse_seconds": 0.004,
+        "read_seconds": 0.107,
+        "scan_seconds": 2.418,
+        "seconds_per_page": 2.529,
+        "started_at": 1790680081.774,
+        "total_seconds": 2.529
       },
       "verification": null,
       "visibility_checked": true,
@@ -3074,7 +3074,7 @@
           "mean_coverage_pct": 27.14,
           "reads_tables": true,
           "reordered": false,
-          "seconds": 0.2726,
+          "seconds": 0.2837,
           "similarity": 1.0
         }
       ],
@@ -4097,11 +4097,11 @@
       "sha256": "3153e66cd7a6fd813457f450d3eec04784ffa93e76b664f9a8defdee9e5ebf50",
       "timing": {
         "analyse_seconds": 0.03,
-        "read_seconds": 0.483,
-        "scan_seconds": 1.557,
-        "seconds_per_page": 0.345,
-        "started_at": 1790679909.569,
-        "total_seconds": 2.07
+        "read_seconds": 0.501,
+        "scan_seconds": 1.728,
+        "seconds_per_page": 0.376,
+        "started_at": 1790680081.776,
+        "total_seconds": 2.259
       },
       "verification": null,
       "visibility_checked": true,
@@ -4305,7 +4305,7 @@
           "mean_coverage_pct": 25.24,
           "reads_tables": true,
           "reordered": false,
-          "seconds": 0.2685,
+          "seconds": 0.2893,
           "similarity": 1.0
         }
       ],
@@ -5380,12 +5380,12 @@
       },
       "sha256": "8186812a462e216e9789ac8f2a99bdc60dea2ab1e123e4f80d971b2627d917cf",
       "timing": {
-        "analyse_seconds": 0.026,
-        "read_seconds": 0.454,
-        "scan_seconds": 0.622,
-        "seconds_per_page": 0.138,
-        "started_at": 1790679911.674,
-        "total_seconds": 1.102
+        "analyse_seconds": 0.027,
+        "read_seconds": 0.485,
+        "scan_seconds": 0.596,
+        "seconds_per_page": 0.139,
+        "started_at": 1790680084.07,
+        "total_seconds": 1.108
       },
       "verification": null,
       "visibility_checked": true,
@@ -5542,7 +5542,7 @@
           "mean_coverage_pct": 9.46,
           "reads_tables": true,
           "reordered": false,
-          "seconds": 0.0695,
+          "seconds": 0.0711,
           "similarity": 1.0
         }
       ],
@@ -6374,12 +6374,12 @@
       },
       "sha256": "e15a2151125e6ebf56b86b9d0193ce55dc832c0d614f96218248982be70174ae",
       "timing": {
-        "analyse_seconds": 0.007,
-        "read_seconds": 0.09,
-        "scan_seconds": 0.629,
-        "seconds_per_page": 0.145,
-        "started_at": 1790679911.935,
-        "total_seconds": 0.726
+        "analyse_seconds": 0.008,
+        "read_seconds": 0.092,
+        "scan_seconds": 0.659,
+        "seconds_per_page": 0.152,
+        "started_at": 1790680084.305,
+        "total_seconds": 0.759
       },
       "verification": null,
       "visibility_checked": true,
@@ -6473,7 +6473,7 @@
           "mean_coverage_pct": 6.36,
           "reads_tables": true,
           "reordered": false,
-          "seconds": 0.0255,
+          "seconds": 0.0267,
           "similarity": 1.0
         }
       ],
@@ -7537,11 +7537,11 @@
       "sha256": "87ae793dc92653908f5206d0ab5f947a7bb675702c480a7a58b7f1269343d04d",
       "timing": {
         "analyse_seconds": 0.002,
-        "read_seconds": 0.032,
-        "scan_seconds": 0.439,
-        "seconds_per_page": 0.158,
-        "started_at": 1790679912.192,
-        "total_seconds": 0.473
+        "read_seconds": 0.033,
+        "scan_seconds": 0.463,
+        "seconds_per_page": 0.166,
+        "started_at": 1790680084.569,
+        "total_seconds": 0.499
       },
       "verification": null,
       "visibility_checked": true,
@@ -8135,10 +8135,10 @@
       "timing": {
         "analyse_seconds": 0.001,
         "read_seconds": 0.001,
-        "scan_seconds": 0.02,
-        "seconds_per_page": 0.022,
-        "started_at": 1790679912.67,
-        "total_seconds": 0.022
+        "scan_seconds": 0.019,
+        "seconds_per_page": 0.021,
+        "started_at": 1790680085.073,
+        "total_seconds": 0.021
       },
       "verification": null,
       "visibility_checked": true,
@@ -8232,7 +8232,7 @@
           "mean_coverage_pct": 0.0,
           "reads_tables": true,
           "reordered": false,
-          "seconds": 0.001,
+          "seconds": 0.0009,
           "similarity": 1.0
         }
       ],
@@ -8771,7 +8771,7 @@
         "read_seconds": 0.039,
         "scan_seconds": 0.001,
         "seconds_per_page": 0.018,
-        "started_at": 1790679912.673,
+        "started_at": 1790680085.075,
         "total_seconds": 0.055
       },
       "verification": null,
@@ -9201,10 +9201,10 @@
     "config_dir": "/Users/duarte/Documents/Development/playground/.venv/lib/python3.13/site-packages/complydoc/config",
     "content_sent_to": [],
     "documents_read_after_worker_failure": 0,
-    "duration_seconds": 4.235,
+    "duration_seconds": 4.426,
     "extracted_text_used": false,
     "extractor": "pdfplumber",
-    "finished_at": "2026-09-29T12:05:12+01:00",
+    "finished_at": "2026-09-29T12:08:05+01:00",
     "jobs": 3,
     "monthly_volume": null,
     "ner_available": true,
@@ -9220,7 +9220,7 @@
     "sample_size": null,
     "sampled_from": null,
     "schema_version": 17,
-    "started_at": "2026-09-29T12:05:08+01:00",
+    "started_at": "2026-09-29T12:08:00+01:00",
     "target": "/Users/duarte/Documents/Development/playground/documents",
     "timeout_seconds": null,
     "tool_version": "0.6.2",

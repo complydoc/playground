@@ -14,7 +14,7 @@ def report():
 
 
 def test_every_file_was_read(report):
-    # all_categories_scanned() fails where the name model has not been downloaded.
+    # all_categories_scanned() fails where `make setup` has not downloaded the name model.
     cd.expect(report).no_failures()
 
 

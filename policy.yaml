@@ -16,7 +16,7 @@ rules:
     severity: high
   # Nothing here should be unreadable or unparseable.
   no_failures: true
-  # Names need a name model: the multilingual one runs on the PyTorch that
-  # Docling brings, once it is downloaded. Without it this reports, not fails.
+  # Names need a name model: `make setup` downloads the multilingual one, which
+  # runs on the PyTorch Docling brings. Without it this reports, not fails.
   all_categories_scanned:
     level: warning
