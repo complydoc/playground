@@ -4,9 +4,9 @@
     uv run python pipeline.py --mask   # with masking added before the split
     uv run complydoc ui                # the traces, side by side
 
-Two sources, each with the LangChain loader that suits it, one splitter and one
-embedding model. Every LangChain call inside the block becomes a step of the trace,
-with its time, tokens, cost and the identifiers it passed on.
+Two sources, each with the LangChain loader that suits it, one splitter, and a vector
+store that embeds what it is given. Every LangChain call inside the block becomes a step
+of the trace, with its time, tokens, cost and the identifiers it passed on.
 """
 
 import sys
@@ -14,6 +14,7 @@ from pathlib import Path
 
 import complydoc as cd
 from langchain_community.document_loaders import PyPDFLoader
+from langchain_core.vectorstores import InMemoryVectorStore
 from langchain_pymupdf4llm import PyMuPDF4LLMLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
@@ -33,8 +34,6 @@ with cd.observe("documents-ingest") as run:
     splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
     chunks = splitter.split_documents(documents)
 
-    OpenAIEmbeddings(model="text-embedding-3-small").embed_documents(
-        [chunk.page_content for chunk in chunks]
-    )
+    InMemoryVectorStore(OpenAIEmbeddings(model="text-embedding-3-small")).add_documents(chunks)
 
 print(run.summary())

@@ -46,8 +46,10 @@ make ui
 
 `make trace` runs `pipeline.py`, a LangChain ingestion pipeline inside `cd.observe`: the
 company documents loaded with `PyMuPDF4LLMLoader`, the invoices with `PyPDFLoader`, then
-cleaned, split and embedded. It runs twice, as written and with `--mask`, and the Trace
-shows every LangChain call with its time, tokens, cost and the identifiers it passed on.
+cleaned, split and stored in a vector store, which embeds them. It runs twice, as written
+and with `--mask`, and the Trace shows every LangChain call with its time, tokens, cost and
+the identifiers it passed on, follows each document through them, and warns where a step
+went wrong without an error: the scanned invoice loads as no text.
 The embedding model in `embeddings.py` is a local stand-in named as OpenAI's, so nothing
 leaves the machine and nothing is charged; import `OpenAIEmbeddings` from
 `langchain_openai` instead to call OpenAI's.
