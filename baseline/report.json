@@ -1,6 +1,6 @@
 {
   "aggregate": {
-    "analyse_seconds": 0.121,
+    "analyse_seconds": 0.133,
     "annual_text_usd": null,
     "annual_vision_usd": null,
     "categories_not_scanned": {},
@@ -25,7 +25,7 @@
       "email": 1,
       "pdf": 6
     },
-    "hours_per_1000_documents": 0.35,
+    "hours_per_1000_documents": 0.65,
     "ignored_total": 0,
     "mean_readiness_score": 86.7,
     "monthly_text_usd": null,
@@ -36,19 +36,19 @@
     "pages_total": 35,
     "pages_unreadable": 3,
     "projected_seconds": {
-      "100": 124.9,
-      "1000": 1248.6,
-      "10000": 12486.2,
-      "100000": 124862.5
+      "100": 235.5,
+      "1000": 2354.6,
+      "10000": 23546.2,
+      "100000": 235462.5
     },
-    "read_seconds": 1.902,
+    "read_seconds": 1.905,
     "readiness_bands": {
       "needs work": 1,
       "ready": 7
     },
-    "scan_seconds": 7.966,
-    "seconds_per_document": 1.249,
-    "seconds_per_page": 0.285,
+    "scan_seconds": 16.798,
+    "seconds_per_document": 2.355,
+    "seconds_per_page": 0.538,
     "sensitive_by_category": {
       "bank_account_number": 2,
       "card_number": 2,
@@ -56,7 +56,7 @@
       "email_address": 15,
       "iban": 3,
       "ni_number": 5,
-      "organisation_name": 18,
+      "organisation_name": 21,
       "person_name": 20,
       "phone_number": 14,
       "sort_code": 2,
@@ -65,10 +65,10 @@
     },
     "sensitive_by_severity": {
       "high": 17,
-      "low": 18,
+      "low": 21,
       "medium": 52
     },
-    "sensitive_total": 87,
+    "sensitive_total": 90,
     "signal_distribution": {
       "acroform_fields": {
         "error": 0,
@@ -232,10 +232,11 @@
         "poor": 0
       }
     },
-    "total_seconds": 9.989,
+    "total_seconds": 18.837,
     "total_text_path_usd": 0.0018243,
     "total_vision_path_usd": 0.003723
   },
+  "categories": null,
   "chunks": null,
   "concepts": null,
   "config_masking": {
@@ -1609,7 +1610,7 @@
           "mean_coverage_pct": 30.14,
           "reads_tables": true,
           "reordered": false,
-          "seconds": 0.3322,
+          "seconds": 0.3217,
           "similarity": 1.0
         }
       ],
@@ -2342,17 +2343,18 @@
         "path": "/Users/duarte/Documents/Development/playground/documents/company/annual-report-2025.pdf",
         "reveal_blocked_categories": [],
         "reveal_used": false,
+        "silent": [],
         "unreadable_pages": [],
         "unscanned_categories": []
       },
       "sha256": "6911df5d52683c1388947080657a022016a1f02c8fdd9f51cb690d2e8fc8efa2",
       "timing": {
-        "analyse_seconds": 0.034,
-        "read_seconds": 0.644,
-        "scan_seconds": 2.082,
-        "seconds_per_page": 0.345,
-        "started_at": 1790680081.77,
-        "total_seconds": 2.759
+        "analyse_seconds": 0.033,
+        "read_seconds": 0.645,
+        "scan_seconds": 5.23,
+        "seconds_per_page": 0.739,
+        "started_at": 1791323332.515,
+        "total_seconds": 5.909
       },
       "verification": null,
       "visibility_checked": true,
@@ -2904,17 +2906,18 @@
         "path": "/Users/duarte/Documents/Development/playground/documents/company/candidate-cv.docx",
         "reveal_blocked_categories": [],
         "reveal_used": false,
+        "silent": [],
         "unreadable_pages": [],
         "unscanned_categories": []
       },
       "sha256": "88f8a22d9dcf6b801ab5642aa3c290eb771244826a5223330995b9545bca9c65",
       "timing": {
-        "analyse_seconds": 0.004,
-        "read_seconds": 0.107,
-        "scan_seconds": 2.418,
-        "seconds_per_page": 2.529,
-        "started_at": 1790680081.774,
-        "total_seconds": 2.529
+        "analyse_seconds": 0.016,
+        "read_seconds": 0.115,
+        "scan_seconds": 5.551,
+        "seconds_per_page": 5.683,
+        "started_at": 1791323332.516,
+        "total_seconds": 5.683
       },
       "verification": null,
       "visibility_checked": true,
@@ -3074,7 +3077,7 @@
           "mean_coverage_pct": 27.14,
           "reads_tables": true,
           "reordered": false,
-          "seconds": 0.2837,
+          "seconds": 0.2742,
           "similarity": 1.0
         }
       ],
@@ -4091,17 +4094,18 @@
         "path": "/Users/duarte/Documents/Development/playground/documents/company/employee-handbook.pdf",
         "reveal_blocked_categories": [],
         "reveal_used": false,
+        "silent": [],
         "unreadable_pages": [],
         "unscanned_categories": []
       },
       "sha256": "3153e66cd7a6fd813457f450d3eec04784ffa93e76b664f9a8defdee9e5ebf50",
       "timing": {
         "analyse_seconds": 0.03,
-        "read_seconds": 0.501,
-        "scan_seconds": 1.728,
-        "seconds_per_page": 0.376,
-        "started_at": 1790680081.776,
-        "total_seconds": 2.259
+        "read_seconds": 0.496,
+        "scan_seconds": 5.086,
+        "seconds_per_page": 0.935,
+        "started_at": 1791323332.518,
+        "total_seconds": 5.612
       },
       "verification": null,
       "visibility_checked": true,
@@ -4305,7 +4309,7 @@
           "mean_coverage_pct": 25.24,
           "reads_tables": true,
           "reordered": false,
-          "seconds": 0.2893,
+          "seconds": 0.2872,
           "similarity": 1.0
         }
       ],
@@ -5375,17 +5379,18 @@
         "path": "/Users/duarte/Documents/Development/playground/documents/company/master-services-agreement.pdf",
         "reveal_blocked_categories": [],
         "reveal_used": false,
+        "silent": [],
         "unreadable_pages": [],
         "unscanned_categories": []
       },
       "sha256": "8186812a462e216e9789ac8f2a99bdc60dea2ab1e123e4f80d971b2627d917cf",
       "timing": {
-        "analyse_seconds": 0.027,
-        "read_seconds": 0.485,
-        "scan_seconds": 0.596,
-        "seconds_per_page": 0.139,
-        "started_at": 1790680084.07,
-        "total_seconds": 1.108
+        "analyse_seconds": 0.026,
+        "read_seconds": 0.481,
+        "scan_seconds": 0.595,
+        "seconds_per_page": 0.138,
+        "started_at": 1791323338.166,
+        "total_seconds": 1.101
       },
       "verification": null,
       "visibility_checked": true,
@@ -5542,7 +5547,7 @@
           "mean_coverage_pct": 9.46,
           "reads_tables": true,
           "reordered": false,
-          "seconds": 0.0711,
+          "seconds": 0.0715,
           "similarity": 1.0
         }
       ],
@@ -6369,17 +6374,18 @@
         "path": "/Users/duarte/Documents/Development/playground/documents/company/vendor-due-diligence.pdf",
         "reveal_blocked_categories": [],
         "reveal_used": false,
+        "silent": [],
         "unreadable_pages": [],
         "unscanned_categories": []
       },
       "sha256": "e15a2151125e6ebf56b86b9d0193ce55dc832c0d614f96218248982be70174ae",
       "timing": {
         "analyse_seconds": 0.008,
-        "read_seconds": 0.092,
-        "scan_seconds": 0.659,
-        "seconds_per_page": 0.152,
-        "started_at": 1790680084.305,
-        "total_seconds": 0.759
+        "read_seconds": 0.093,
+        "scan_seconds": 0.256,
+        "seconds_per_page": 0.071,
+        "started_at": 1791323338.201,
+        "total_seconds": 0.357
       },
       "verification": null,
       "visibility_checked": true,
@@ -6473,7 +6479,7 @@
           "mean_coverage_pct": 6.36,
           "reads_tables": true,
           "reordered": false,
-          "seconds": 0.0267,
+          "seconds": 0.0259,
           "similarity": 1.0
         }
       ],
@@ -7128,6 +7134,22 @@
         "matches": [
           {
             "category": "organisation_name",
+            "column": 0,
+            "confidence": 1.0,
+            "context_term": null,
+            "evidence": "pattern",
+            "fingerprint": "id-9dab42ef84747d4b",
+            "label": "Organisation name",
+            "length": 24,
+            "line": 1,
+            "masked": "•••••• •••••••••••• GMBH",
+            "page": 1,
+            "revealed": null,
+            "severity": "low",
+            "validators_passed": []
+          },
+          {
+            "category": "organisation_name",
             "column": 7,
             "confidence": 0.9986040592193604,
             "context_term": null,
@@ -7260,6 +7282,22 @@
           },
           {
             "category": "organisation_name",
+            "column": 0,
+            "confidence": 1.0,
+            "context_term": null,
+            "evidence": "pattern",
+            "fingerprint": "id-9dab42ef84747d4b",
+            "label": "Organisation name",
+            "length": 24,
+            "line": 1,
+            "masked": "•••••• •••••••••••• GMBH",
+            "page": 2,
+            "revealed": null,
+            "severity": "low",
+            "validators_passed": []
+          },
+          {
+            "category": "organisation_name",
             "column": 7,
             "confidence": 0.9985840916633606,
             "context_term": null,
@@ -7388,6 +7426,22 @@
             "page": 2,
             "revealed": null,
             "severity": "medium",
+            "validators_passed": []
+          },
+          {
+            "category": "organisation_name",
+            "column": 0,
+            "confidence": 1.0,
+            "context_term": null,
+            "evidence": "pattern",
+            "fingerprint": "id-9dab42ef84747d4b",
+            "label": "Organisation name",
+            "length": 24,
+            "line": 1,
+            "masked": "•••••• •••••••••••• GMBH",
+            "page": 3,
+            "revealed": null,
+            "severity": "low",
             "validators_passed": []
           },
           {
@@ -7531,17 +7585,18 @@
         "path": "/Users/duarte/Documents/Development/playground/documents/invoices/rechnungen-2026-de.pdf",
         "reveal_blocked_categories": [],
         "reveal_used": false,
+        "silent": [],
         "unreadable_pages": [],
         "unscanned_categories": []
       },
       "sha256": "87ae793dc92653908f5206d0ab5f947a7bb675702c480a7a58b7f1269343d04d",
       "timing": {
-        "analyse_seconds": 0.002,
+        "analyse_seconds": 0.003,
         "read_seconds": 0.033,
-        "scan_seconds": 0.463,
-        "seconds_per_page": 0.166,
-        "started_at": 1790680084.569,
-        "total_seconds": 0.499
+        "scan_seconds": 0.06,
+        "seconds_per_page": 0.032,
+        "started_at": 1791323338.465,
+        "total_seconds": 0.096
       },
       "verification": null,
       "visibility_checked": true,
@@ -8128,17 +8183,18 @@
         "path": "/Users/duarte/Documents/Development/playground/documents/invoices/refund-request.eml",
         "reveal_blocked_categories": [],
         "reveal_used": false,
+        "silent": [],
         "unreadable_pages": [],
         "unscanned_categories": []
       },
       "sha256": "db5e9cf9d7d5e1fac37cae4bc116771319af163665410dc660b458efe5069c63",
       "timing": {
         "analyse_seconds": 0.001,
-        "read_seconds": 0.001,
+        "read_seconds": 0.002,
         "scan_seconds": 0.019,
-        "seconds_per_page": 0.021,
-        "started_at": 1790680085.073,
-        "total_seconds": 0.021
+        "seconds_per_page": 0.022,
+        "started_at": 1791323338.566,
+        "total_seconds": 0.022
       },
       "verification": null,
       "visibility_checked": true,
@@ -8758,6 +8814,7 @@
         "path": "/Users/duarte/Documents/Development/playground/documents/invoices/supplier-invoices-scanned.pdf",
         "reveal_blocked_categories": [],
         "reveal_used": false,
+        "silent": [],
         "unreadable_pages": [
           1,
           2,
@@ -8767,12 +8824,12 @@
       },
       "sha256": "b9293ef1ccaacdd8e49c4282661652bbc81c564fe68b290c8c382d658c74e93f",
       "timing": {
-        "analyse_seconds": 0.015,
-        "read_seconds": 0.039,
+        "analyse_seconds": 0.016,
+        "read_seconds": 0.04,
         "scan_seconds": 0.001,
-        "seconds_per_page": 0.018,
-        "started_at": 1790680085.075,
-        "total_seconds": 0.055
+        "seconds_per_page": 0.019,
+        "started_at": 1791323338.568,
+        "total_seconds": 0.057
       },
       "verification": null,
       "visibility_checked": true,
@@ -9082,7 +9139,7 @@
       "company/employee-handbook.pdf": 73.0,
       "company/master-services-agreement.pdf": 74.8,
       "company/vendor-due-diligence.pdf": 77.5,
-      "invoices/rechnungen-2026-de.pdf": 69.4,
+      "invoices/rechnungen-2026-de.pdf": 67.9,
       "invoices/refund-request.eml": 89.4,
       "invoices/supplier-invoices-scanned.pdf": 45.0
     },
@@ -9104,13 +9161,13 @@
       {
         "key": "exposure",
         "name": "Exposure",
-        "score": 49.6,
+        "score": 48.9,
         "weight": 0.25,
         "why": "What these documents carry that should not leave, weighted by severity and by how good the evidence for each finding is."
       }
     ],
     "label": "ready",
-    "score": 77.7,
+    "score": 77.5,
     "scored_documents": 8,
     "total_documents": 8
   },
@@ -9197,14 +9254,14 @@
       "readiness",
       "sensitive"
     ],
-    "config_digest": "228e94365a6157ca",
+    "config_digest": "8c943dd5e8deaa73",
     "config_dir": "/Users/duarte/Documents/Development/playground/.venv/lib/python3.13/site-packages/complydoc/config",
     "content_sent_to": [],
     "documents_read_after_worker_failure": 0,
-    "duration_seconds": 4.426,
+    "duration_seconds": 7.988,
     "extracted_text_used": false,
     "extractor": "pdfplumber",
-    "finished_at": "2026-09-29T12:08:05+01:00",
+    "finished_at": "2026-10-06T22:48:59+01:00",
     "jobs": 3,
     "monthly_volume": null,
     "ner_available": true,
@@ -9219,11 +9276,11 @@
     "reveal_used": false,
     "sample_size": null,
     "sampled_from": null,
-    "schema_version": 17,
-    "started_at": "2026-09-29T12:08:00+01:00",
+    "schema_version": 22,
+    "started_at": "2026-10-06T22:48:51+01:00",
     "target": "/Users/duarte/Documents/Development/playground/documents",
     "timeout_seconds": null,
-    "tool_version": "0.6.2",
+    "tool_version": "0.6.8",
     "verify_model": null,
     "verify_scope": null
   },
