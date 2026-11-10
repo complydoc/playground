@@ -1,6 +1,6 @@
 {
   "aggregate": {
-    "analyse_seconds": 0.133,
+    "analyse_seconds": 0.13,
     "annual_text_usd": null,
     "annual_vision_usd": null,
     "categories_not_scanned": {},
@@ -25,9 +25,9 @@
       "email": 1,
       "pdf": 6
     },
-    "hours_per_1000_documents": 0.65,
+    "hours_per_1000_documents": 0.53,
     "ignored_total": 0,
-    "mean_readiness_score": 86.7,
+    "mean_readiness_score": 86.6,
     "monthly_text_usd": null,
     "monthly_vision_usd": null,
     "ocr_pages": 0,
@@ -36,19 +36,19 @@
     "pages_total": 35,
     "pages_unreadable": 3,
     "projected_seconds": {
-      "100": 235.5,
-      "1000": 2354.6,
-      "10000": 23546.2,
-      "100000": 235462.5
+      "100": 191.3,
+      "1000": 1912.6,
+      "10000": 19126.2,
+      "100000": 191262.5
     },
-    "read_seconds": 1.905,
+    "read_seconds": 2.279,
     "readiness_bands": {
       "needs work": 1,
       "ready": 7
     },
-    "scan_seconds": 16.798,
-    "seconds_per_document": 2.355,
-    "seconds_per_page": 0.538,
+    "scan_seconds": 12.896,
+    "seconds_per_document": 1.913,
+    "seconds_per_page": 0.437,
     "sensitive_by_category": {
       "bank_account_number": 2,
       "card_number": 2,
@@ -57,7 +57,7 @@
       "iban": 3,
       "ni_number": 5,
       "organisation_name": 21,
-      "person_name": 20,
+      "person_name": 22,
       "phone_number": 14,
       "sort_code": 2,
       "street_address": 1,
@@ -66,9 +66,9 @@
     "sensitive_by_severity": {
       "high": 17,
       "low": 21,
-      "medium": 52
+      "medium": 54
     },
-    "sensitive_total": 90,
+    "sensitive_total": 92,
     "signal_distribution": {
       "acroform_fields": {
         "error": 0,
@@ -163,8 +163,8 @@
       },
       "repeated_page_lines": {
         "error": 0,
-        "fair": 0,
-        "good": 3,
+        "fair": 1,
+        "good": 2,
         "not_applicable": 3,
         "poor": 2
       },
@@ -232,8 +232,8 @@
         "poor": 0
       }
     },
-    "total_seconds": 18.837,
-    "total_text_path_usd": 0.0018243,
+    "total_seconds": 15.301,
+    "total_text_path_usd": 0.0018401000000000001,
     "total_vision_path_usd": 0.003723
   },
   "categories": null,
@@ -252,28 +252,29 @@
     "headline_resolution": "medium",
     "models": [
       {
+        "accepts_pdf": true,
         "architectures": [
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.072972,
+            "folder_usd": 0.073604,
             "key": "text_layer",
             "label": "Text layer",
             "note": "Only documents that already carry a text layer.",
-            "per_1000_usd": 10.424571428571427,
-            "per_document_usd": 0.010424571428571427
+            "per_1000_usd": 10.514857142857144,
+            "per_document_usd": 0.010514857142857143
           },
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.072972,
+            "folder_usd": 0.073604,
             "key": "text_ocr",
             "label": "Text + local OCR",
             "note": "Every document. Scans are read locally first, which costs nothing to send.",
-            "per_1000_usd": 10.424571428571427,
-            "per_document_usd": 0.010424571428571427
+            "per_1000_usd": 10.514857142857144,
+            "per_document_usd": 0.010514857142857143
           },
           {
             "annual_usd": null,
@@ -287,9 +288,10 @@
             "per_document_usd": 0.031085714285714282
           }
         ],
-        "batch_per_1000_usd": 5.212285714285714,
+        "batch_per_1000_usd": 5.257428571428572,
         "display_name": "Claude Opus 5.5",
         "input_per_mtok_usd": 4.0,
+        "max_input_tokens": 1000000,
         "model_id": "claude-opus-5-5",
         "price_source": "imported",
         "provider": "anthropic",
@@ -298,28 +300,77 @@
         "vision_formula": "width_height_area"
       },
       {
+        "accepts_pdf": true,
         "architectures": [
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.036486,
+            "folder_usd": 0.18400999999999998,
             "key": "text_layer",
             "label": "Text layer",
             "note": "Only documents that already carry a text layer.",
-            "per_1000_usd": 5.212285714285714,
-            "per_document_usd": 0.005212285714285714
+            "per_1000_usd": 26.287142857142854,
+            "per_document_usd": 0.026287142857142853
           },
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.036486,
+            "folder_usd": 0.18400999999999998,
             "key": "text_ocr",
             "label": "Text + local OCR",
             "note": "Every document. Scans are read locally first, which costs nothing to send.",
-            "per_1000_usd": 5.212285714285714,
-            "per_document_usd": 0.005212285714285714
+            "per_1000_usd": 26.287142857142854,
+            "per_document_usd": 0.026287142857142853
+          },
+          {
+            "annual_usd": null,
+            "documents_served": 7,
+            "documents_total": 8,
+            "folder_usd": 0.544,
+            "key": "vision",
+            "label": "Vision",
+            "note": "Every document, sent as page images.",
+            "per_1000_usd": 77.71428571428572,
+            "per_document_usd": 0.07771428571428572
+          }
+        ],
+        "batch_per_1000_usd": 13.143571428571427,
+        "display_name": "Claude Fable 5.1",
+        "input_per_mtok_usd": 10.0,
+        "max_input_tokens": 1000000,
+        "model_id": "claude-fable-5-1",
+        "price_source": "imported",
+        "provider": "anthropic",
+        "supports_vision": true,
+        "tokenizer": "o200k_basex1",
+        "vision_formula": "width_height_area"
+      },
+      {
+        "accepts_pdf": true,
+        "architectures": [
+          {
+            "annual_usd": null,
+            "documents_served": 7,
+            "documents_total": 8,
+            "folder_usd": 0.036802,
+            "key": "text_layer",
+            "label": "Text layer",
+            "note": "Only documents that already carry a text layer.",
+            "per_1000_usd": 5.257428571428572,
+            "per_document_usd": 0.005257428571428572
+          },
+          {
+            "annual_usd": null,
+            "documents_served": 7,
+            "documents_total": 8,
+            "folder_usd": 0.036802,
+            "key": "text_ocr",
+            "label": "Text + local OCR",
+            "note": "Every document. Scans are read locally first, which costs nothing to send.",
+            "per_1000_usd": 5.257428571428572,
+            "per_document_usd": 0.005257428571428572
           },
           {
             "annual_usd": null,
@@ -333,10 +384,11 @@
             "per_document_usd": 0.015542857142857141
           }
         ],
-        "batch_per_1000_usd": 2.606142857142857,
-        "display_name": "Claude Sonnet 5",
+        "batch_per_1000_usd": 2.628714285714286,
+        "display_name": "Claude Sonnet 5.5",
         "input_per_mtok_usd": 2.0,
-        "model_id": "claude-sonnet-5",
+        "max_input_tokens": 1000000,
+        "model_id": "claude-sonnet-5-5",
         "price_source": "imported",
         "provider": "anthropic",
         "supports_vision": true,
@@ -344,45 +396,47 @@
         "vision_formula": "width_height_area"
       },
       {
+        "accepts_pdf": true,
         "architectures": [
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.018243,
+            "folder_usd": 0.0018401000000000001,
             "key": "text_layer",
             "label": "Text layer",
             "note": "Only documents that already carry a text layer.",
-            "per_1000_usd": 2.606142857142857,
-            "per_document_usd": 0.002606142857142857
+            "per_1000_usd": 0.2628714285714286,
+            "per_document_usd": 0.0002628714285714286
           },
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.018243,
+            "folder_usd": 0.0018401000000000001,
             "key": "text_ocr",
             "label": "Text + local OCR",
             "note": "Every document. Scans are read locally first, which costs nothing to send.",
-            "per_1000_usd": 2.606142857142857,
-            "per_document_usd": 0.002606142857142857
+            "per_1000_usd": 0.2628714285714286,
+            "per_document_usd": 0.0002628714285714286
           },
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.0544,
+            "folder_usd": 0.00544,
             "key": "vision",
             "label": "Vision",
             "note": "Every document, sent as page images.",
-            "per_1000_usd": 7.7714285714285705,
-            "per_document_usd": 0.007771428571428571
+            "per_1000_usd": 0.7771428571428572,
+            "per_document_usd": 0.0007771428571428572
           }
         ],
-        "batch_per_1000_usd": 1.3030714285714284,
-        "display_name": "Claude Haiku 4.5",
-        "input_per_mtok_usd": 1.0,
-        "model_id": "claude-haiku-4-5",
+        "batch_per_1000_usd": 0.1314357142857143,
+        "display_name": "Claude Haiku 5.5",
+        "input_per_mtok_usd": 0.1,
+        "max_input_tokens": 1000000,
+        "model_id": "claude-haiku-5-5",
         "price_source": "imported",
         "provider": "anthropic",
         "supports_vision": true,
@@ -390,28 +444,29 @@
         "vision_formula": "width_height_area"
       },
       {
+        "accepts_pdf": false,
         "architectures": [
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.00273645,
+            "folder_usd": 0.00276015,
             "key": "text_layer",
             "label": "Text layer",
             "note": "Only documents that already carry a text layer.",
-            "per_1000_usd": 0.3909214285714286,
-            "per_document_usd": 0.0003909214285714286
+            "per_1000_usd": 0.3943071428571428,
+            "per_document_usd": 0.0003943071428571428
           },
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.00273645,
+            "folder_usd": 0.00276015,
             "key": "text_ocr",
             "label": "Text + local OCR",
             "note": "Every document. Scans are read locally first, which costs nothing to send.",
-            "per_1000_usd": 0.3909214285714286,
-            "per_document_usd": 0.0003909214285714286
+            "per_1000_usd": 0.3943071428571428,
+            "per_document_usd": 0.0003943071428571428
           },
           {
             "annual_usd": null,
@@ -428,6 +483,7 @@
         "batch_per_1000_usd": null,
         "display_name": "DeepSeek V4 Flash Vision Exp",
         "input_per_mtok_usd": 0.15,
+        "max_input_tokens": 1048576,
         "model_id": "deepseek-v4-flash-vision-exp",
         "price_source": "imported",
         "provider": "deepseek",
@@ -436,74 +492,29 @@
         "vision_formula": "tiled_512"
       },
       {
+        "accepts_pdf": false,
         "architectures": [
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.036486,
+            "folder_usd": 0.055203,
             "key": "text_layer",
             "label": "Text layer",
             "note": "Only documents that already carry a text layer.",
-            "per_1000_usd": 5.212285714285714,
-            "per_document_usd": 0.005212285714285714
+            "per_1000_usd": 7.886142857142858,
+            "per_document_usd": 0.007886142857142857
           },
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.036486,
+            "folder_usd": 0.055203,
             "key": "text_ocr",
             "label": "Text + local OCR",
             "note": "Every document. Scans are read locally first, which costs nothing to send.",
-            "per_1000_usd": 5.212285714285714,
-            "per_document_usd": 0.005212285714285714
-          },
-          {
-            "annual_usd": null,
-            "documents_served": 7,
-            "documents_total": 8,
-            "folder_usd": 0.212592,
-            "key": "vision",
-            "label": "Vision",
-            "note": "Every document, sent as page images.",
-            "per_1000_usd": 30.370285714285714,
-            "per_document_usd": 0.030370285714285714
-          }
-        ],
-        "batch_per_1000_usd": 2.606142857142857,
-        "display_name": "Gemini 3.1 Pro Preview",
-        "input_per_mtok_usd": 2.0,
-        "model_id": "gemini/gemini-3.1-pro-preview",
-        "price_source": "imported",
-        "provider": "gemini",
-        "supports_vision": true,
-        "tokenizer": "o200k_basex1",
-        "vision_formula": "flat_then_tiled"
-      },
-      {
-        "architectures": [
-          {
-            "annual_usd": null,
-            "documents_served": 7,
-            "documents_total": 8,
-            "folder_usd": 0.054729,
-            "key": "text_layer",
-            "label": "Text layer",
-            "note": "Only documents that already carry a text layer.",
-            "per_1000_usd": 7.818428571428572,
-            "per_document_usd": 0.007818428571428572
-          },
-          {
-            "annual_usd": null,
-            "documents_served": 7,
-            "documents_total": 8,
-            "folder_usd": 0.054729,
-            "key": "text_ocr",
-            "label": "Text + local OCR",
-            "note": "Every document. Scans are read locally first, which costs nothing to send.",
-            "per_1000_usd": 7.818428571428572,
-            "per_document_usd": 0.007818428571428572
+            "per_1000_usd": 7.886142857142858,
+            "per_document_usd": 0.007886142857142857
           },
           {
             "annual_usd": null,
@@ -520,6 +531,7 @@
         "batch_per_1000_usd": null,
         "display_name": "Kimi K3",
         "input_per_mtok_usd": 3.0,
+        "max_input_tokens": 1048576,
         "model_id": "moonshot/kimi-k3",
         "price_source": "imported",
         "provider": "moonshot",
@@ -528,28 +540,29 @@
         "vision_formula": "tiled_512"
       },
       {
+        "accepts_pdf": true,
         "architectures": [
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.00273645,
+            "folder_usd": 0.00276015,
             "key": "text_layer",
             "label": "Text layer",
             "note": "Only documents that already carry a text layer.",
-            "per_1000_usd": 0.3909214285714286,
-            "per_document_usd": 0.0003909214285714286
+            "per_1000_usd": 0.3943071428571428,
+            "per_document_usd": 0.0003943071428571428
           },
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.00273645,
+            "folder_usd": 0.00276015,
             "key": "text_ocr",
             "label": "Text + local OCR",
             "note": "Every document. Scans are read locally first, which costs nothing to send.",
-            "per_1000_usd": 0.3909214285714286,
-            "per_document_usd": 0.0003909214285714286
+            "per_1000_usd": 0.3943071428571428,
+            "per_document_usd": 0.0003943071428571428
           },
           {
             "annual_usd": null,
@@ -566,6 +579,7 @@
         "batch_per_1000_usd": null,
         "display_name": "GLM-5.3-Flash",
         "input_per_mtok_usd": 0.15,
+        "max_input_tokens": 1000000,
         "model_id": "zai/glm-5.3-flash",
         "price_source": "imported",
         "provider": "zai",
@@ -574,74 +588,29 @@
         "vision_formula": "tiled_512"
       },
       {
+        "accepts_pdf": false,
         "architectures": [
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.18243,
+            "folder_usd": 0.00276015,
             "key": "text_layer",
             "label": "Text layer",
             "note": "Only documents that already carry a text layer.",
-            "per_1000_usd": 26.06142857142857,
-            "per_document_usd": 0.026061428571428572
+            "per_1000_usd": 0.3943071428571428,
+            "per_document_usd": 0.0003943071428571428
           },
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.18243,
+            "folder_usd": 0.00276015,
             "key": "text_ocr",
             "label": "Text + local OCR",
             "note": "Every document. Scans are read locally first, which costs nothing to send.",
-            "per_1000_usd": 26.06142857142857,
-            "per_document_usd": 0.026061428571428572
-          },
-          {
-            "annual_usd": null,
-            "documents_served": 7,
-            "documents_total": 8,
-            "folder_usd": 0.544,
-            "key": "vision",
-            "label": "Vision",
-            "note": "Every document, sent as page images.",
-            "per_1000_usd": 77.71428571428572,
-            "per_document_usd": 0.07771428571428572
-          }
-        ],
-        "batch_per_1000_usd": 13.030714285714286,
-        "display_name": "Claude Fable 5.1",
-        "input_per_mtok_usd": 10.0,
-        "model_id": "claude-fable-5-1",
-        "price_source": "imported",
-        "provider": "anthropic",
-        "supports_vision": true,
-        "tokenizer": "o200k_basex1",
-        "vision_formula": "width_height_area"
-      },
-      {
-        "architectures": [
-          {
-            "annual_usd": null,
-            "documents_served": 7,
-            "documents_total": 8,
-            "folder_usd": 0.00273645,
-            "key": "text_layer",
-            "label": "Text layer",
-            "note": "Only documents that already carry a text layer.",
-            "per_1000_usd": 0.3909214285714286,
-            "per_document_usd": 0.0003909214285714286
-          },
-          {
-            "annual_usd": null,
-            "documents_served": 7,
-            "documents_total": 8,
-            "folder_usd": 0.00273645,
-            "key": "text_ocr",
-            "label": "Text + local OCR",
-            "note": "Every document. Scans are read locally first, which costs nothing to send.",
-            "per_1000_usd": 0.3909214285714286,
-            "per_document_usd": 0.0003909214285714286
+            "per_1000_usd": 0.3943071428571428,
+            "per_document_usd": 0.0003943071428571428
           },
           {
             "annual_usd": null,
@@ -656,8 +625,9 @@
           }
         ],
         "batch_per_1000_usd": null,
-        "display_name": "DeepSeek V4.1 Flash",
+        "display_name": "DeepSeek V4.1 Flash 1017",
         "input_per_mtok_usd": 0.15,
+        "max_input_tokens": 1048576,
         "model_id": "deepseek-flash",
         "price_source": "imported",
         "provider": "deepseek",
@@ -666,28 +636,29 @@
         "vision_formula": "tiled_512"
       },
       {
+        "accepts_pdf": false,
         "architectures": [
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.007935705,
+            "folder_usd": 0.012144660000000002,
             "key": "text_layer",
             "label": "Text layer",
             "note": "Only documents that already carry a text layer.",
-            "per_1000_usd": 1.1336721428571428,
-            "per_document_usd": 0.0011336721428571428
+            "per_1000_usd": 1.7349514285714287,
+            "per_document_usd": 0.0017349514285714288
           },
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.007935705,
+            "folder_usd": 0.012144660000000002,
             "key": "text_ocr",
             "label": "Text + local OCR",
             "note": "Every document. Scans are read locally first, which costs nothing to send.",
-            "per_1000_usd": 1.1336721428571428,
-            "per_document_usd": 0.0011336721428571428
+            "per_1000_usd": 1.7349514285714287,
+            "per_document_usd": 0.0017349514285714288
           },
           {
             "annual_usd": null,
@@ -703,7 +674,8 @@
         ],
         "batch_per_1000_usd": null,
         "display_name": "DeepSeek V4 Pro",
-        "input_per_mtok_usd": 0.435,
+        "input_per_mtok_usd": 0.66,
+        "max_input_tokens": 1048576,
         "model_id": "deepseek-v4-pro",
         "price_source": "imported",
         "provider": "deepseek",
@@ -712,28 +684,29 @@
         "vision_formula": null
       },
       {
+        "accepts_pdf": true,
         "architectures": [
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.0054729,
+            "folder_usd": 0.0055203,
             "key": "text_layer",
             "label": "Text layer",
             "note": "Only documents that already carry a text layer.",
-            "per_1000_usd": 0.7818428571428572,
-            "per_document_usd": 0.0007818428571428572
+            "per_1000_usd": 0.7886142857142856,
+            "per_document_usd": 0.0007886142857142857
           },
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.0054729,
+            "folder_usd": 0.0055203,
             "key": "text_ocr",
             "label": "Text + local OCR",
             "note": "Every document. Scans are read locally first, which costs nothing to send.",
-            "per_1000_usd": 0.7818428571428572,
-            "per_document_usd": 0.0007818428571428572
+            "per_1000_usd": 0.7886142857142856,
+            "per_document_usd": 0.0007886142857142857
           },
           {
             "annual_usd": null,
@@ -747,9 +720,10 @@
             "per_document_usd": 0.004555542857142857
           }
         ],
-        "batch_per_1000_usd": 0.3909214285714286,
+        "batch_per_1000_usd": 0.3943071428571428,
         "display_name": "Gemini 3.5 Flash Lite",
         "input_per_mtok_usd": 0.3,
+        "max_input_tokens": 1048576,
         "model_id": "gemini-3.5-flash-lite",
         "price_source": "imported",
         "provider": "gemini",
@@ -758,28 +732,29 @@
         "vision_formula": "flat_then_tiled"
       },
       {
+        "accepts_pdf": true,
         "architectures": [
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.01368225,
+            "folder_usd": 0.01380075,
             "key": "text_layer",
             "label": "Text layer",
             "note": "Only documents that already carry a text layer.",
-            "per_1000_usd": 1.954607142857143,
-            "per_document_usd": 0.001954607142857143
+            "per_1000_usd": 1.9715357142857144,
+            "per_document_usd": 0.0019715357142857143
           },
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.01368225,
+            "folder_usd": 0.01380075,
             "key": "text_ocr",
             "label": "Text + local OCR",
             "note": "Every document. Scans are read locally first, which costs nothing to send.",
-            "per_1000_usd": 1.954607142857143,
-            "per_document_usd": 0.001954607142857143
+            "per_1000_usd": 1.9715357142857144,
+            "per_document_usd": 0.0019715357142857143
           },
           {
             "annual_usd": null,
@@ -793,9 +768,10 @@
             "per_document_usd": 0.011388857142857142
           }
         ],
-        "batch_per_1000_usd": 0.9773035714285715,
+        "batch_per_1000_usd": 0.9857678571428572,
         "display_name": "Gemini 3.8 Flash",
         "input_per_mtok_usd": 0.75,
+        "max_input_tokens": 1048576,
         "model_id": "gemini-3.8-flash",
         "price_source": "imported",
         "provider": "gemini",
@@ -804,28 +780,125 @@
         "vision_formula": "flat_then_tiled"
       },
       {
+        "accepts_pdf": true,
         "architectures": [
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.025540199999999996,
+            "folder_usd": 0.036802,
             "key": "text_layer",
             "label": "Text layer",
             "note": "Only documents that already carry a text layer.",
-            "per_1000_usd": 3.648599999999999,
-            "per_document_usd": 0.0036485999999999992
+            "per_1000_usd": 5.257428571428572,
+            "per_document_usd": 0.005257428571428572
           },
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.025540199999999996,
+            "folder_usd": 0.036802,
             "key": "text_ocr",
             "label": "Text + local OCR",
             "note": "Every document. Scans are read locally first, which costs nothing to send.",
-            "per_1000_usd": 3.648599999999999,
-            "per_document_usd": 0.0036485999999999992
+            "per_1000_usd": 5.257428571428572,
+            "per_document_usd": 0.005257428571428572
+          },
+          {
+            "annual_usd": null,
+            "documents_served": 7,
+            "documents_total": 8,
+            "folder_usd": 0.212592,
+            "key": "vision",
+            "label": "Vision",
+            "note": "Every document, sent as page images.",
+            "per_1000_usd": 30.370285714285714,
+            "per_document_usd": 0.030370285714285714
+          }
+        ],
+        "batch_per_1000_usd": 2.628714285714286,
+        "display_name": "Gemini 4 Argon",
+        "input_per_mtok_usd": 2.0,
+        "max_input_tokens": 1048576,
+        "model_id": "gemini-4-argon",
+        "price_source": "imported",
+        "provider": "gemini",
+        "supports_vision": true,
+        "tokenizer": "o200k_basex1",
+        "vision_formula": "flat_then_tiled"
+      },
+      {
+        "accepts_pdf": true,
+        "architectures": [
+          {
+            "annual_usd": null,
+            "documents_served": 7,
+            "documents_total": 8,
+            "folder_usd": 0.036802,
+            "key": "text_layer",
+            "label": "Text layer",
+            "note": "Only documents that already carry a text layer.",
+            "per_1000_usd": 5.257428571428572,
+            "per_document_usd": 0.005257428571428572
+          },
+          {
+            "annual_usd": null,
+            "documents_served": 7,
+            "documents_total": 8,
+            "folder_usd": 0.036802,
+            "key": "text_ocr",
+            "label": "Text + local OCR",
+            "note": "Every document. Scans are read locally first, which costs nothing to send.",
+            "per_1000_usd": 5.257428571428572,
+            "per_document_usd": 0.005257428571428572
+          },
+          {
+            "annual_usd": null,
+            "documents_served": 7,
+            "documents_total": 8,
+            "folder_usd": 0.212592,
+            "key": "vision",
+            "label": "Vision",
+            "note": "Every document, sent as page images.",
+            "per_1000_usd": 30.370285714285714,
+            "per_document_usd": 0.030370285714285714
+          }
+        ],
+        "batch_per_1000_usd": 2.628714285714286,
+        "display_name": "Gemini Pro Latest",
+        "input_per_mtok_usd": 2.0,
+        "max_input_tokens": 1048576,
+        "model_id": "gemini-pro-latest",
+        "price_source": "imported",
+        "provider": "gemini",
+        "supports_vision": true,
+        "tokenizer": "o200k_basex1",
+        "vision_formula": "flat_then_tiled"
+      },
+      {
+        "accepts_pdf": false,
+        "architectures": [
+          {
+            "annual_usd": null,
+            "documents_served": 7,
+            "documents_total": 8,
+            "folder_usd": 0.0257614,
+            "key": "text_layer",
+            "label": "Text layer",
+            "note": "Only documents that already carry a text layer.",
+            "per_1000_usd": 3.6802,
+            "per_document_usd": 0.0036802000000000002
+          },
+          {
+            "annual_usd": null,
+            "documents_served": 7,
+            "documents_total": 8,
+            "folder_usd": 0.0257614,
+            "key": "text_ocr",
+            "label": "Text + local OCR",
+            "note": "Every document. Scans are read locally first, which costs nothing to send.",
+            "per_1000_usd": 3.6802,
+            "per_document_usd": 0.0036802000000000002
           },
           {
             "annual_usd": null,
@@ -842,6 +915,7 @@
         "batch_per_1000_usd": null,
         "display_name": "GLM-5.3",
         "input_per_mtok_usd": 1.4,
+        "max_input_tokens": 1000000,
         "model_id": "glm-5.3",
         "price_source": "imported",
         "provider": "zai",
@@ -850,28 +924,29 @@
         "vision_formula": null
       },
       {
+        "accepts_pdf": true,
         "architectures": [
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.00674991,
+            "folder_usd": 0.00680837,
             "key": "text_layer",
             "label": "Text layer",
             "note": "Only documents that already carry a text layer.",
-            "per_1000_usd": 0.964272857142857,
-            "per_document_usd": 0.0009642728571428571
+            "per_1000_usd": 0.9726242857142857,
+            "per_document_usd": 0.0009726242857142857
           },
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.00674991,
+            "folder_usd": 0.00680837,
             "key": "text_ocr",
             "label": "Text + local OCR",
             "note": "Every document. Scans are read locally first, which costs nothing to send.",
-            "per_1000_usd": 0.964272857142857,
-            "per_document_usd": 0.0009642728571428571
+            "per_1000_usd": 0.9726242857142857,
+            "per_document_usd": 0.0009726242857142857
           },
           {
             "annual_usd": null,
@@ -888,6 +963,7 @@
         "batch_per_1000_usd": null,
         "display_name": "GLM-5.3-FlashX",
         "input_per_mtok_usd": 0.37,
+        "max_input_tokens": 1000000,
         "model_id": "glm-5.3-flashx",
         "price_source": "imported",
         "provider": "zai",
@@ -896,28 +972,29 @@
         "vision_formula": "tiled_512"
       },
       {
+        "accepts_pdf": true,
         "architectures": [
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.0218916,
+            "folder_usd": 0.0220812,
             "key": "text_layer",
             "label": "Text layer",
             "note": "Only documents that already carry a text layer.",
-            "per_1000_usd": 3.1273714285714287,
-            "per_document_usd": 0.0031273714285714287
+            "per_1000_usd": 3.1544571428571424,
+            "per_document_usd": 0.0031544571428571426
           },
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.0218916,
+            "folder_usd": 0.0220812,
             "key": "text_ocr",
             "label": "Text + local OCR",
             "note": "Every document. Scans are read locally first, which costs nothing to send.",
-            "per_1000_usd": 3.1273714285714287,
-            "per_document_usd": 0.0031273714285714287
+            "per_1000_usd": 3.1544571428571424,
+            "per_document_usd": 0.0031544571428571426
           },
           {
             "annual_usd": null,
@@ -934,6 +1011,7 @@
         "batch_per_1000_usd": null,
         "display_name": "GLM-5V-Turbo",
         "input_per_mtok_usd": 1.2,
+        "max_input_tokens": 200000,
         "model_id": "glm-5v-turbo",
         "price_source": "imported",
         "provider": "zai",
@@ -942,74 +1020,29 @@
         "vision_formula": "tiled_512"
       },
       {
+        "accepts_pdf": true,
         "architectures": [
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.036486,
+            "folder_usd": 0.18400999999999998,
             "key": "text_layer",
             "label": "Text layer",
             "note": "Only documents that already carry a text layer.",
-            "per_1000_usd": 5.212285714285714,
-            "per_document_usd": 0.005212285714285714
+            "per_1000_usd": 26.287142857142854,
+            "per_document_usd": 0.026287142857142853
           },
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.036486,
+            "folder_usd": 0.18400999999999998,
             "key": "text_ocr",
             "label": "Text + local OCR",
             "note": "Every document. Scans are read locally first, which costs nothing to send.",
-            "per_1000_usd": 5.212285714285714,
-            "per_document_usd": 0.005212285714285714
-          },
-          {
-            "annual_usd": null,
-            "documents_served": 7,
-            "documents_total": 8,
-            "folder_usd": 0.07446,
-            "key": "vision",
-            "label": "Vision",
-            "note": "Every document, sent as page images.",
-            "per_1000_usd": 10.637142857142857,
-            "per_document_usd": 0.010637142857142857
-          }
-        ],
-        "batch_per_1000_usd": 2.606142857142857,
-        "display_name": "GPT-5.6 Terra",
-        "input_per_mtok_usd": 2.0,
-        "model_id": "gpt-5.6-terra",
-        "price_source": "imported",
-        "provider": "openai",
-        "supports_vision": true,
-        "tokenizer": "o200k_base",
-        "vision_formula": "tiled_512"
-      },
-      {
-        "architectures": [
-          {
-            "annual_usd": null,
-            "documents_served": 7,
-            "documents_total": 8,
-            "folder_usd": 0.18243,
-            "key": "text_layer",
-            "label": "Text layer",
-            "note": "Only documents that already carry a text layer.",
-            "per_1000_usd": 26.06142857142857,
-            "per_document_usd": 0.026061428571428572
-          },
-          {
-            "annual_usd": null,
-            "documents_served": 7,
-            "documents_total": 8,
-            "folder_usd": 0.18243,
-            "key": "text_ocr",
-            "label": "Text + local OCR",
-            "note": "Every document. Scans are read locally first, which costs nothing to send.",
-            "per_1000_usd": 26.06142857142857,
-            "per_document_usd": 0.026061428571428572
+            "per_1000_usd": 26.287142857142854,
+            "per_document_usd": 0.026287142857142853
           },
           {
             "annual_usd": null,
@@ -1023,9 +1056,10 @@
             "per_document_usd": 0.053185714285714294
           }
         ],
-        "batch_per_1000_usd": 13.030714285714286,
+        "batch_per_1000_usd": 13.143571428571427,
         "display_name": "GPT-6 Astra",
         "input_per_mtok_usd": 10.0,
+        "max_input_tokens": 1050000,
         "model_id": "gpt-6-astra",
         "price_source": "imported",
         "provider": "openai",
@@ -1034,28 +1068,29 @@
         "vision_formula": "tiled_512"
       },
       {
+        "accepts_pdf": true,
         "architectures": [
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.0018243,
+            "folder_usd": 0.0018401000000000001,
             "key": "text_layer",
             "label": "Text layer",
             "note": "Only documents that already carry a text layer.",
-            "per_1000_usd": 0.26061428571428574,
-            "per_document_usd": 0.0002606142857142857
+            "per_1000_usd": 0.2628714285714286,
+            "per_document_usd": 0.0002628714285714286
           },
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.0018243,
+            "folder_usd": 0.0018401000000000001,
             "key": "text_ocr",
             "label": "Text + local OCR",
             "note": "Every document. Scans are read locally first, which costs nothing to send.",
-            "per_1000_usd": 0.26061428571428574,
-            "per_document_usd": 0.0002606142857142857
+            "per_1000_usd": 0.2628714285714286,
+            "per_document_usd": 0.0002628714285714286
           },
           {
             "annual_usd": null,
@@ -1069,9 +1104,10 @@
             "per_document_usd": 0.0005318571428571429
           }
         ],
-        "batch_per_1000_usd": 0.13030714285714287,
+        "batch_per_1000_usd": 0.1314357142857143,
         "display_name": "GPT-6 Luna",
         "input_per_mtok_usd": 0.1,
+        "max_input_tokens": 1050000,
         "model_id": "gpt-6-luna",
         "price_source": "imported",
         "provider": "openai",
@@ -1080,28 +1116,29 @@
         "vision_formula": "tiled_512"
       },
       {
+        "accepts_pdf": true,
         "architectures": [
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.036486,
+            "folder_usd": 0.036802,
             "key": "text_layer",
             "label": "Text layer",
             "note": "Only documents that already carry a text layer.",
-            "per_1000_usd": 5.212285714285714,
-            "per_document_usd": 0.005212285714285714
+            "per_1000_usd": 5.257428571428572,
+            "per_document_usd": 0.005257428571428572
           },
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.036486,
+            "folder_usd": 0.036802,
             "key": "text_ocr",
             "label": "Text + local OCR",
             "note": "Every document. Scans are read locally first, which costs nothing to send.",
-            "per_1000_usd": 5.212285714285714,
-            "per_document_usd": 0.005212285714285714
+            "per_1000_usd": 5.257428571428572,
+            "per_document_usd": 0.005257428571428572
           },
           {
             "annual_usd": null,
@@ -1115,10 +1152,11 @@
             "per_document_usd": 0.010637142857142857
           }
         ],
-        "batch_per_1000_usd": 2.606142857142857,
-        "display_name": "GPT-6 Sol",
+        "batch_per_1000_usd": 2.628714285714286,
+        "display_name": "GPT-6.1 Sol",
         "input_per_mtok_usd": 2.0,
-        "model_id": "gpt-6-sol",
+        "max_input_tokens": 1050000,
+        "model_id": "gpt-6.1-sol",
         "price_source": "imported",
         "provider": "openai",
         "supports_vision": true,
@@ -1126,28 +1164,77 @@
         "vision_formula": "tiled_512"
       },
       {
+        "accepts_pdf": true,
         "architectures": [
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.036486,
+            "folder_usd": 0.018401,
             "key": "text_layer",
             "label": "Text layer",
             "note": "Only documents that already carry a text layer.",
-            "per_1000_usd": 5.212285714285714,
-            "per_document_usd": 0.005212285714285714
+            "per_1000_usd": 2.628714285714286,
+            "per_document_usd": 0.002628714285714286
           },
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.036486,
+            "folder_usd": 0.018401,
             "key": "text_ocr",
             "label": "Text + local OCR",
             "note": "Every document. Scans are read locally first, which costs nothing to send.",
-            "per_1000_usd": 5.212285714285714,
-            "per_document_usd": 0.005212285714285714
+            "per_1000_usd": 2.628714285714286,
+            "per_document_usd": 0.002628714285714286
+          },
+          {
+            "annual_usd": null,
+            "documents_served": 7,
+            "documents_total": 8,
+            "folder_usd": 0.03723,
+            "key": "vision",
+            "label": "Vision",
+            "note": "Every document, sent as page images.",
+            "per_1000_usd": 5.3185714285714285,
+            "per_document_usd": 0.005318571428571429
+          }
+        ],
+        "batch_per_1000_usd": 1.314357142857143,
+        "display_name": "GPT-6.1 Terra",
+        "input_per_mtok_usd": 1.0,
+        "max_input_tokens": 1050000,
+        "model_id": "gpt-6.1-terra",
+        "price_source": "imported",
+        "provider": "openai",
+        "supports_vision": true,
+        "tokenizer": "o200k_base",
+        "vision_formula": "tiled_512"
+      },
+      {
+        "accepts_pdf": true,
+        "architectures": [
+          {
+            "annual_usd": null,
+            "documents_served": 7,
+            "documents_total": 8,
+            "folder_usd": 0.036802,
+            "key": "text_layer",
+            "label": "Text layer",
+            "note": "Only documents that already carry a text layer.",
+            "per_1000_usd": 5.257428571428572,
+            "per_document_usd": 0.005257428571428572
+          },
+          {
+            "annual_usd": null,
+            "documents_served": 7,
+            "documents_total": 8,
+            "folder_usd": 0.036802,
+            "key": "text_ocr",
+            "label": "Text + local OCR",
+            "note": "Every document. Scans are read locally first, which costs nothing to send.",
+            "per_1000_usd": 5.257428571428572,
+            "per_document_usd": 0.005257428571428572
           },
           {
             "annual_usd": null,
@@ -1161,9 +1248,10 @@
             "per_document_usd": 0.010637142857142857
           }
         ],
-        "batch_per_1000_usd": null,
+        "batch_per_1000_usd": 4.205942857142857,
         "display_name": "Grok 4.7",
         "input_per_mtok_usd": 2.0,
+        "max_input_tokens": 500000,
         "model_id": "grok-4.7",
         "price_source": "imported",
         "provider": "xai",
@@ -1172,28 +1260,29 @@
         "vision_formula": "tiled_512"
       },
       {
+        "accepts_pdf": false,
         "architectures": [
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.01733085,
+            "folder_usd": 0.01748095,
             "key": "text_layer",
             "label": "Text layer",
             "note": "Only documents that already carry a text layer.",
-            "per_1000_usd": 2.475835714285714,
-            "per_document_usd": 0.002475835714285714
+            "per_1000_usd": 2.4972785714285712,
+            "per_document_usd": 0.002497278571428571
           },
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.01733085,
+            "folder_usd": 0.01748095,
             "key": "text_ocr",
             "label": "Text + local OCR",
             "note": "Every document. Scans are read locally first, which costs nothing to send.",
-            "per_1000_usd": 2.475835714285714,
-            "per_document_usd": 0.002475835714285714
+            "per_1000_usd": 2.4972785714285712,
+            "per_document_usd": 0.002497278571428571
           },
           {
             "annual_usd": null,
@@ -1210,6 +1299,7 @@
         "batch_per_1000_usd": null,
         "display_name": "Kimi K2.7 Code",
         "input_per_mtok_usd": 0.95,
+        "max_input_tokens": 262144,
         "model_id": "kimi-k2.7-code",
         "price_source": "imported",
         "provider": "moonshot",
@@ -1218,120 +1308,173 @@
         "vision_formula": "tiled_512"
       },
       {
+        "accepts_pdf": false,
         "architectures": [
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.036486,
+            "folder_usd": 0.036802,
             "key": "text_layer",
             "label": "Text layer",
             "note": "Only documents that already carry a text layer.",
-            "per_1000_usd": 5.212285714285714,
-            "per_document_usd": 0.005212285714285714
+            "per_1000_usd": 5.257428571428572,
+            "per_document_usd": 0.005257428571428572
           },
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.036486,
+            "folder_usd": 0.036802,
             "key": "text_ocr",
             "label": "Text + local OCR",
             "note": "Every document. Scans are read locally first, which costs nothing to send.",
-            "per_1000_usd": 5.212285714285714,
-            "per_document_usd": 0.005212285714285714
+            "per_1000_usd": 5.257428571428572,
+            "per_document_usd": 0.005257428571428572
           },
           {
             "annual_usd": null,
-            "documents_served": 0,
+            "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": null,
+            "folder_usd": 0.07446,
             "key": "vision",
             "label": "Vision",
             "note": "Every document, sent as page images.",
-            "per_1000_usd": null,
-            "per_document_usd": null
+            "per_1000_usd": 10.637142857142857,
+            "per_document_usd": 0.010637142857142857
           }
         ],
         "batch_per_1000_usd": null,
-        "display_name": "Magistral Medium (latest)",
+        "display_name": "Kimi K3.1 Pro",
         "input_per_mtok_usd": 2.0,
-        "model_id": "magistral-medium-latest",
+        "max_input_tokens": 1048576,
+        "model_id": "kimi-k3.1-pro",
         "price_source": "imported",
-        "provider": "mistral",
-        "supports_vision": false,
+        "provider": "moonshot",
+        "supports_vision": true,
         "tokenizer": "o200k_basex1",
-        "vision_formula": null
+        "vision_formula": "tiled_512"
       },
       {
+        "accepts_pdf": true,
         "architectures": [
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.0091215,
+            "folder_usd": 0.00276015,
             "key": "text_layer",
             "label": "Text layer",
             "note": "Only documents that already carry a text layer.",
-            "per_1000_usd": 1.3030714285714284,
-            "per_document_usd": 0.0013030714285714284
+            "per_1000_usd": 0.3943071428571428,
+            "per_document_usd": 0.0003943071428571428
           },
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.0091215,
+            "folder_usd": 0.00276015,
             "key": "text_ocr",
             "label": "Text + local OCR",
             "note": "Every document. Scans are read locally first, which costs nothing to send.",
-            "per_1000_usd": 1.3030714285714284,
-            "per_document_usd": 0.0013030714285714284
+            "per_1000_usd": 0.3943071428571428,
+            "per_document_usd": 0.0003943071428571428
           },
           {
             "annual_usd": null,
-            "documents_served": 0,
+            "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": null,
+            "folder_usd": 0.005584500000000001,
             "key": "vision",
             "label": "Vision",
             "note": "Every document, sent as page images.",
-            "per_1000_usd": null,
-            "per_document_usd": null
+            "per_1000_usd": 0.7977857142857144,
+            "per_document_usd": 0.0007977857142857144
           }
         ],
         "batch_per_1000_usd": null,
-        "display_name": "Magistral Small",
-        "input_per_mtok_usd": 0.5,
-        "model_id": "magistral-small",
+        "display_name": "Ministral 3 8B",
+        "input_per_mtok_usd": 0.15,
+        "max_input_tokens": 262144,
+        "model_id": "ministral-8b-2512",
         "price_source": "imported",
         "provider": "mistral",
-        "supports_vision": false,
+        "supports_vision": true,
         "tokenizer": "o200k_basex1",
-        "vision_formula": null
+        "vision_formula": "tiled_512"
       },
       {
+        "accepts_pdf": true,
         "architectures": [
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.0273645,
+            "folder_usd": 0.0128807,
             "key": "text_layer",
             "label": "Text layer",
             "note": "Only documents that already carry a text layer.",
-            "per_1000_usd": 3.909214285714286,
-            "per_document_usd": 0.003909214285714286
+            "per_1000_usd": 1.8401,
+            "per_document_usd": 0.0018401000000000001
           },
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.0273645,
+            "folder_usd": 0.0128807,
             "key": "text_ocr",
             "label": "Text + local OCR",
             "note": "Every document. Scans are read locally first, which costs nothing to send.",
-            "per_1000_usd": 3.909214285714286,
-            "per_document_usd": 0.003909214285714286
+            "per_1000_usd": 1.8401,
+            "per_document_usd": 0.0018401000000000001
+          },
+          {
+            "annual_usd": null,
+            "documents_served": 7,
+            "documents_total": 8,
+            "folder_usd": 0.026060999999999997,
+            "key": "vision",
+            "label": "Vision",
+            "note": "Every document, sent as page images.",
+            "per_1000_usd": 3.723,
+            "per_document_usd": 0.0037229999999999997
+          }
+        ],
+        "batch_per_1000_usd": null,
+        "display_name": "Mistral Large 4",
+        "input_per_mtok_usd": 0.7,
+        "max_input_tokens": 1048576,
+        "model_id": "mistral-large-4",
+        "price_source": "imported",
+        "provider": "mistral",
+        "supports_vision": true,
+        "tokenizer": "o200k_basex1",
+        "vision_formula": "tiled_512"
+      },
+      {
+        "accepts_pdf": true,
+        "architectures": [
+          {
+            "annual_usd": null,
+            "documents_served": 7,
+            "documents_total": 8,
+            "folder_usd": 0.0276015,
+            "key": "text_layer",
+            "label": "Text layer",
+            "note": "Only documents that already carry a text layer.",
+            "per_1000_usd": 3.943071428571429,
+            "per_document_usd": 0.003943071428571429
+          },
+          {
+            "annual_usd": null,
+            "documents_served": 7,
+            "documents_total": 8,
+            "folder_usd": 0.0276015,
+            "key": "text_ocr",
+            "label": "Text + local OCR",
+            "note": "Every document. Scans are read locally first, which costs nothing to send.",
+            "per_1000_usd": 3.943071428571429,
+            "per_document_usd": 0.003943071428571429
           },
           {
             "annual_usd": null,
@@ -1348,6 +1491,7 @@
         "batch_per_1000_usd": null,
         "display_name": "Mistral Medium 3.5",
         "input_per_mtok_usd": 1.5,
+        "max_input_tokens": 262144,
         "model_id": "mistral-medium-2604",
         "price_source": "imported",
         "provider": "mistral",
@@ -1356,28 +1500,29 @@
         "vision_formula": "tiled_512"
       },
       {
+        "accepts_pdf": true,
         "architectures": [
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.00273645,
+            "folder_usd": 0.00276015,
             "key": "text_layer",
             "label": "Text layer",
             "note": "Only documents that already carry a text layer.",
-            "per_1000_usd": 0.3909214285714286,
-            "per_document_usd": 0.0003909214285714286
+            "per_1000_usd": 0.3943071428571428,
+            "per_document_usd": 0.0003943071428571428
           },
           {
             "annual_usd": null,
             "documents_served": 7,
             "documents_total": 8,
-            "folder_usd": 0.00273645,
+            "folder_usd": 0.00276015,
             "key": "text_ocr",
             "label": "Text + local OCR",
             "note": "Every document. Scans are read locally first, which costs nothing to send.",
-            "per_1000_usd": 0.3909214285714286,
-            "per_document_usd": 0.0003909214285714286
+            "per_1000_usd": 0.3943071428571428,
+            "per_document_usd": 0.0003943071428571428
           },
           {
             "annual_usd": null,
@@ -1394,6 +1539,7 @@
         "batch_per_1000_usd": null,
         "display_name": "Mistral Small 4",
         "input_per_mtok_usd": 0.15,
+        "max_input_tokens": 262144,
         "model_id": "mistral-small-2603",
         "price_source": "imported",
         "provider": "mistral",
@@ -1402,7 +1548,7 @@
         "vision_formula": "tiled_512"
       }
     ],
-    "prices_as_of": "2026-09-25",
+    "prices_as_of": "2026-11-09",
     "resolutions": [
       "low",
       "medium",
@@ -1604,13 +1750,13 @@
       "extracted_text": [],
       "extractions": [
         {
-          "characters": 29441,
-          "extractor": "pdfplumber",
+          "characters": 29778,
+          "extractor": "complydoc",
           "granularity": "word",
           "mean_coverage_pct": 30.14,
           "reads_tables": true,
           "reordered": false,
-          "seconds": 0.3217,
+          "seconds": 0.3229,
           "similarity": 1.0
         }
       ],
@@ -1911,7 +2057,7 @@
           },
           {
             "detail": {
-              "characters_examined": 29448,
+              "characters_examined": 29785,
               "ligature_source": "unnormalised page characters",
               "replacement_characters": 0,
               "run_together_words": 0,
@@ -1976,6 +2122,7 @@
                 "en": 8
               },
               "model": "py3langid, run locally",
+              "not_counted": [],
               "pages_measured": 8,
               "pages_skipped_as_not_prose": 0,
               "per_page": {
@@ -2228,7 +2375,7 @@
           },
           {
             "detail": {
-              "characters_examined": 29448,
+              "characters_examined": 29785,
               "cid_codes": 0,
               "control_characters": 0,
               "private_use_characters": 0
@@ -2251,49 +2398,49 @@
       "routing": {
         "pages": [
           {
-            "characters": 3838,
+            "characters": 3883,
             "number": 1,
             "reason": "a text layer covering 48% of the page",
             "route": "text"
           },
           {
-            "characters": 1336,
+            "characters": 1351,
             "number": 2,
             "reason": "a text layer covering 17% of the page",
             "route": "text"
           },
           {
-            "characters": 2412,
+            "characters": 2444,
             "number": 3,
             "reason": "a table with merged or stacked header cells, which plain text loses",
             "route": "vision"
           },
           {
-            "characters": 4393,
+            "characters": 4442,
             "number": 4,
             "reason": "a text layer covering 54% of the page",
             "route": "text"
           },
           {
-            "characters": 4401,
+            "characters": 4450,
             "number": 5,
             "reason": "a text layer covering 54% of the page",
             "route": "text"
           },
           {
-            "characters": 4354,
+            "characters": 4403,
             "number": 6,
             "reason": "a text layer covering 53% of the page",
             "route": "text"
           },
           {
-            "characters": 4368,
+            "characters": 4417,
             "number": 7,
             "reason": "a text layer covering 53% of the page",
             "route": "text"
           },
           {
-            "characters": 4339,
+            "characters": 4388,
             "number": 8,
             "reason": "a text layer covering 53% of the page",
             "route": "text"
@@ -2305,13 +2452,13 @@
           {
             "category": "organisation_name",
             "column": 0,
-            "confidence": 0.985625147819519,
+            "confidence": 0.9903329610824585,
             "context_term": null,
             "evidence": "model",
             "fingerprint": "id-e5927d3c6db8cf08",
             "label": "Organisation name",
             "length": 21,
-            "line": 1,
+            "line": 2,
             "masked": "••••••• ••••••••s Ltd",
             "page": 1,
             "revealed": null,
@@ -2321,13 +2468,13 @@
           {
             "category": "person_name",
             "column": 10,
-            "confidence": 0.9997694492340088,
+            "confidence": 0.9998220801353455,
             "context_term": null,
             "evidence": "model",
             "fingerprint": "id-51841514ac06a9aa",
             "label": "Person name",
             "length": 16,
-            "line": 45,
+            "line": 46,
             "masked": "•••••••• •••ison",
             "page": 1,
             "revealed": null,
@@ -2350,11 +2497,11 @@
       "sha256": "6911df5d52683c1388947080657a022016a1f02c8fdd9f51cb690d2e8fc8efa2",
       "timing": {
         "analyse_seconds": 0.033,
-        "read_seconds": 0.645,
-        "scan_seconds": 5.23,
-        "seconds_per_page": 0.739,
-        "started_at": 1791323332.515,
-        "total_seconds": 5.909
+        "read_seconds": 0.827,
+        "scan_seconds": 3.641,
+        "seconds_per_page": 0.563,
+        "started_at": 1794311937.911,
+        "total_seconds": 4.501
       },
       "verification": null,
       "visibility_checked": true,
@@ -2613,6 +2760,7 @@
                 "en": 1
               },
               "model": "py3langid, run locally",
+              "not_counted": [],
               "pages_measured": 1,
               "pages_skipped_as_not_prose": 0,
               "per_page": {
@@ -2912,12 +3060,12 @@
       },
       "sha256": "88f8a22d9dcf6b801ab5642aa3c290eb771244826a5223330995b9545bca9c65",
       "timing": {
-        "analyse_seconds": 0.016,
-        "read_seconds": 0.115,
-        "scan_seconds": 5.551,
-        "seconds_per_page": 5.683,
-        "started_at": 1791323332.516,
-        "total_seconds": 5.683
+        "analyse_seconds": 0.013,
+        "read_seconds": 0.111,
+        "scan_seconds": 4.152,
+        "seconds_per_page": 4.276,
+        "started_at": 1794311937.911,
+        "total_seconds": 4.276
       },
       "verification": null,
       "visibility_checked": true,
@@ -3071,13 +3219,13 @@
       "extracted_text": [],
       "extractions": [
         {
-          "characters": 24487,
-          "extractor": "pdfplumber",
+          "characters": 24738,
+          "extractor": "complydoc",
           "granularity": "word",
           "mean_coverage_pct": 27.14,
           "reads_tables": true,
           "reordered": false,
-          "seconds": 0.2742,
+          "seconds": 0.2741,
           "similarity": 1.0
         }
       ],
@@ -3376,7 +3524,7 @@
           },
           {
             "detail": {
-              "characters_examined": 24492,
+              "characters_examined": 24743,
               "ligature_source": "unnormalised page characters",
               "replacement_characters": 0,
               "run_together_words": 0,
@@ -3439,6 +3587,7 @@
                 "en": 6
               },
               "model": "py3langid, run locally",
+              "not_counted": [],
               "pages_measured": 6,
               "pages_skipped_as_not_prose": 0,
               "per_page": {
@@ -3683,7 +3832,7 @@
           },
           {
             "detail": {
-              "characters_examined": 24492,
+              "characters_examined": 24743,
               "cid_codes": 0,
               "control_characters": 0,
               "private_use_characters": 0
@@ -3706,37 +3855,37 @@
       "routing": {
         "pages": [
           {
-            "characters": 5143,
+            "characters": 5196,
             "number": 1,
             "reason": "a text layer covering 51% of the page",
             "route": "text"
           },
           {
-            "characters": 5694,
+            "characters": 5751,
             "number": 2,
             "reason": "a text layer covering 56% of the page",
             "route": "text"
           },
           {
-            "characters": 5631,
+            "characters": 5688,
             "number": 3,
             "reason": "a text layer covering 56% of the page",
             "route": "text"
           },
           {
-            "characters": 5711,
+            "characters": 5768,
             "number": 4,
             "reason": "a text layer covering 57% of the page",
             "route": "text"
           },
           {
-            "characters": 1759,
+            "characters": 1778,
             "number": 5,
             "reason": "a text layer covering 17% of the page",
             "route": "text"
           },
           {
-            "characters": 549,
+            "characters": 557,
             "number": 6,
             "reason": "a text layer covering 7% of the page",
             "route": "text"
@@ -3748,13 +3897,13 @@
           {
             "category": "person_name",
             "column": 0,
-            "confidence": 0.9760686159133911,
+            "confidence": 0.9798586368560791,
             "context_term": null,
             "evidence": "model",
             "fingerprint": "id-e38be19c28959d2e",
             "label": "Person name",
             "length": 8,
-            "line": 3,
+            "line": 4,
             "masked": "•••e Doe",
             "page": 6,
             "revealed": null,
@@ -3770,7 +3919,7 @@
             "fingerprint": "id-45521b61510a7529",
             "label": "Email address",
             "length": 24,
-            "line": 3,
+            "line": 4,
             "masked": "••••.•••@•••••••.•••mple",
             "page": 6,
             "revealed": null,
@@ -3786,7 +3935,7 @@
             "fingerprint": "id-596887991fdf3e8d",
             "label": "Phone number",
             "length": 14,
-            "line": 3,
+            "line": 4,
             "masked": "••• •••• 0100 ",
             "page": 6,
             "revealed": null,
@@ -3800,11 +3949,11 @@
             "column": 60,
             "confidence": 1.0,
             "context_term": null,
-            "evidence": "confirmed",
+            "evidence": "pattern",
             "fingerprint": "id-d94dda01b59e99de",
             "label": "National Insurance number",
             "length": 9,
-            "line": 3,
+            "line": 4,
             "masked": "•••••456C",
             "page": 6,
             "revealed": null,
@@ -3816,13 +3965,13 @@
           {
             "category": "person_name",
             "column": 0,
-            "confidence": 0.939118504524231,
+            "confidence": 0.9700509309768677,
             "context_term": null,
             "evidence": "model",
             "fingerprint": "id-f362acd72093a315",
             "label": "Person name",
             "length": 13,
-            "line": 4,
+            "line": 5,
             "masked": "•••••• ••afor",
             "page": 6,
             "revealed": null,
@@ -3838,7 +3987,7 @@
             "fingerprint": "id-d7c28f042dc0d69e",
             "label": "Email address",
             "length": 29,
-            "line": 4,
+            "line": 5,
             "masked": "••••••.••••••@•••••••.•••mple",
             "page": 6,
             "revealed": null,
@@ -3854,7 +4003,7 @@
             "fingerprint": "id-44f7c83d2b718d4e",
             "label": "Phone number",
             "length": 14,
-            "line": 4,
+            "line": 5,
             "masked": "••• •••• 0101 ",
             "page": 6,
             "revealed": null,
@@ -3868,11 +4017,11 @@
             "column": 66,
             "confidence": 1.0,
             "context_term": null,
-            "evidence": "confirmed",
+            "evidence": "pattern",
             "fingerprint": "id-19b7e6f47087d53e",
             "label": "National Insurance number",
             "length": 9,
-            "line": 4,
+            "line": 5,
             "masked": "•••••456D",
             "page": 6,
             "revealed": null,
@@ -3884,13 +4033,13 @@
           {
             "category": "person_name",
             "column": 0,
-            "confidence": 0.9796391725540161,
+            "confidence": 0.984742283821106,
             "context_term": null,
             "evidence": "model",
             "fingerprint": "id-c4102bfe99204f7e",
             "label": "Person name",
             "length": 12,
-            "line": 5,
+            "line": 6,
             "masked": "•••••• •ewis",
             "page": 6,
             "revealed": null,
@@ -3906,7 +4055,7 @@
             "fingerprint": "id-bb56829327f606b1",
             "label": "Email address",
             "length": 28,
-            "line": 5,
+            "line": 6,
             "masked": "••••••.•••••@•••••••.•••mple",
             "page": 6,
             "revealed": null,
@@ -3922,7 +4071,7 @@
             "fingerprint": "id-45a0e8a4b100c63f",
             "label": "Phone number",
             "length": 14,
-            "line": 5,
+            "line": 6,
             "masked": "••• •••• 0102 ",
             "page": 6,
             "revealed": null,
@@ -3936,11 +4085,11 @@
             "column": 65,
             "confidence": 1.0,
             "context_term": null,
-            "evidence": "confirmed",
+            "evidence": "pattern",
             "fingerprint": "id-6a7eab4ed67f0632",
             "label": "National Insurance number",
             "length": 9,
-            "line": 5,
+            "line": 6,
             "masked": "•••••759A",
             "page": 6,
             "revealed": null,
@@ -3948,6 +4097,22 @@
             "validators_passed": [
               "ni_prefix"
             ]
+          },
+          {
+            "category": "person_name",
+            "column": 0,
+            "confidence": 0.9155170321464539,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-ae516cf0fbc723fa",
+            "label": "Person name",
+            "length": 11,
+            "line": 7,
+            "masked": "••••• •owak",
+            "page": 6,
+            "revealed": null,
+            "severity": "medium",
+            "validators_passed": []
           },
           {
             "category": "email_address",
@@ -3958,7 +4123,7 @@
             "fingerprint": "id-2471c5a39e98ee27",
             "label": "Email address",
             "length": 27,
-            "line": 6,
+            "line": 7,
             "masked": "•••••.•••••@•••••••.•••mple",
             "page": 6,
             "revealed": null,
@@ -3974,7 +4139,7 @@
             "fingerprint": "id-fb7e9bab1fe93e33",
             "label": "Phone number",
             "length": 14,
-            "line": 6,
+            "line": 7,
             "masked": "••• •••• 0103 ",
             "page": 6,
             "revealed": null,
@@ -3988,11 +4153,11 @@
             "column": 70,
             "confidence": 1.0,
             "context_term": null,
-            "evidence": "confirmed",
+            "evidence": "pattern",
             "fingerprint": "id-94b742201211b8ab",
             "label": "National Insurance number",
             "length": 9,
-            "line": 6,
+            "line": 7,
             "masked": "•••••019B",
             "page": 6,
             "revealed": null,
@@ -4004,13 +4169,13 @@
           {
             "category": "person_name",
             "column": 0,
-            "confidence": 0.9902021884918213,
+            "confidence": 0.9899632334709167,
             "context_term": null,
             "evidence": "model",
             "fingerprint": "id-92ebcf69b69878c9",
             "label": "Person name",
             "length": 10,
-            "line": 7,
+            "line": 8,
             "masked": "••••• Khan",
             "page": 6,
             "revealed": null,
@@ -4026,7 +4191,7 @@
             "fingerprint": "id-d625b0764da10c21",
             "label": "Email address",
             "length": 32,
-            "line": 7,
+            "line": 8,
             "masked": "•••••••••••.••••@•••••••.•••mple",
             "page": 6,
             "revealed": null,
@@ -4042,7 +4207,7 @@
             "fingerprint": "id-d9667582b5bb31d2",
             "label": "Phone number",
             "length": 14,
-            "line": 7,
+            "line": 8,
             "masked": "••• •••• 0104 ",
             "page": 6,
             "revealed": null,
@@ -4056,11 +4221,11 @@
             "column": 71,
             "confidence": 1.0,
             "context_term": null,
-            "evidence": "confirmed",
+            "evidence": "pattern",
             "fingerprint": "id-34df3d32ef095ad7",
             "label": "National Insurance number",
             "length": 9,
-            "line": 7,
+            "line": 8,
             "masked": "•••••173C",
             "page": 6,
             "revealed": null,
@@ -4078,7 +4243,7 @@
             "fingerprint": "id-fab56faac0c9e68c",
             "label": "Email address",
             "length": 23,
-            "line": 8,
+            "line": 9,
             "masked": "•••••••@•••••••.•••mple",
             "page": 6,
             "revealed": null,
@@ -4101,11 +4266,11 @@
       "sha256": "3153e66cd7a6fd813457f450d3eec04784ffa93e76b664f9a8defdee9e5ebf50",
       "timing": {
         "analyse_seconds": 0.03,
-        "read_seconds": 0.496,
-        "scan_seconds": 5.086,
-        "seconds_per_page": 0.935,
-        "started_at": 1791323332.518,
-        "total_seconds": 5.612
+        "read_seconds": 0.683,
+        "scan_seconds": 3.231,
+        "seconds_per_page": 0.657,
+        "started_at": 1794311937.913,
+        "total_seconds": 3.944
       },
       "verification": null,
       "visibility_checked": true,
@@ -4303,13 +4468,13 @@
       "extracted_text": [],
       "extractions": [
         {
-          "characters": 24945,
-          "extractor": "pdfplumber",
+          "characters": 25512,
+          "extractor": "complydoc",
           "granularity": "word",
           "mean_coverage_pct": 25.24,
           "reads_tables": true,
           "reordered": false,
-          "seconds": 0.2872,
+          "seconds": 0.2564,
           "similarity": 1.0
         }
       ],
@@ -4435,11 +4600,11 @@
               "signal_id": "page_size_variance"
             },
             {
-              "contribution": 1.92,
+              "contribution": 0.96,
               "name": "Repeated page lines",
               "normalised_weight": 0.0192,
-              "points": 1.0,
-              "rating": "good",
+              "points": 0.5,
+              "rating": "fair",
               "raw_weight": 0.02,
               "signal_id": "repeated_page_lines"
             },
@@ -4513,7 +4678,7 @@
           "method": "weighted_sum: each signal's rating scores good=1.0, fair=0.5, poor=0.0; weights renormalised across the 20 signals that produced a rating for this document, then expressed out of 100.",
           "signals_counted": 20,
           "signals_excluded": 3,
-          "value": 94.7
+          "value": 93.8
         },
         "signals": [
           {
@@ -4626,7 +4791,7 @@
           },
           {
             "detail": {
-              "characters_examined": 24952,
+              "characters_examined": 25519,
               "ligature_source": "unnormalised page characters",
               "replacement_characters": 0,
               "run_together_words": 0,
@@ -4691,6 +4856,7 @@
                 "en": 8
               },
               "model": "py3langid, run locally",
+              "not_counted": [],
               "pages_measured": 8,
               "pages_skipped_as_not_prose": 0,
               "per_page": {
@@ -4775,16 +4941,16 @@
             "detail": {
               "pages_examined": 8,
               "pages_needed_to_count_as_repeated": 4,
-              "repeated_lines": 3
+              "repeated_lines": 13
             },
-            "display": "2.8% of text",
+            "display": "14.0% of text",
             "id": "repeated_page_lines",
             "name": "Repeated page lines",
-            "rating": "good",
+            "rating": "fair",
             "reason": null,
             "status": "measured",
             "unit": "% of text",
-            "value": 2.76,
+            "value": 14.0,
             "weight": 0.02,
             "why": "Headers and footers repeated on every page put the same text into many chunks."
           },
@@ -4946,7 +5112,7 @@
           },
           {
             "detail": {
-              "characters_examined": 24952,
+              "characters_examined": 25519,
               "cid_codes": 0,
               "control_characters": 0,
               "private_use_characters": 0
@@ -4969,49 +5135,49 @@
       "routing": {
         "pages": [
           {
-            "characters": 2053,
+            "characters": 2079,
             "number": 1,
             "reason": "a text layer covering 27% of the page",
             "route": "text"
           },
           {
-            "characters": 4148,
+            "characters": 4247,
             "number": 2,
             "reason": "a text layer covering 50% of the page",
             "route": "text"
           },
           {
-            "characters": 4165,
+            "characters": 4265,
             "number": 3,
             "reason": "a text layer covering 50% of the page",
             "route": "text"
           },
           {
-            "characters": 4230,
+            "characters": 4331,
             "number": 4,
             "reason": "a text layer covering 52% of the page",
             "route": "text"
           },
           {
-            "characters": 4298,
+            "characters": 4399,
             "number": 5,
             "reason": "a text layer covering 52% of the page",
             "route": "text"
           },
           {
-            "characters": 4405,
+            "characters": 4508,
             "number": 6,
             "reason": "a text layer covering 53% of the page",
             "route": "text"
           },
           {
-            "characters": 1195,
+            "characters": 1223,
             "number": 7,
             "reason": "a text layer covering 14% of the page",
             "route": "text"
           },
           {
-            "characters": 451,
+            "characters": 460,
             "number": 8,
             "reason": "a text layer covering 6% of the page",
             "route": "text"
@@ -5023,13 +5189,13 @@
           {
             "category": "organisation_name",
             "column": 8,
-            "confidence": 0.99452143907547,
+            "confidence": 0.9953498244285583,
             "context_term": null,
             "evidence": "model",
             "fingerprint": "id-feb7d805e54fb6d1",
             "label": "Organisation name",
             "length": 24,
-            "line": 2,
+            "line": 3,
             "masked": "••••••••• •••••••••s Ltd",
             "page": 1,
             "revealed": null,
@@ -5039,13 +5205,13 @@
           {
             "category": "organisation_name",
             "column": 37,
-            "confidence": 0.9941643476486206,
+            "confidence": 0.9949979782104492,
             "context_term": null,
             "evidence": "model",
             "fingerprint": "id-e5927d3c6db8cf08",
             "label": "Organisation name",
             "length": 21,
-            "line": 2,
+            "line": 3,
             "masked": "••••••• ••••••••s Ltd",
             "page": 1,
             "revealed": null,
@@ -5055,13 +5221,13 @@
           {
             "category": "organisation_name",
             "column": 47,
-            "confidence": 0.9946494698524475,
+            "confidence": 0.995223343372345,
             "context_term": null,
             "evidence": "model",
             "fingerprint": "id-feb7d805e54fb6d1",
             "label": "Organisation name",
             "length": 24,
-            "line": 3,
+            "line": 4,
             "masked": "••••••••• •••••••••s Ltd",
             "page": 1,
             "revealed": null,
@@ -5077,7 +5243,7 @@
             "fingerprint": "id-774570e9ea85e14c",
             "label": "Street address",
             "length": 17,
-            "line": 4,
+            "line": 5,
             "masked": "•• ••••••• ••reet",
             "page": 1,
             "revealed": null,
@@ -5093,7 +5259,7 @@
             "fingerprint": "id-7678a3d7bcced372",
             "label": "UK postcode",
             "length": 8,
-            "line": 5,
+            "line": 6,
             "masked": "•••A 1BB",
             "page": 1,
             "revealed": null,
@@ -5105,13 +5271,13 @@
           {
             "category": "organisation_name",
             "column": 36,
-            "confidence": 0.9897300004959106,
+            "confidence": 0.9875661730766296,
             "context_term": null,
             "evidence": "model",
             "fingerprint": "id-e5927d3c6db8cf08",
             "label": "Organisation name",
             "length": 21,
-            "line": 5,
+            "line": 6,
             "masked": "••••••• ••••••••s Ltd",
             "page": 1,
             "revealed": null,
@@ -5127,7 +5293,7 @@
             "fingerprint": "id-e3362cd1c9d36f19",
             "label": "UK postcode",
             "length": 7,
-            "line": 6,
+            "line": 7,
             "masked": "••1 4AP",
             "page": 1,
             "revealed": null,
@@ -5139,13 +5305,13 @@
           {
             "category": "person_name",
             "column": 14,
-            "confidence": 0.9645969867706299,
+            "confidence": 0.9706918597221375,
             "context_term": null,
             "evidence": "model",
             "fingerprint": "id-9e66ed4e9c19fc9a",
             "label": "Person name",
             "length": 11,
-            "line": 9,
+            "line": 10,
             "masked": "••••• •aman",
             "page": 1,
             "revealed": null,
@@ -5161,7 +5327,7 @@
             "fingerprint": "id-90e5004ec7215ba3",
             "label": "Email address",
             "length": 29,
-            "line": 9,
+            "line": 10,
             "masked": "•••••.•••••@•••••••••.•••mple",
             "page": 1,
             "revealed": null,
@@ -5177,7 +5343,7 @@
             "fingerprint": "id-ccebc323d35d3f9e",
             "label": "Phone number",
             "length": 13,
-            "line": 9,
+            "line": 10,
             "masked": "••• •••• 0112",
             "page": 1,
             "revealed": null,
@@ -5189,13 +5355,13 @@
           {
             "category": "person_name",
             "column": 14,
-            "confidence": 0.984039306640625,
+            "confidence": 0.9892978072166443,
             "context_term": null,
             "evidence": "model",
             "fingerprint": "id-b3c059116618c949",
             "label": "Person name",
             "length": 12,
-            "line": 10,
+            "line": 11,
             "masked": "•••••• •rant",
             "page": 1,
             "revealed": null,
@@ -5211,7 +5377,7 @@
             "fingerprint": "id-bd8c7d52cb1106f8",
             "label": "Email address",
             "length": 28,
-            "line": 10,
+            "line": 11,
             "masked": "••••••.•••••@•••••••.•••mple",
             "page": 1,
             "revealed": null,
@@ -5227,7 +5393,7 @@
             "fingerprint": "id-45119cfac9e3449e",
             "label": "Phone number",
             "length": 13,
-            "line": 10,
+            "line": 11,
             "masked": "•••• ••• 0431",
             "page": 1,
             "revealed": null,
@@ -5235,6 +5401,22 @@
             "validators_passed": [
               "uk_phone"
             ]
+          },
+          {
+            "category": "person_name",
+            "column": 8,
+            "confidence": 0.9083594083786011,
+            "context_term": null,
+            "evidence": "model",
+            "fingerprint": "id-0429f534b57543ce",
+            "label": "Person name",
+            "length": 13,
+            "line": 12,
+            "masked": "••••• •••yemi",
+            "page": 1,
+            "revealed": null,
+            "severity": "medium",
+            "validators_passed": []
           },
           {
             "category": "email_address",
@@ -5245,7 +5427,7 @@
             "fingerprint": "id-917b5510a7f9e98e",
             "label": "Email address",
             "length": 23,
-            "line": 11,
+            "line": 12,
             "masked": "•••••••@•••••••.•••mple",
             "page": 1,
             "revealed": null,
@@ -5261,7 +5443,7 @@
             "fingerprint": "id-08bfa976bfa2aab6",
             "label": "Phone number",
             "length": 13,
-            "line": 11,
+            "line": 12,
             "masked": "•••• ••• 0877",
             "page": 1,
             "revealed": null,
@@ -5273,13 +5455,13 @@
           {
             "category": "organisation_name",
             "column": 10,
-            "confidence": 0.9703365564346313,
+            "confidence": 0.9832965135574341,
             "context_term": null,
             "evidence": "model",
             "fingerprint": "id-d6505c4734743696",
             "label": "Organisation name",
             "length": 17,
-            "line": 44,
+            "line": 36,
             "masked": "•••••••• •••k plc",
             "page": 3,
             "revealed": null,
@@ -5295,7 +5477,7 @@
             "fingerprint": "id-b20b6b768cfd3e10",
             "label": "UK sort code",
             "length": 8,
-            "line": 46,
+            "line": 37,
             "masked": "••-34-56",
             "page": 3,
             "revealed": null,
@@ -5313,7 +5495,7 @@
             "fingerprint": "id-43f0297e0190b30a",
             "label": "UK bank account number",
             "length": 8,
-            "line": 46,
+            "line": 37,
             "masked": "••••5678",
             "page": 3,
             "revealed": null,
@@ -5329,7 +5511,7 @@
             "fingerprint": "id-a08712cda25cc673",
             "label": "IBAN",
             "length": 27,
-            "line": 47,
+            "line": 38,
             "masked": "•••• •••• •••• •••• ••54 32",
             "page": 3,
             "revealed": null,
@@ -5341,13 +5523,13 @@
           {
             "category": "person_name",
             "column": 27,
-            "confidence": 0.996070384979248,
+            "confidence": 0.9954137206077576,
             "context_term": null,
             "evidence": "model",
             "fingerprint": "id-9e66ed4e9c19fc9a",
             "label": "Person name",
             "length": 11,
-            "line": 8,
+            "line": 9,
             "masked": "••••• •aman",
             "page": 8,
             "revealed": null,
@@ -5357,13 +5539,13 @@
           {
             "category": "person_name",
             "column": 27,
-            "confidence": 0.9996490478515625,
+            "confidence": 0.9997221231460571,
             "context_term": null,
             "evidence": "model",
             "fingerprint": "id-b3c059116618c949",
             "label": "Person name",
             "length": 12,
-            "line": 9,
+            "line": 10,
             "masked": "•••••• •rant",
             "page": 8,
             "revealed": null,
@@ -5385,12 +5567,12 @@
       },
       "sha256": "8186812a462e216e9789ac8f2a99bdc60dea2ab1e123e4f80d971b2627d917cf",
       "timing": {
-        "analyse_seconds": 0.026,
-        "read_seconds": 0.481,
-        "scan_seconds": 0.595,
-        "seconds_per_page": 0.138,
-        "started_at": 1791323338.166,
-        "total_seconds": 1.101
+        "analyse_seconds": 0.027,
+        "read_seconds": 0.45,
+        "scan_seconds": 0.773,
+        "seconds_per_page": 0.156,
+        "started_at": 1794311941.92,
+        "total_seconds": 1.249
       },
       "verification": null,
       "visibility_checked": true,
@@ -5541,13 +5723,13 @@
       "extracted_text": [],
       "extractions": [
         {
-          "characters": 6029,
-          "extractor": "pdfplumber",
+          "characters": 6110,
+          "extractor": "complydoc",
           "granularity": "word",
           "mean_coverage_pct": 9.46,
           "reads_tables": true,
           "reordered": false,
-          "seconds": 0.0715,
+          "seconds": 0.0708,
           "similarity": 1.0
         }
       ],
@@ -5845,7 +6027,7 @@
           },
           {
             "detail": {
-              "characters_examined": 6033,
+              "characters_examined": 6114,
               "ligature_source": "unnormalised page characters",
               "replacement_characters": 0,
               "run_together_words": 0,
@@ -5907,6 +6089,7 @@
                 "en": 5
               },
               "model": "py3langid, run locally",
+              "not_counted": [],
               "pages_measured": 5,
               "pages_skipped_as_not_prose": 0,
               "per_page": {
@@ -6156,7 +6339,7 @@
           },
           {
             "detail": {
-              "characters_examined": 6033,
+              "characters_examined": 6114,
               "cid_codes": 0,
               "control_characters": 0,
               "private_use_characters": 0
@@ -6179,31 +6362,31 @@
       "routing": {
         "pages": [
           {
-            "characters": 1967,
+            "characters": 1993,
             "number": 1,
             "reason": "a text layer covering 24% of the page",
             "route": "text"
           },
           {
-            "characters": 1361,
+            "characters": 1379,
             "number": 2,
             "reason": "a text layer covering 15% of the page",
             "route": "text"
           },
           {
-            "characters": 1201,
+            "characters": 1217,
             "number": 3,
             "reason": "a text layer covering 13% of the page",
             "route": "text"
           },
           {
-            "characters": 1217,
+            "characters": 1234,
             "number": 4,
             "reason": "a text layer covering 14% of the page",
             "route": "text"
           },
           {
-            "characters": 283,
+            "characters": 287,
             "number": 5,
             "reason": "a text layer covering 4% of the page",
             "route": "text"
@@ -6215,13 +6398,13 @@
           {
             "category": "organisation_name",
             "column": 12,
-            "confidence": 0.9941613078117371,
+            "confidence": 0.9941391944885254,
             "context_term": null,
             "evidence": "model",
             "fingerprint": "id-e5927d3c6db8cf08",
             "label": "Organisation name",
             "length": 21,
-            "line": 2,
+            "line": 3,
             "masked": "••••••• ••••••••s Ltd",
             "page": 1,
             "revealed": null,
@@ -6231,13 +6414,13 @@
           {
             "category": "person_name",
             "column": 48,
-            "confidence": 0.9992572069168091,
+            "confidence": 0.9991470575332642,
             "context_term": null,
             "evidence": "model",
             "fingerprint": "id-b3c059116618c949",
             "label": "Person name",
             "length": 12,
-            "line": 2,
+            "line": 3,
             "masked": "•••••• •rant",
             "page": 1,
             "revealed": null,
@@ -6247,13 +6430,13 @@
           {
             "category": "organisation_name",
             "column": 14,
-            "confidence": 0.9965662956237793,
+            "confidence": 0.9933514595031738,
             "context_term": null,
             "evidence": "model",
             "fingerprint": "id-e5927d3c6db8cf08",
             "label": "Organisation name",
             "length": 21,
-            "line": 2,
+            "line": 3,
             "masked": "••••••• ••••••••s Ltd",
             "page": 5,
             "revealed": null,
@@ -6269,7 +6452,7 @@
             "fingerprint": "id-b20b6b768cfd3e10",
             "label": "UK sort code",
             "length": 8,
-            "line": 2,
+            "line": 3,
             "masked": "••-34-56",
             "page": 5,
             "revealed": null,
@@ -6287,7 +6470,7 @@
             "fingerprint": "id-43f0297e0190b30a",
             "label": "UK bank account number",
             "length": 8,
-            "line": 2,
+            "line": 3,
             "masked": "••••5678",
             "page": 5,
             "revealed": null,
@@ -6303,7 +6486,7 @@
             "fingerprint": "id-a08712cda25cc673",
             "label": "IBAN",
             "length": 27,
-            "line": 3,
+            "line": 4,
             "masked": "•••• •••• •••• •••• ••54 32",
             "page": 5,
             "revealed": null,
@@ -6321,26 +6504,27 @@
             "fingerprint": "id-fcf8115e166d2572",
             "label": "Payment card number",
             "length": 19,
-            "line": 3,
+            "line": 4,
             "masked": "•••• •••• •••• 1111",
             "page": 5,
             "revealed": null,
             "severity": "high",
             "validators_passed": [
               "luhn",
-              "card_issuer"
+              "card_issuer",
+              "card_grouping"
             ]
           },
           {
             "category": "person_name",
             "column": 26,
-            "confidence": 0.995052695274353,
+            "confidence": 0.9971145391464233,
             "context_term": null,
             "evidence": "model",
             "fingerprint": "id-0429f534b57543ce",
             "label": "Person name",
             "length": 13,
-            "line": 4,
+            "line": 5,
             "masked": "••••• •••yemi",
             "page": 5,
             "revealed": null,
@@ -6356,7 +6540,7 @@
             "fingerprint": "id-08bfa976bfa2aab6",
             "label": "Phone number",
             "length": 13,
-            "line": 4,
+            "line": 5,
             "masked": "•••• ••• 0877",
             "page": 5,
             "revealed": null,
@@ -6381,11 +6565,11 @@
       "sha256": "e15a2151125e6ebf56b86b9d0193ce55dc832c0d614f96218248982be70174ae",
       "timing": {
         "analyse_seconds": 0.008,
-        "read_seconds": 0.093,
-        "scan_seconds": 0.256,
-        "seconds_per_page": 0.071,
-        "started_at": 1791323338.201,
-        "total_seconds": 0.357
+        "read_seconds": 0.13,
+        "scan_seconds": 0.615,
+        "seconds_per_page": 0.15,
+        "started_at": 1794311942.19,
+        "total_seconds": 0.752
       },
       "verification": null,
       "visibility_checked": true,
@@ -6473,13 +6657,13 @@
       "extracted_text": [],
       "extractions": [
         {
-          "characters": 1745,
-          "extractor": "pdfplumber",
+          "characters": 1781,
+          "extractor": "complydoc",
           "granularity": "word",
           "mean_coverage_pct": 6.36,
           "reads_tables": true,
           "reordered": false,
-          "seconds": 0.0259,
+          "seconds": 0.0254,
           "similarity": 1.0
         }
       ],
@@ -6790,7 +6974,7 @@
           },
           {
             "detail": {
-              "characters_examined": 1747,
+              "characters_examined": 1783,
               "ligature_source": "unnormalised page characters",
               "replacement_characters": 0,
               "run_together_words": 0,
@@ -6850,6 +7034,7 @@
                 "de": 3
               },
               "model": "py3langid, run locally",
+              "not_counted": [],
               "pages_measured": 3,
               "pages_skipped_as_not_prose": 0,
               "per_page": {
@@ -7088,7 +7273,7 @@
           },
           {
             "detail": {
-              "characters_examined": 1747,
+              "characters_examined": 1783,
               "cid_codes": 0,
               "control_characters": 0,
               "private_use_characters": 0
@@ -7111,19 +7296,19 @@
       "routing": {
         "pages": [
           {
-            "characters": 582,
+            "characters": 594,
             "number": 1,
             "reason": "a text layer covering 9% of the page",
             "route": "text"
           },
           {
-            "characters": 583,
+            "characters": 595,
             "number": 2,
             "reason": "a text layer covering 9% of the page",
             "route": "text"
           },
           {
-            "characters": 580,
+            "characters": 592,
             "number": 3,
             "reason": "a text layer covering 9% of the page",
             "route": "text"
@@ -7141,7 +7326,7 @@
             "fingerprint": "id-9dab42ef84747d4b",
             "label": "Organisation name",
             "length": 24,
-            "line": 1,
+            "line": 2,
             "masked": "•••••• •••••••••••• GMBH",
             "page": 1,
             "revealed": null,
@@ -7151,13 +7336,13 @@
           {
             "category": "organisation_name",
             "column": 7,
-            "confidence": 0.9986040592193604,
+            "confidence": 0.9987068176269531,
             "context_term": null,
             "evidence": "model",
             "fingerprint": "id-8695cf921a661ab1",
             "label": "Organisation name",
             "length": 20,
-            "line": 3,
+            "line": 4,
             "masked": "•••••••• ••••••ik AG",
             "page": 1,
             "revealed": null,
@@ -7167,13 +7352,13 @@
           {
             "category": "person_name",
             "column": 55,
-            "confidence": 0.998214840888977,
+            "confidence": 0.9969735145568848,
             "context_term": null,
             "evidence": "model",
             "fingerprint": "id-4d768a73aa753020",
             "label": "Person name",
             "length": 14,
-            "line": 3,
+            "line": 4,
             "masked": "•••••• •••midt",
             "page": 1,
             "revealed": null,
@@ -7189,7 +7374,7 @@
             "fingerprint": "id-ed2bf1472baa8680",
             "label": "Email address",
             "length": 21,
-            "line": 4,
+            "line": 5,
             "masked": "•.•••••••@••••••el.de",
             "page": 1,
             "revealed": null,
@@ -7205,7 +7390,7 @@
             "fingerprint": "id-a401c54dd2abf781",
             "label": "German tax identification number",
             "length": 11,
-            "line": 4,
+            "line": 5,
             "masked": "•••••••1809",
             "page": 1,
             "revealed": null,
@@ -7223,7 +7408,7 @@
             "fingerprint": "id-940efae47f64ad95",
             "label": "Phone number",
             "length": 12,
-            "line": 10,
+            "line": 11,
             "masked": "•••• ••30 00",
             "page": 1,
             "revealed": null,
@@ -7235,13 +7420,13 @@
           {
             "category": "organisation_name",
             "column": 33,
-            "confidence": 0.9990462064743042,
+            "confidence": 0.9990449547767639,
             "context_term": null,
             "evidence": "model",
             "fingerprint": "id-9dab42ef84747d4b",
             "label": "Organisation name",
             "length": 24,
-            "line": 11,
+            "line": 12,
             "masked": "•••••• •••••••••••• GmbH",
             "page": 1,
             "revealed": null,
@@ -7251,13 +7436,13 @@
           {
             "category": "organisation_name",
             "column": 66,
-            "confidence": 0.9989541172981262,
+            "confidence": 0.9989628791809082,
             "context_term": null,
             "evidence": "model",
             "fingerprint": "id-8695cf921a661ab1",
             "label": "Organisation name",
             "length": 20,
-            "line": 11,
+            "line": 12,
             "masked": "•••••••• ••••••ik AG",
             "page": 1,
             "revealed": null,
@@ -7267,13 +7452,13 @@
           {
             "category": "person_name",
             "column": 58,
-            "confidence": 0.9981197714805603,
+            "confidence": 0.9962763786315918,
             "context_term": null,
             "evidence": "model",
             "fingerprint": "id-c169c200dacd503f",
             "label": "Person name",
             "length": 11,
-            "line": 12,
+            "line": 13,
             "masked": "•••• ••cker",
             "page": 1,
             "revealed": null,
@@ -7289,7 +7474,7 @@
             "fingerprint": "id-9dab42ef84747d4b",
             "label": "Organisation name",
             "length": 24,
-            "line": 1,
+            "line": 2,
             "masked": "•••••• •••••••••••• GMBH",
             "page": 2,
             "revealed": null,
@@ -7299,13 +7484,13 @@
           {
             "category": "organisation_name",
             "column": 7,
-            "confidence": 0.9985840916633606,
+            "confidence": 0.9986917972564697,
             "context_term": null,
             "evidence": "model",
             "fingerprint": "id-8695cf921a661ab1",
             "label": "Organisation name",
             "length": 20,
-            "line": 3,
+            "line": 4,
             "masked": "•••••••• ••••••ik AG",
             "page": 2,
             "revealed": null,
@@ -7315,13 +7500,13 @@
           {
             "category": "person_name",
             "column": 55,
-            "confidence": 0.9983264207839966,
+            "confidence": 0.9971790909767151,
             "context_term": null,
             "evidence": "model",
             "fingerprint": "id-4d768a73aa753020",
             "label": "Person name",
             "length": 14,
-            "line": 3,
+            "line": 4,
             "masked": "•••••• •••midt",
             "page": 2,
             "revealed": null,
@@ -7337,7 +7522,7 @@
             "fingerprint": "id-ed2bf1472baa8680",
             "label": "Email address",
             "length": 21,
-            "line": 4,
+            "line": 5,
             "masked": "•.•••••••@••••••el.de",
             "page": 2,
             "revealed": null,
@@ -7353,7 +7538,7 @@
             "fingerprint": "id-a401c54dd2abf781",
             "label": "German tax identification number",
             "length": 11,
-            "line": 4,
+            "line": 5,
             "masked": "•••••••1809",
             "page": 2,
             "revealed": null,
@@ -7371,7 +7556,7 @@
             "fingerprint": "id-940efae47f64ad95",
             "label": "Phone number",
             "length": 12,
-            "line": 10,
+            "line": 11,
             "masked": "•••• ••30 00",
             "page": 2,
             "revealed": null,
@@ -7383,13 +7568,13 @@
           {
             "category": "organisation_name",
             "column": 33,
-            "confidence": 0.9990407228469849,
+            "confidence": 0.9990424513816833,
             "context_term": null,
             "evidence": "model",
             "fingerprint": "id-9dab42ef84747d4b",
             "label": "Organisation name",
             "length": 24,
-            "line": 11,
+            "line": 12,
             "masked": "•••••• •••••••••••• GmbH",
             "page": 2,
             "revealed": null,
@@ -7399,13 +7584,13 @@
           {
             "category": "organisation_name",
             "column": 66,
-            "confidence": 0.9989479184150696,
+            "confidence": 0.9989587664604187,
             "context_term": null,
             "evidence": "model",
             "fingerprint": "id-8695cf921a661ab1",
             "label": "Organisation name",
             "length": 20,
-            "line": 11,
+            "line": 12,
             "masked": "•••••••• ••••••ik AG",
             "page": 2,
             "revealed": null,
@@ -7415,13 +7600,13 @@
           {
             "category": "person_name",
             "column": 58,
-            "confidence": 0.9982311725616455,
+            "confidence": 0.9962947368621826,
             "context_term": null,
             "evidence": "model",
             "fingerprint": "id-c169c200dacd503f",
             "label": "Person name",
             "length": 11,
-            "line": 12,
+            "line": 13,
             "masked": "•••• ••cker",
             "page": 2,
             "revealed": null,
@@ -7437,7 +7622,7 @@
             "fingerprint": "id-9dab42ef84747d4b",
             "label": "Organisation name",
             "length": 24,
-            "line": 1,
+            "line": 2,
             "masked": "•••••• •••••••••••• GMBH",
             "page": 3,
             "revealed": null,
@@ -7447,13 +7632,13 @@
           {
             "category": "organisation_name",
             "column": 7,
-            "confidence": 0.9985762238502502,
+            "confidence": 0.9986832141876221,
             "context_term": null,
             "evidence": "model",
             "fingerprint": "id-8695cf921a661ab1",
             "label": "Organisation name",
             "length": 20,
-            "line": 3,
+            "line": 4,
             "masked": "•••••••• ••••••ik AG",
             "page": 3,
             "revealed": null,
@@ -7463,13 +7648,13 @@
           {
             "category": "person_name",
             "column": 55,
-            "confidence": 0.9982607364654541,
+            "confidence": 0.9970653057098389,
             "context_term": null,
             "evidence": "model",
             "fingerprint": "id-4d768a73aa753020",
             "label": "Person name",
             "length": 14,
-            "line": 3,
+            "line": 4,
             "masked": "•••••• •••midt",
             "page": 3,
             "revealed": null,
@@ -7485,7 +7670,7 @@
             "fingerprint": "id-ed2bf1472baa8680",
             "label": "Email address",
             "length": 21,
-            "line": 4,
+            "line": 5,
             "masked": "•.•••••••@••••••el.de",
             "page": 3,
             "revealed": null,
@@ -7501,7 +7686,7 @@
             "fingerprint": "id-a401c54dd2abf781",
             "label": "German tax identification number",
             "length": 11,
-            "line": 4,
+            "line": 5,
             "masked": "•••••••1809",
             "page": 3,
             "revealed": null,
@@ -7519,7 +7704,7 @@
             "fingerprint": "id-940efae47f64ad95",
             "label": "Phone number",
             "length": 12,
-            "line": 10,
+            "line": 11,
             "masked": "•••• ••30 00",
             "page": 3,
             "revealed": null,
@@ -7531,13 +7716,13 @@
           {
             "category": "organisation_name",
             "column": 33,
-            "confidence": 0.9990403056144714,
+            "confidence": 0.9990435838699341,
             "context_term": null,
             "evidence": "model",
             "fingerprint": "id-9dab42ef84747d4b",
             "label": "Organisation name",
             "length": 24,
-            "line": 11,
+            "line": 12,
             "masked": "•••••• •••••••••••• GmbH",
             "page": 3,
             "revealed": null,
@@ -7547,13 +7732,13 @@
           {
             "category": "organisation_name",
             "column": 66,
-            "confidence": 0.9989479184150696,
+            "confidence": 0.9989585280418396,
             "context_term": null,
             "evidence": "model",
             "fingerprint": "id-8695cf921a661ab1",
             "label": "Organisation name",
             "length": 20,
-            "line": 11,
+            "line": 12,
             "masked": "•••••••• ••••••ik AG",
             "page": 3,
             "revealed": null,
@@ -7563,13 +7748,13 @@
           {
             "category": "person_name",
             "column": 58,
-            "confidence": 0.9981750249862671,
+            "confidence": 0.9962586760520935,
             "context_term": null,
             "evidence": "model",
             "fingerprint": "id-c169c200dacd503f",
             "label": "Person name",
             "length": 11,
-            "line": 12,
+            "line": 13,
             "masked": "•••• ••cker",
             "page": 3,
             "revealed": null,
@@ -7592,11 +7777,11 @@
       "sha256": "87ae793dc92653908f5206d0ab5f947a7bb675702c480a7a58b7f1269343d04d",
       "timing": {
         "analyse_seconds": 0.003,
-        "read_seconds": 0.033,
-        "scan_seconds": 0.06,
-        "seconds_per_page": 0.032,
-        "started_at": 1791323338.465,
-        "total_seconds": 0.096
+        "read_seconds": 0.034,
+        "scan_seconds": 0.463,
+        "seconds_per_page": 0.166,
+        "started_at": 1794311942.457,
+        "total_seconds": 0.499
       },
       "verification": null,
       "visibility_checked": true,
@@ -7837,6 +8022,7 @@
                 "en": 1
               },
               "model": "py3langid, run locally",
+              "not_counted": [],
               "pages_measured": 1,
               "pages_skipped_as_not_prose": 0,
               "per_page": {
@@ -8137,7 +8323,8 @@
             "severity": "high",
             "validators_passed": [
               "luhn",
-              "card_issuer"
+              "card_issuer",
+              "card_grouping"
             ]
           },
           {
@@ -8191,9 +8378,9 @@
       "timing": {
         "analyse_seconds": 0.001,
         "read_seconds": 0.002,
-        "scan_seconds": 0.019,
+        "scan_seconds": 0.02,
         "seconds_per_page": 0.022,
-        "started_at": 1791323338.566,
+        "started_at": 1794311942.954,
         "total_seconds": 0.022
       },
       "verification": null,
@@ -8283,12 +8470,12 @@
       "extractions": [
         {
           "characters": 0,
-          "extractor": "pdfplumber",
+          "extractor": "complydoc",
           "granularity": "word",
           "mean_coverage_pct": 0.0,
           "reads_tables": true,
           "reordered": false,
-          "seconds": 0.0009,
+          "seconds": 0.0011,
           "similarity": 1.0
         }
       ],
@@ -8790,19 +8977,19 @@
           {
             "characters": 0,
             "number": 1,
-            "reason": "a scan at 150 dpi, below the 200 OCR needs",
+            "reason": "a scan at 150 dpi with no text layer",
             "route": "vision"
           },
           {
             "characters": 0,
             "number": 2,
-            "reason": "a scan at 150 dpi, below the 200 OCR needs",
+            "reason": "a scan at 150 dpi with no text layer",
             "route": "vision"
           },
           {
             "characters": 0,
             "number": 3,
-            "reason": "a scan at 150 dpi, below the 200 OCR needs",
+            "reason": "a scan at 150 dpi with no text layer",
             "route": "vision"
           }
         ]
@@ -8824,18 +9011,26 @@
       },
       "sha256": "b9293ef1ccaacdd8e49c4282661652bbc81c564fe68b290c8c382d658c74e93f",
       "timing": {
-        "analyse_seconds": 0.016,
-        "read_seconds": 0.04,
+        "analyse_seconds": 0.015,
+        "read_seconds": 0.042,
         "scan_seconds": 0.001,
         "seconds_per_page": 0.019,
-        "started_at": 1791323338.568,
-        "total_seconds": 0.057
+        "started_at": 1794311942.962,
+        "total_seconds": 0.058
       },
       "verification": null,
       "visibility_checked": true,
       "visibility_note": null
     }
   ],
+  "evals": {
+    "checks": [],
+    "error": null,
+    "file": "/Users/duarte/Documents/Development/playground/documents/.complydoc-evals.yaml",
+    "readers": [
+      "complydoc"
+    ]
+  },
   "ignores": null,
   "limitations": [
     {
@@ -8864,7 +9059,7 @@
       "affected": [],
       "area": "Price provenance",
       "severity": "info",
-      "statement": "Prices are as of 2026-09-25, from the price table complydoc carries, refreshed each week from models.dev and litellm. A provider can change a price between refreshes."
+      "statement": "Prices are as of 2026-11-09, from the price table complydoc carries, refreshed each week from models.dev and litellm. A provider can change a price between refreshes."
     },
     {
       "affected": [
@@ -8886,6 +9081,7 @@
     {
       "affected": [
         "claude-fable-5",
+        "claude-haiku-4-5",
         "claude-haiku-4-5-20251001",
         "claude-opus-4-5",
         "claude-opus-4-5-20251101",
@@ -8896,14 +9092,14 @@
         "claude-sonnet-4-5",
         "claude-sonnet-4-5-20250929",
         "claude-sonnet-4-6",
+        "claude-sonnet-5",
+        "codestral-2508",
         "codestral-latest",
+        "deepseek-v4-1-flash-1017",
         "deepseek-v4-flash",
         "devstral-2512",
         "devstral-latest",
-        "devstral-medium-2507",
         "devstral-medium-latest",
-        "devstral-small-2505",
-        "devstral-small-2507",
         "gemini-2.5-computer-use-preview-10-2025",
         "gemini-2.5-flash",
         "gemini-2.5-flash-lite",
@@ -8922,6 +9118,7 @@
         "gemini-flash-latest",
         "gemini-flash-lite-latest",
         "gemini-omni-flash-preview",
+        "gemini/gemini-3.1-pro-preview",
         "gemini/gemini-3.7-flash",
         "glm-4.5",
         "glm-4.5-air",
@@ -8931,6 +9128,7 @@
         "glm-4.7",
         "glm-4.7-flashx",
         "glm-5",
+        "glm-5-2",
         "glm-5-turbo",
         "glm-5.1",
         "glm-5.2",
@@ -8951,9 +9149,7 @@
         "gpt-5-pro",
         "gpt-5.1",
         "gpt-5.2",
-        "gpt-5.2-chat-latest",
         "gpt-5.2-pro",
-        "gpt-5.3-chat-latest",
         "gpt-5.3-codex",
         "gpt-5.3-codex-spark",
         "gpt-5.4",
@@ -8965,6 +9161,10 @@
         "gpt-5.6",
         "gpt-5.6-luna",
         "gpt-5.6-sol",
+        "gpt-5.6-terra",
+        "gpt-6-sol",
+        "gpt-daybreak-blue-latest",
+        "gpt-daybreak-red-latest",
         "gpt-realtime-2.1",
         "grok-4.20-0309-non-reasoning",
         "grok-4.20-0309-reasoning",
@@ -8975,16 +9175,19 @@
         "grok-build-0.1",
         "kimi-k2.6",
         "kimi-k2.7-code-highspeed",
+        "kimi-k3.1-pro-highspeed",
+        "magistral-medium-latest",
+        "ministral-14b-2512",
+        "ministral-3b-2512",
         "ministral-3b-latest",
         "ministral-8b-latest",
         "mistral-embed",
-        "mistral-large-2411",
         "mistral-large-2512",
+        "mistral-large-4-0-8",
         "mistral-large-latest",
         "mistral-medium-2505",
         "mistral-medium-2508",
         "mistral-medium-latest",
-        "mistral-nemo",
         "mistral-small-2506",
         "mistral-small-latest",
         "o1",
@@ -8993,25 +9196,24 @@
         "o3-mini",
         "o3-pro",
         "o4-mini",
-        "open-mistral-7b",
         "open-mistral-nemo",
-        "open-mixtral-8x22b",
-        "open-mixtral-8x7b",
         "pixtral-12b",
-        "pixtral-large-latest",
+        "voxtral-small-2507",
         "voxtral-small-latest",
         "zai-glm-5-2",
-        "zai-glm-5-3"
+        "zai-glm-5-3",
+        "zai-glm-5-3-flash"
       ],
       "area": "Models not costed",
       "severity": "info",
-      "statement": "117 model entr(y/ies) in pricing.yaml carry no price and are switched off, so no cost was computed for them. complydoc does not invent prices; fill them in and set last_verified to include them."
+      "statement": "123 model entr(y/ies) in pricing.yaml carry no price and are switched off, so no cost was computed for them. complydoc does not invent prices; fill them in and set last_verified to include them."
     },
     {
       "affected": [
-        "Claude Haiku 4.5",
+        "Claude Fable 5.1",
+        "Claude Haiku 5.5",
         "Claude Opus 5.5",
-        "Claude Sonnet 5"
+        "Claude Sonnet 5.5"
       ],
       "area": "Token counting",
       "severity": "info",
@@ -9024,14 +9226,6 @@
       "area": "Token counting",
       "severity": "info",
       "statement": "deepseek does not publish an offline tokenizer; token counts are approximated with the o200k_base encoding.\n"
-    },
-    {
-      "affected": [
-        "Gemini 3.1 Pro Preview"
-      ],
-      "area": "Token counting",
-      "severity": "info",
-      "statement": "gemini does not publish an offline tokenizer; token counts are approximated with the o200k_base encoding.\n"
     },
     {
       "affected": [
@@ -9051,16 +9245,8 @@
     },
     {
       "affected": [
-        "Claude Fable 5.1"
-      ],
-      "area": "Token counting",
-      "severity": "info",
-      "statement": "anthropic does not publish an offline tokenizer; token counts are approximated with the o200k_base encoding."
-    },
-    {
-      "affected": [
         "DeepSeek V4 Pro",
-        "DeepSeek V4.1 Flash"
+        "DeepSeek V4.1 Flash 1017"
       ],
       "area": "Token counting",
       "severity": "info",
@@ -9069,7 +9255,9 @@
     {
       "affected": [
         "Gemini 3.5 Flash Lite",
-        "Gemini 3.8 Flash"
+        "Gemini 3.8 Flash",
+        "Gemini 4 Argon",
+        "Gemini Pro Latest"
       ],
       "area": "Token counting",
       "severity": "info",
@@ -9095,7 +9283,8 @@
     },
     {
       "affected": [
-        "Kimi K2.7 Code"
+        "Kimi K2.7 Code",
+        "Kimi K3.1 Pro"
       ],
       "area": "Token counting",
       "severity": "info",
@@ -9103,8 +9292,8 @@
     },
     {
       "affected": [
-        "Magistral Medium (latest)",
-        "Magistral Small",
+        "Ministral 3 8B",
+        "Mistral Large 4",
         "Mistral Medium 3.5",
         "Mistral Small 4"
       ],
@@ -9130,14 +9319,14 @@
   "overall": {
     "bands": {
       "needs work": 1,
-      "ready": 4,
-      "workable": 3
+      "ready": 5,
+      "workable": 2
     },
     "by_document": {
       "company/annual-report-2025.pdf": 95.3,
       "company/candidate-cv.docx": 96.8,
-      "company/employee-handbook.pdf": 73.0,
-      "company/master-services-agreement.pdf": 74.8,
+      "company/employee-handbook.pdf": 75.5,
+      "company/master-services-agreement.pdf": 73.5,
       "company/vendor-due-diligence.pdf": 77.5,
       "invoices/rechnungen-2026-de.pdf": 67.9,
       "invoices/refund-request.eml": 89.4,
@@ -9147,7 +9336,7 @@
       {
         "key": "content",
         "name": "Content",
-        "score": 86.7,
+        "score": 86.6,
         "weight": 0.5,
         "why": "Whether the text can be got off the page at all."
       },
@@ -9161,13 +9350,13 @@
       {
         "key": "exposure",
         "name": "Exposure",
-        "score": 48.9,
+        "score": 49.7,
         "weight": 0.25,
         "why": "What these documents carry that should not leave, weighted by severity and by how good the evidence for each finding is."
       }
     ],
     "label": "ready",
-    "score": 77.5,
+    "score": 77.6,
     "scored_documents": 8,
     "total_documents": 8
   },
@@ -9176,7 +9365,6 @@
       "actor": "you",
       "detail": "These carry identifiers that passed a checksum. Anything sent to a hosted model takes them with it.",
       "documents": [
-        "company/employee-handbook.pdf",
         "company/master-services-agreement.pdf",
         "company/vendor-due-diligence.pdf",
         "invoices/rechnungen-2026-de.pdf",
@@ -9206,7 +9394,7 @@
       ],
       "effect": "1 document would move onto the text path",
       "id": "ocr_blank_pages",
-      "saving_usd_per_1000": 1.2913,
+      "saving_usd_per_1000": 0.0504,
       "title": "Read the pages nothing came off"
     },
     {
@@ -9222,7 +9410,7 @@
     }
   ],
   "routing": {
-    "basis": "Each page priced by the route it needs, for Claude Sonnet 5 at medium resolution, covering every document. Text and OCR pages are priced on the document's text tokens shared out by characters per page; vision pages are priced as rendered images.",
+    "basis": "Each page priced by the route it needs, for Mistral Small 4 at medium resolution, covering every document. Text and OCR pages are priced on the document's text tokens shared out by characters per page; vision pages are priced as rendered images.",
     "documents": {
       "ocr": 0,
       "text": 6,
@@ -9230,18 +9418,18 @@
     },
     "documents_routed": 8,
     "documents_without_pages": 0,
-    "model_id": "claude-sonnet-5",
-    "model_name": "Claude Sonnet 5",
+    "model_id": "mistral-small-2603",
+    "model_name": "Mistral Small 4",
     "pages": {
       "ocr": 0,
       "text": 31,
       "vision": 4
     },
     "resolution": "medium",
-    "routed_usd": 0.048302,
-    "text_layer_usd": 0.036486,
-    "text_ocr_usd": 0.036486,
-    "vision_usd": 0.1088
+    "routed_usd": 0.003349,
+    "text_layer_usd": 0.00276015,
+    "text_ocr_usd": 0.00276015,
+    "vision_usd": 0.005584500000000001
   },
   "run": {
     "classifier_calls": 0,
@@ -9254,14 +9442,22 @@
       "readiness",
       "sensitive"
     ],
-    "config_digest": "8c943dd5e8deaa73",
+    "config_digest": "552ad41c881f258c",
     "config_dir": "/Users/duarte/Documents/Development/playground/.venv/lib/python3.13/site-packages/complydoc/config",
     "content_sent_to": [],
+    "context": {
+      "branch": "main",
+      "commit": "58a45243cc56495a8cf5d619e274b4b3cc56423f",
+      "dirty": true,
+      "repository": "github.com/complydoc/playground",
+      "url": null,
+      "workflow": null
+    },
     "documents_read_after_worker_failure": 0,
-    "duration_seconds": 7.988,
+    "duration_seconds": 6.625,
     "extracted_text_used": false,
-    "extractor": "pdfplumber",
-    "finished_at": "2026-10-06T22:48:59+01:00",
+    "extractor": "complydoc",
+    "finished_at": "2026-11-10T11:59:03+00:00",
     "jobs": 3,
     "monthly_volume": null,
     "ner_available": true,
@@ -9276,11 +9472,11 @@
     "reveal_used": false,
     "sample_size": null,
     "sampled_from": null,
-    "schema_version": 22,
-    "started_at": "2026-10-06T22:48:51+01:00",
+    "schema_version": 27,
+    "started_at": "2026-11-10T11:58:56+00:00",
     "target": "/Users/duarte/Documents/Development/playground/documents",
     "timeout_seconds": null,
-    "tool_version": "0.6.8",
+    "tool_version": "0.7.10",
     "verify_model": null,
     "verify_scope": null
   },

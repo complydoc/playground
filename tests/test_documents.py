@@ -33,6 +33,15 @@ def test_the_hidden_instruction_in_the_questionnaire_is_caught():
         cd.expect(vendor).no_hidden(severity="high")
 
 
+def test_the_evals_hold_but_the_hidden_instruction_gets_through():
+    # documents/.complydoc-evals.yaml: kept passages and totals, and one that must not appear.
+    # Evals are checked against the page text, so this audit keeps it.
+    report = cd.full_audit("documents", ocr=False, extracted_text=True, page_images=False)
+    held = {check.fact: all(check.found.values()) for check in report.evals.checks}
+    assert held.pop("Note to AI assistants") is False, "the white text reaches the reader"
+    assert all(held.values()), held
+
+
 def test_the_loader_keeps_the_key_fact_and_stays_offline():
     report = cd.inspect_documents(
         PyPDFLoader("documents/company/vendor-due-diligence.pdf")

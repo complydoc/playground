@@ -520,7 +520,7 @@ wheels = [
 
 [[package]]
 name = "complydoc"
-version = "0.7.0"
+version = "0.7.10"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "lxml" },
@@ -539,9 +539,9 @@ dependencies = [
     { name = "tiktoken" },
     { name = "typer" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/e9/0e/6adff31be8a20fedcde521f9b67bff049ef59d5b811384c56c7550e54632/complydoc-0.7.0.tar.gz", hash = "sha256:c19c0d1bdaf93736cb6dc1381dbd903b3638524c88b9e711fe7d4fd3268d39f7", size = 6046827, upload-time = "2026-10-09T08:59:52.737Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/e4/0a/f8716090a299babc30773c8478d63e21b891936b5c254d9ff48b76c90441/complydoc-0.7.10.tar.gz", hash = "sha256:3e992ca35f39639cf7f2d5a71deb6d853b6d60e3434e67459ef78f33769d1efe", size = 6540283, upload-time = "2026-11-10T11:50:21.858Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/35/39/3254302fb657cbe2265536f3fd2f41bed714411bc3af0e4d4130963106e3/complydoc-0.7.0-py3-none-any.whl", hash = "sha256:eb6df69976c77dbdde1aa211bcb4fbbc1589de6331b3dc3b147dd312d3800335", size = 4092393, upload-time = "2026-10-09T08:59:50.47Z" },
+    { url = "https://files.pythonhosted.org/packages/91/4f/5752d0a9590ba0a8efca7aba4617718c101029d7b78d0f4cc0498dce6b80/complydoc-0.7.10-py3-none-any.whl", hash = "sha256:c393a65a08f16d61ab0764c3744e912c4c57d005c1e3c7ecbc86518614b49354", size = 4165800, upload-time = "2026-11-10T11:50:19.836Z" },
 ]
 
 [package.optional-dependencies]
@@ -568,7 +568,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "complydoc", extras = ["notebook"], specifier = ">=0.7.0" },
+    { name = "complydoc", extras = ["notebook"], specifier = ">=0.7.10" },
     { name = "docling", specifier = ">=2.131.0" },
     { name = "langchain-community", specifier = ">=0.3" },
     { name = "langchain-docling", specifier = ">=3.0.0" },

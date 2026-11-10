@@ -1,4 +1,4 @@
-.PHONY: setup start trace ui cli python test baseline all
+.PHONY: setup start look trace ui cli python test baseline all
 
 setup: ## Install complydoc and the LangChain loaders, and download the model names are found with
 	uv sync
@@ -8,6 +8,9 @@ start: ## Four LangChain loaders compared and five LangChain splitters: then `ma
 	rm -rf .complydoc
 	uv run python experiment.py
 	uv run complydoc chunks documents --extractor pypdf --no-ocr --preset common --name chunks -q
+
+look: ## One command: audit the documents and open the viewer on them
+	uv run complydoc ui documents
 
 trace: ## The pipeline, observed twice: as written and with masking
 	uv run python pipeline.py

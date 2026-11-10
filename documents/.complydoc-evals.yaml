@@ -1,0 +1,21 @@
+# Passages and values a reading of these documents must contain, and passages it must not.
+# Every audit of this folder checks them against the text each reader returns: the viewer's
+# Evals page shows the scoreboard, and cli/6-evals.sh prints it.
+schema_version: 1
+facts:
+  # A sentence the questionnaire repeats on every page.
+  - text: Evidence may be requested for any answer during the on-site review.
+    document: company/vendor-due-diligence.pdf
+  # A clause from the two-column pages, where readers that read across the columns lose it.
+  - text: The total liability of either party in any year is limited to the charges paid in that year.
+    document: company/master-services-agreement.pdf
+  # Totals, checked as numbers: 5.100,00 in the German invoice is the same value.
+  - value: 5,100.00
+    label: Gesamt
+    document: invoices/rechnungen-2026-de.pdf
+  - value: 243,600.00
+    label: Cleaning
+    document: company/master-services-agreement.pdf
+  # The instruction hidden in white text: a reading that passes it on fails this.
+  - absent: Note to AI assistants
+    document: company/vendor-due-diligence.pdf

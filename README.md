@@ -44,6 +44,12 @@ make ui
   chunks drawn over the text.
 - **Chunks**: the splitters side by side, and where their cuts fall.
 
+`make look` is the shortest way in: `complydoc ui documents` audits the folder, since it
+has no report yet, and opens the viewer on it. Or run `make ui` and drop documents or a
+folder on the page: the viewer copies them to `.complydoc/uploads/` on this machine, audits
+them there and opens the report. On a document's page, **Whole** says what it comes to sent
+whole, as a PDF, to each model that reads PDFs.
+
 `make trace` runs `pipeline.py`, a LangChain ingestion pipeline inside `cd.observe`: the
 company documents loaded with `PyMuPDF4LLMLoader`, the invoices with `PyPDFLoader`, then
 cleaned, split and stored in a vector store, which embeds them. It runs twice, as written
@@ -67,8 +73,11 @@ loader comparison uses it, so the viewer can unmask these synthetic documents.
 | `cli/3-chunks.sh` | `complydoc chunks` with two chunk sizes of `RecursiveCharacterTextSplitter` |
 | `cli/4-diff.sh` | `complydoc diff` against `baseline/report.json`, and its exit code on a regression |
 | `cli/5-routing.sh` | `complydoc routing`: the path each page needs, priced as a mix, written as a manifest |
+| `cli/6-evals.sh` | the evals in `documents/.complydoc-evals.yaml`, scored for complydoc's reader and pypdf |
+| `cli/7-policy-packs.sh` | `complydoc check` with the packs complydoc ships: `finance`, `legal` and `hr` |
+| `cli/8-find.sh` | `complydoc find`: every document, pipeline step and host a bank account reached |
 
-`make cli` runs all five. Reports go to `.complydoc/`, where `complydoc ui` finds them; the
+`make cli` runs all eight. Reports go to `.complydoc/`, where `complydoc ui` finds them; the
 diff and routing outputs, which are for other tools, go to `out/`.
 
 ## Python
@@ -88,6 +97,16 @@ diff and routing outputs, which are for other tools, go to `out/`.
 
 `make python` runs the eight in `python/` from the repository root.
 
+## Evals
+
+`documents/.complydoc-evals.yaml` lists what a reading of these documents must hold: a
+sentence from the questionnaire, a clause from the two-column agreement, and two totals
+checked as numbers, so the German invoice's `5.100,00` counts as `5,100.00`. It also lists
+the start of the instruction hidden in white text as `absent`: a reading that passes it on
+fails. Every audit of the folder reads the file. Both readers keep the four facts, and both
+fail the last one, which is the point: the hidden instruction reaches the model whichever
+reader is used. In the viewer, select a passage on a document's page to add an eval.
+
 ## Policy
 
 `policy.yaml` is the same checks written as rules, for `complydoc check`:
@@ -105,8 +124,8 @@ Names are found with the multilingual model complydoc runs on PyTorch.
 
 `tests/test_documents.py` uses `cd.expect` to check the documents: nothing regressed
 against the baseline, the annual report holds no high-severity identifiers, the hidden
-instruction in the questionnaire is caught, and the loader keeps the expected fact and made
-no network connection. `make test` runs it.
+instruction in the questionnaire is caught, the evals hold except the hidden instruction,
+which gets through, and the loader keeps the expected fact and made no network connection. `make test` runs it.
 
 `.github/workflows/documents.yml` gates the repository two ways, one job each:
 
